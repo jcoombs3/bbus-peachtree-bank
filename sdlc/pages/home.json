@@ -1,4 +1,85 @@
 {
-  "extends": "container-bb-manageable-area",
-  "children": []
+  "extends":"container-bb-manageable-area",
+  "children":[
+     {
+        "extends":"pt-peachtree-retail-app-ang",
+        "area":"0",
+        "children":[
+           {
+              "name":"bb-layout-container-flex-ang-_-0e8ba1345fa6",
+              "classId":"LayoutContainerComponent",
+              "navigationType":"horizontal",
+              "children":[
+                 {
+                    "name":"bb-panel-container-ang-_-658f6dad56a4",
+                    "classId":"PanelContainerComponent",
+                    "title":"Branding Area",
+                    "children":[
+
+                    ]
+                 },
+                 {
+                    "name":"bb-panel-container-ang-_-3d30bb506ee2",
+                    "classId":"PanelContainerComponent",
+                    "title":"Right Topbar Area",
+                    "children":[
+
+                    ]
+                 },
+                 {
+                    "name":"bb-panel-container-ang-_-731ab39984bf",
+                    "classId":"PanelContainerComponent",
+                    "title":"Sidebar Area",
+                    "children":[
+
+                    ]
+                 },
+                 {
+                    "name":"bb-panel-container-ang-_-534cf2412dda",
+                    "classId":"PanelContainerComponent",
+                    "title":"Header Area",
+                    "children":[
+
+                    ]
+                 },
+                 {
+                    "name":"bb-panel-container-ang-_-c078cd6ac8ca",
+                    "classId":"PanelContainerComponent",
+                    "title":"Main Content Area",
+                    "children":[
+                       {
+                          "name":"bb-panel-container-ang-_-c139d00d",
+                          "classId":"PanelContainerComponent",
+                          "title":"My products",
+                          "route":"list",
+                          "children":[
+                             {
+                                "name":"bb-heading-widget-ang-_-e5629c44",
+                                "classId":"HeadingWidgetComponent",
+                                "buttonClasses":"btn btn-link w-auto bb-button bb-button--xs-hide-text m-0",
+                                "buttonTitle":"Manage accounts",
+                                "customClassName":"px-0 flex-row align-items-center",
+                                "heading":"My accounts",
+                                "headingType":"h1",
+                                "iconClasses":"settings"
+                             },
+                             {
+                                "name":"bb-panel-container-ang-_-3b38597a",
+                                "classId":"PanelContainerComponent",
+                                "children":[
+                                   {
+                                      "name":"bb-product-summary-list-widget-ang-_-a9a45eb3",
+                                      "classId":"ProductSummaryListWidgetComponent"
+                                   }
+                                ]
+                             }
+                          ]
+                       }
+                    ]
+                 }
+              ]
+           }
+        ]
+     }
+  ]
 }
