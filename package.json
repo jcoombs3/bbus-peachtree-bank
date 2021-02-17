@@ -17,7 +17,9 @@
     "test": "ng test",
     "update": "ng update @bb-cli/schematics@^4 @backbase/foundation-ang@^6",
     "api:check": "bb-ang check-api",
-    "api:extract": "bb-ang extract-api"
+    "api:extract": "bb-ang extract-api",
+    "create-experience:retail": "npx sdlc package sdlc/experience.json",
+    "bundle-home-page:retail": "sdlc convert-from apps/peachtree-retail-app/sdlc/experience.json apps/peachtree-retail-app/sdlc/pages/home.json -l silent --remove-defaults false -o dist/apps/retail-app/page-model-mock.json"
   },
   "private": true,
   "dependencies": {
@@ -52,6 +54,7 @@
     "@angular/cli": "~10.1.0",
     "@angular/compiler-cli": "~10.1.0",
     "@angular/language-service": "~10.1.0",
+    "@backbase/sdlc-convert": "^0.12.23",
     "@bb-cli/bb-ang": "~4.3.0",
     "@bb-cli/schematics": "4.4.2",
     "@types/jasmine": "^3.5.0",

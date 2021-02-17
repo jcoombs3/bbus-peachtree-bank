@@ -1,0 +1,130 @@
+{
+  "$schema": "../../../node_modules/@backbase/sdlc-convert/node_modules/@backbase/sdlc-schema/experience.schema.json",
+  "name": "peachtree-retail-app",
+  "title": "Peachtree Retail App",
+  "locales": ["en"],
+  "properties": {
+    "AccessDeniedPage": "peachtree-retail-app/login?error=accessdenied",
+    "DefaultLandingPage": "peachtre-retail-app/home",
+    "ErrorPage": "peachtre-retail-app/error",
+    "LoginPage": "peachtre-retail-app/redirect",
+    "thumbnailUrl": "/Peachtree Retail App/"
+  },
+  "contentDirs": {
+    "default": "apps/retail-app/sdlc/content",
+    "shared": "shared"
+  },
+  "cxSources": [
+    "node_modules/@backbase",
+    "dist/provisioning-packages/cx6/peachtree-retail-app.zip",
+    "collections/collection-bb-web-sdk-1.15.2.zip"
+  ],
+  "environments": {
+    "default": {
+      "authorization": {
+        "authUrl": "http://localhost:8180/auth",
+        "clientId": "bb-web-client",
+        "scope": "openid",
+        "kind": "hybrid",
+        "realm": "backbase",
+        "landingPageUrl": "peachtree-retail-app/select-context",
+        "loginPageUrl": "peachtree-retail-app/redirect",
+        "maxInactivityDuration": 300
+      },
+      "entitlements": {
+        "enable": false,
+        "uri": "/accessgroup-presentation-service/client-api/v2/accessgroups/users/permissions/summary"
+      },
+      "provisioning": {
+        "type": "cx",
+        "outputDir": "experience",
+        "permissions": {
+          "anonymousConsumer": {
+            "ROLE_group_user": "CONSUMER",
+            "ROLE_group_admin": "ADMIN",
+            "ROLE_group_manager": "ADMIN",
+            "ROLE_group_master page designer": "ADMIN",
+            "ROLE_ANONYMOUS": "CONSUMER"
+          },
+          "userConsumer": {
+            "ROLE_group_user": "CONSUMER",
+            "ROLE_group_manager": "ADMIN",
+            "ROLE_group_admin": "ADMIN",
+            "ROLE_group_master page designer": "ADMIN"
+          }
+        },
+        "linkRoot": "",
+        "staticResourcesRoot": "/api/portal/static/items"
+      }
+    }
+  },
+  "menus": {
+    "master-pages": [
+      {
+        "section": "LeanMasterPage",
+        "title": "LeanMasterPage",
+        "page": {
+          "extends": "page-bb-default",
+          "name": "LeanMasterPage",
+          "title": "Lean Master Page",
+          "innerWrapperClass": "bg-gray-light-300",
+          "children": [
+            {
+              "fragment": "./pages/lean-master-page.json"
+            }
+          ]
+        }
+      }
+    ],
+    "special-pages": [
+      {
+        "section": "error",
+        "title": "Error",
+        "permission": "anonymousConsumer",
+        "page": {
+          "extends": "LeanMasterPage",
+          "title": "Something went wrong",
+          "innerWrapperClass": "",
+          "outerWrapperClass": "",
+          "children": [
+            {
+              "fragment": "./pages/error.json"
+            }
+          ]
+        }
+      },
+      {
+        "section": "redirect",
+        "title": "Redirect",
+        "permission": "anonymousConsumer",
+        "page": {
+          "extends": "LeanMasterPage",
+          "title": "Redirect",
+          "children": [
+            {
+              "fragment": "./pages/redirect.json"
+            }
+          ]
+        }
+      }
+    ],
+    "main": [
+      {
+        "section": "index",
+        "friendlyUrl": "retail-app",
+        "title": "Home",
+        "permission": "anonymousConsumer",
+        "page": {
+          "extends": "LeanMasterPage",
+          "title": "Home",
+          "innerWrapperClass": "",
+          "children": [
+            {
+              "fragment": "./pages/home.json"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
