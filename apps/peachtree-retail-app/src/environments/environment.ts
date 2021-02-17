@@ -1,9 +1,7 @@
-import { createMocksInterceptor } from '@backbase/foundation-ang/data-http';
-
 import { Item } from '@backbase/foundation-ang/web-sdk';
 import { ExternalServices } from '@backbase/foundation-ang/start';
-
 import { Environment } from './type';
+import { mockProviders } from '../mocks/providers';
 
 const services: ExternalServices = {};
 
@@ -15,7 +13,7 @@ const pageModel: Item = {
 
 export const environment: Environment = {
   production: false,
-  mockProviders: [createMocksInterceptor()],
+  mockProviders: mockProviders,
   bootstrap: {
     pageModel,
     services,
