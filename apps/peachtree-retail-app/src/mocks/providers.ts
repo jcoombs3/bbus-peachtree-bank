@@ -11,6 +11,13 @@ import {
   TransactionClientHttpServiceMocksProvider,
 } from '@backbase/data-ang/transactions';
 
+import { NotificationsMocksProvider } from '@backbase/notifications-mocks-provider-ang';
+import { NotificationsHttpServiceMocksProvider } from '@backbase/data-ang/notifications';
+import {
+  ServiceAgreementHttpServiceMocksProvider,
+  ServiceAgreementsHttpServiceMocksProvider,
+} from '@backbase/data-ang/accesscontrol';
+
 export const mockProviders: Array<Provider> = [
   createMocksInterceptor(),
   ProductSummaryHttpServiceMocksProvider,
@@ -18,4 +25,8 @@ export const mockProviders: Array<Provider> = [
   CategoryTotalsHttpServiceMocksProvider,
   TransactionClientHttpServiceMocksProvider,
   ArrangementsHttpServiceMocksProvider,
+  NotificationsMocksProvider,
+  ServiceAgreementHttpServiceMocksProvider,
+  ServiceAgreementsHttpServiceMocksProvider,
+  NotificationsHttpServiceMocksProvider,
 ];

@@ -28,8 +28,8 @@
            "scope":"openid",
            "kind":"hybrid",
            "realm":"backbase",
-           "landingPageUrl":"peachtree-retail-app/select-context",
-           "loginPageUrl":"peachtree-retail-app/login",
+           "landingPageUrl":"peachtree-retail-app/home",
+           "loginPageUrl":"peachtree-retail-app/home",
            "maxInactivityDuration":300
         },
         "provisioning":{
@@ -94,7 +94,6 @@
            "page":{
               "extends":"LeanMasterPage",
               "title":"Login",
-              "extensionPageDefaultName":"ext-zb-page-loader",
               "children":[
 
               ]
