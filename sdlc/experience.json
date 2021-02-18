@@ -22,16 +22,6 @@
   ],
   "environments":{
      "default":{
-        "authorization":{
-           "authUrl":"http://localhost:8180/auth",
-           "clientId":"bb-web-client",
-           "scope":"openid",
-           "kind":"hybrid",
-           "realm":"backbase",
-           "landingPageUrl":"peachtree-retail-app/home",
-           "loginPageUrl":"peachtree-retail-app/home",
-           "maxInactivityDuration":300
-        },
         "provisioning":{
            "type":"cx",
            "permissions":{

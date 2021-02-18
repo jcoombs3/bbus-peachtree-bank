@@ -32,6 +32,7 @@
                  {
                     "classId":"PanelContainerComponent",
                     "title":"Right Topbar Area",
+                    "cssClasses":"mr-2 mr-sm-0",
                     "children":[
                        {
                           "classId":"ColumnContainerComponent",
@@ -48,7 +49,7 @@
                              },
                              {
                                 "classId":"PanelContainerComponent",
-                                "columnClass":"d-flex align-items-center",
+                                "columnClass":"d-flex align-items-center ",
                                 "children":[
                                    {
                                       "classId":"UserContextMenuWidgetComponent"
@@ -150,7 +151,7 @@
                                                                     "children":[
                                                                        {
                                                                           "classId":"ProductSummaryAccountSelectorWidgetComponent",
-                                                                          "output.selectedAccount":"router.navigate accounts details {selectedAccount}"
+                                                                          "output.selectedAccount":"navigation:bb-panel-container-ang-_-62bbb87815d0"
                                                                        }
                                                                     ]
                                                                  },
@@ -219,38 +220,6 @@
                              },
                              {
                                 "classId":"PanelContainerComponent",
-                                "title":"Insight",
-                                "cssClasses":"container",
-                                "route":"insight",
-                                "navIcon":"equalizer",
-                                "children":[
-                                  {
-                                    "name": "bb-deck-container-ang-_-12dc4fbf6cba",
-                                    "classId": "DeckContainerComponent",
-                                    "children": [
-                                      {
-                                        "name": "bb-panel-container-ang-_-f82c4b0a1837",
-                                        "classId": "PanelContainerComponent",
-                                        "title": "Spending analysis",
-                                        "route": "spending-analysis",
-                                        "navIcon": "debit-cards",
-                                        "children": [
-                                        ]
-                                      },
-                                      {
-                                        "name": "bb-panel-container-ang-_-4ce9ab2af9d4",
-                                        "classId": "PanelContainerComponent",
-                                        "title": "Income analysis",
-                                        "route": "income-analysis",
-                                        "navIcon": "attach-money",
-                                        "children": []
-                                      }
-                                    ]
-                                  }
-                                ]
-                             },
-                             {
-                                "classId":"PanelContainerComponent",
                                 "title":"Self Service",
                                 "cssClasses":"container",
                                 "route":"self-service",
@@ -272,13 +241,6 @@
                                             "cssClasses":"container",
                                             "route":"password",
                                             "navIcon":"https"
-                                         },
-                                         {
-                                            "classId":"PanelContainerComponent",
-                                            "title":"Mail",
-                                            "cssClasses":"container",
-                                            "route":"mail",
-                                            "navIcon":"mail"
                                          }
                                       ]
                                    }
