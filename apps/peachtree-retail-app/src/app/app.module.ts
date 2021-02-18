@@ -9,19 +9,29 @@ import { environment } from '../environments/environment';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
+// Widgets
+import { ContainersModule } from '@backbase/universal-ang/containers';
+import { LayoutContainerModule } from '@backbase/universal-ang/layouts';
+import { HeadingWidgetModule } from '@backbase/universal-ang/heading';
+import { ProductSummaryListWidgetModule } from '@backbase/product-summary-list-widget-ang';
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     HttpClientModule,
     BackbaseCoreModule,
-    RouterModule.forRoot([], { initialNavigation: false, useHash: true })
+    RouterModule.forRoot([], { initialNavigation: false, useHash: true }),
+
+    // Widgets
+    ContainersModule,
+    LayoutContainerModule,
+    HeadingWidgetModule,
+    ProductSummaryListWidgetModule,
   ],
-  providers: [...environment.mockProviders || []],
-  bootstrap: [AppComponent]
+  providers: [...(environment.mockProviders || [])],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

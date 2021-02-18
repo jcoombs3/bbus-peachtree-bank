@@ -55,7 +55,9 @@
               "apps/peachtree-retail-app/src/favicon.ico",
               "apps/peachtree-retail-app/src/assets"
             ],
-            "styles": [],
+            "styles": [
+              "themes/peachtree/scss/main.scss"
+            ],
             "scripts": []
           },
           "configurations": {
