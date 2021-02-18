@@ -28,7 +28,14 @@
                     "classId":"PanelContainerComponent",
                     "title":"Sidebar Area",
                     "children":[
+                       {
+                          "classId":"MegaMenuNavigationContainerComponent",
+                          "displayDescription":"false",
+                          "mainContainer":"pt-deck-container-ang-_-48a2b14d9c5f",
+                          "children":[
 
+                          ]
+                       }
                     ]
                  },
                  {
@@ -44,33 +51,119 @@
                     "children":[
                        {
                           "classId":"DeckContainerComponent",
+                          "name":"pt-deck-container-ang-_-48a2b14d9c5f",
                           "children":[
                              {
                                 "classId":"PanelContainerComponent",
                                 "title":"Accounts",
                                 "cssClasses":"container",
                                 "route":"accounts",
+                                "navIcon":"accounts",
                                 "children":[
                                    {
-                                      "classId":"DeckContainerComponent",
+                                      "classId":"PanelContainerComponent",
                                       "children":[
                                          {
                                             "classId":"PanelContainerComponent",
-                                            "title":"List",
-                                            "route":"list",
                                             "children":[
                                                {
-                                                  "classId":"HeadingWidgetComponent",
-                                                  "customClassName":"px-0",
-                                                  "heading":"My Accounts",
-                                                  "headingType":"h1"
-                                               },
-                                               {
-                                                  "classId":"PanelContainerComponent",
+                                                  "classId":"DeckContainerComponent",
                                                   "children":[
                                                      {
-                                                        "classId":"ProductSummaryListWidgetComponent"
-                                                     }
+                                                        "classId":"PanelContainerComponent",
+                                                        "title":"List",
+                                                        "route":"list",
+                                                        "children":[
+                                                           {
+                                                              "classId":"HeadingWidgetComponent",
+                                                              "customClassName":"px-0",
+                                                              "heading":"My Accounts",
+                                                              "headingType":"h1"
+                                                           },
+                                                           {
+                                                              "classId":"PanelContainerComponent",
+                                                              "children":[
+                                                                 {
+                                                                    "classId":"ProductSummaryListWidgetComponent",
+                                                                    "output.selectedAccount": "navigation:"
+                                                                 }
+                                                              ]
+                                                           }
+                                                        ]
+                                                     },
+                                                     {
+                                                      "classId": "PanelContainerComponent",
+                                                      "title": "Details",
+                                                      "route": "details",
+                                                      "children": [
+                                                        {
+                                                          "classId": "PanelContainerComponent",
+                                                          "children": [
+                                                            {
+                                                              "classId": "HeadingWidgetComponent",
+                                                              "buttonClasses": "btn btn-link pl-0 ml-0 mb-3",
+                                                              "buttonTitle": "Back to my accounts",
+                                                              "customClassName": "px-0 pt-4 pb-5 flex-column-reverse align-items-start",
+                                                              "heading": "Account details",
+                                                              "headingType": "h1",
+                                                              "iconClasses": "arrow-back",
+                                                              "output.buttonAction": "router.navigate accounts"
+                                                            },
+                                                            {
+                                                              "classId": "PanelContainerComponent",
+                                                              "cssClasses": "d-block container-medium px-0 mb-2",
+                                                              "children": [
+                                                                {
+                                                                  "classId": "ProductSummaryAccountSelectorWidgetComponent",
+                                                                  "output.selectedAccount": "router.navigate accounts details {selectedAccount}"
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "classId": "TabContainerComponent",
+                                                              "children": [
+                                                                {
+                                                                  "name": "bb-panel-container-ang-_-62bbb87815d0",
+                                                                  "classId": "PanelContainerComponent",
+                                                                  "title": "Activity",
+                                                                  "route": "transactions",
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "bb-panel-container-ang-_-1110696cec5a",
+                                                                      "classId": "PanelContainerComponent",
+                                                                      "cssClasses": "d-block mt-3",
+                                                                      "children": [
+                                                                        {
+                                                                          "classId": "TransactionsListWidgetComponent"
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "name": "bb-panel-container-ang-_-0405eea48a69",
+                                                                  "classId": "PanelContainerComponent",
+                                                                  "title": "Account Info",
+                                                                  "route": "details",
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "bb-panel-container-ang-_-95baf9a60c85",
+                                                                      "classId": "PanelContainerComponent",
+                                                                      "cssClasses": "d-block mt-3",
+                                                                      "children": [
+                                                                        {
+                                                                          "classId": "ProductSummaryDetailsWidgetComponent"
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
                                                   ]
                                                }
                                             ]

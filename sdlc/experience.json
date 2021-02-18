@@ -18,7 +18,7 @@
   "cxSources":[
      "node_modules/@backbase",
      "dist/provisioning-packages/cx6/peachtree-retail-app.zip",
-     "collections/collection-bb-web-sdk-1.15.1.zip"
+     "collections/collection-bb-web-sdk-1.15.2.zip"
   ],
   "environments":{
      "default":{

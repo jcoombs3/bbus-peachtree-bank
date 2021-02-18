@@ -14,6 +14,10 @@ import { ContainersModule } from '@backbase/universal-ang/containers';
 import { LayoutContainerModule } from '@backbase/universal-ang/layouts';
 import { HeadingWidgetModule } from '@backbase/universal-ang/heading';
 import { ProductSummaryListWidgetModule } from '@backbase/product-summary-list-widget-ang';
+import { MegaMenuNavigationContainerModule } from '@backbase/universal-ang/navigation';
+import { TransactionsListWidgetModule } from '@backbase/retail-ang/transactions';
+import { ProductSummaryDetailsWidgetModule } from '@backbase/product-summary-details-widget-ang';
+import { ProductSummaryAccountSelectorWidgetModule } from '@backbase/product-summary-account-selector-widget-ang';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,6 +34,10 @@ import { ProductSummaryListWidgetModule } from '@backbase/product-summary-list-w
     LayoutContainerModule,
     HeadingWidgetModule,
     ProductSummaryListWidgetModule,
+    MegaMenuNavigationContainerModule,
+    ProductSummaryDetailsWidgetModule,
+    TransactionsListWidgetModule,
+    ProductSummaryAccountSelectorWidgetModule,
   ],
   providers: [...(environment.mockProviders || [])],
   bootstrap: [AppComponent],

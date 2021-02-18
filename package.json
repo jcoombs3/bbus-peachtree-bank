@@ -36,7 +36,7 @@
     "@backbase/backbase-theme": "latest",
     "@backbase/data-ang": "^3.9.0",
     "@backbase/foundation-ang": "^6.0.0",
-    "@backbase/retail-ang": "^3.9.0-sp.2",
+    "@backbase/retail-ang": "3.9.0",
     "@backbase/ui-ang": "^5.21.7",
     "@backbase/universal-ang": "^6.9.7",
     "@ng-bootstrap/ng-bootstrap": "^9.0.2",
