@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -13,7 +12,14 @@ import { EffectsModule } from '@ngrx/effects';
 import { ContainersModule } from '@backbase/universal-ang/containers';
 import { LayoutContainerModule } from '@backbase/universal-ang/layouts';
 import { HeadingWidgetModule } from '@backbase/universal-ang/heading';
+import { ContentWidgetModule } from '@backbase/universal-ang/content';
 import { ProductSummaryListWidgetModule } from '@backbase/product-summary-list-widget-ang';
+import { MegaMenuNavigationContainerModule } from '@backbase/universal-ang/navigation';
+import { TransactionsListWidgetModule } from '@backbase/retail-ang/transactions';
+import { ProductSummaryDetailsWidgetModule } from '@backbase/product-summary-details-widget-ang';
+import { ProductSummaryAccountSelectorWidgetModule } from '@backbase/product-summary-account-selector-widget-ang';
+import { UserContextMenuWidgetModule } from '@backbase/retail-ang/access-control';
+import { NotificationsBadgeWidgetModule } from '@backbase/retail-ang/notifications';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,6 +36,13 @@ import { ProductSummaryListWidgetModule } from '@backbase/product-summary-list-w
     LayoutContainerModule,
     HeadingWidgetModule,
     ProductSummaryListWidgetModule,
+    MegaMenuNavigationContainerModule,
+    ProductSummaryDetailsWidgetModule,
+    TransactionsListWidgetModule,
+    ProductSummaryAccountSelectorWidgetModule,
+    UserContextMenuWidgetModule,
+    NotificationsBadgeWidgetModule,
+    ContentWidgetModule,
   ],
   providers: [...(environment.mockProviders || [])],
   bootstrap: [AppComponent],
