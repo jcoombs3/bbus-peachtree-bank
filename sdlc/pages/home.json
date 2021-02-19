@@ -244,7 +244,8 @@
                                                             "classId":"PanelContainerComponent",
                                                             "children":[
                                                                {
-                                                                  "classId":"PocketsComponent"
+                                                                  "classId":"PocketsComponent",
+                                                                  "output.selectPocket": "route-param pocketId"
                                                                }
                                                             ]
                                                          }
@@ -255,7 +256,16 @@
                                                         "title":"Details",
                                                         "route":"details",
                                                         "children":[
-
+                                                          {
+                                                            "classId":"PanelContainerComponent",
+                                                            "children":[
+                                                               {
+                                                                  "classId":"PocketsDetailsComponent",
+                                                                  "input.pocketId": "route-param pocketId",
+                                                                  "output.goBack": "router.navigate pockets"
+                                                               }
+                                                            ]
+                                                         }
                                                         ]
                                                      },
                                                      {

@@ -21,6 +21,9 @@
       <property name="label">
         <value>Angular PocketsDetails Widget</value>
       </property>
+       <property name="input.pocketId">
+        <value></value>
+      </property>
     </properties>
   </widget>
 </catalog>
