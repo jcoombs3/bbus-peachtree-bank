@@ -1,0 +1,247 @@
+.pockets-list-item {
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+  cursor: pointer;
+  flex-wrap: wrap;
+  width: 100%;
+  transition: transform 0.15s;
+  backface-visibility: hidden;
+  filter: blur(0);
+  &:hover {
+    transform: scale(1.01) translateZ(0) perspective(1px);
+  }
+
+  & > div:first-child {
+    background: url('../../assets/images/piggy-bank.png') no-repeat center center / 50px auto;
+    flex: 1 0 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 8rem;
+    height: 200px;
+    @include media-breakpoint-down(sm){
+      background-size: 4rem;
+    }
+
+    & > img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  & > div:nth-child(2) {
+    flex: 1 0 75%;
+    padding: 2rem 2rem 2rem 1rem;
+    height: 200px;
+
+    .pocket-name{
+      text-align: left;
+    }
+
+    .pocket-amount{
+      text-align: left;
+      margin-top: 1rem;
+      span {
+        color: #919191;
+      }
+    }
+
+    & > p {
+      @include media-breakpoint-down(xs){
+        font-size: 10px;
+      }
+      text-align: left;
+      margin-top: 3rem;
+      font-size: 14px;
+      color: #616161;
+    }
+    .pocket-item-progress {
+      margin-top: 3rem;
+
+      & > span {
+        color: #14305f;
+        font-size: 14px;
+      }
+
+      & > p{
+        color: #919191;
+        font-size:14px;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+
+        bb-icon-ui{
+          margin-right: 4px;
+        }
+      }
+
+      &.completed {
+        & > .pocket-progress-scale > div {
+          background-color: #266d26;
+        }
+        & > span {
+          color: #266d26;
+        }
+      }
+
+      & > .pocket-progress-scale {
+        height: 7px;
+        background-color: #d6d6d6;
+        border-radius: 5px;
+        overflow: hidden;
+
+        & > div {
+          height: 100%;
+          border-radius: 5px;
+          background-color: #14305f;
+        }
+      }
+    }
+  }
+
+
+  &.individual-pocket{
+    transition: none;
+    transform: none !important;
+    padding: 30px 30px 0;
+    height: auto;
+    min-height: 200px;
+    cursor:default;
+
+    & > div:nth-child(2){
+      display: flex;
+      flex-direction: column;
+
+      .pocket-amount{
+        position: relative;
+
+        & > bb-icon-ui{
+          position: absolute;
+          right: 0;
+          color: #4e4e4e;
+          cursor: pointer;
+        }
+      }
+
+      .pocket-item-progress{
+        margin: 0;
+      }
+
+      & > p{
+        margin-top: 0;
+      }
+    }
+
+    .pocket-actions{
+      button:last-child{
+        margin-left: 20px;
+      }
+
+      bb-icon-ui{
+        margin-right: 6px;
+      }
+    }
+    .pocket-transactions-container{
+      width: 100%;
+
+      .pocket-transactions-section{
+        padding: 32px 0 24px 0;
+        border-bottom: 1px solid #d6d6d6;
+        // margin-bottom: 36px;
+
+        &:last-child{
+          border: none;
+        }
+
+        & > p:first-child{
+          text-transform: uppercase;
+          font-size:12px;
+          margin-bottom: 0;
+          color: #616161;
+          font-weight: bold;
+
+        }
+        .pocket-transaction{
+          display: flex;
+          align-items: center;
+          position: relative;
+          margin-top:1.5rem;
+
+          &.transaction-incoming{
+            .pocket-transaction-amount{
+              color: #266d26;
+            }
+          }
+
+          & > div:first-child{
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #131632;
+            border-radius: 8px;
+            margin-right:16px;
+
+            & > bb-icon-ui{
+              color: white;
+            }
+          }
+
+          & > div:nth-child(2){
+            display: flex;
+            flex-direction: column;
+
+            span:first-child{
+              font-size: 16px;
+              font-weight: 500;
+            }
+            span:last-child{
+              font-size:14px;
+              color: #616161;
+            }
+          }
+
+          .pocket-transaction-amount{
+            position: absolute;
+            right: 0;
+            font-size:18px;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .no-transactions{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5rem 0;
+
+        bb-icon-ui{
+          margin-bottom: 1rem;
+          color: #262626;
+        }
+
+        & > span:nth-child(2){
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        & > span:nth-child(3){
+          font-size:14px;
+          color: #616161;
+        }
+      }
+    }
+  }
+}
+
+.pockets-details-button{
+  margin-top: 3rem;
+  }
+
+.pockets-details-heading{
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}

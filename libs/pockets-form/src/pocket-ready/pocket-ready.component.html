@@ -1,0 +1,13 @@
+<div
+  class="d-flex flex-column align-items-center justify-content-center mb-3 mt-3"
+  *ngIf="pocketForm$ | async as pocketForm"
+>
+  <div class="pocket-success-icon"></div>
+  <bb-header-ui headingType="h2" heading="Your Pocket Is Ready!"></bb-header-ui>
+  <span class="text-muted small mb-4"
+    >Your "{{ pocketForm.name }}" Pocket is created and you've just added ${{
+      pocketForm.fundAmount?.amount ? pocketForm.fundAmount?.amount : '0'
+    }}.</span
+  >
+  <button bbButton type="button" color="primary" (click)="onViewPocket()">View Pocket</button>
+</div>

@@ -1,0 +1,62 @@
+<div class="div">
+<button class='pockets-details-button' color="link-text" bbButton (click)="goToPockets()"><bb-icon-ui name="arrow-back"></bb-icon-ui>Back to pockets</button>
+<h1 class='pockets-details-heading'>{{pocket?.name}}</h1>
+
+<div *ngIf='loading' class='card' style='height: 400px; margin: 2rem;'>
+  <div class="app-loading">
+    <div class="logo"></div>
+    <svg class="spinner" viewBox="25 25 50 50">
+      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+  </div>
+</div>
+
+<div *ngIf='pocket && !loading' class='pockets-list-item card individual-pocket ml-0'>
+  <div></div>
+  <div>
+    <h3 class='mt-0 pocket-amount'>${{pocket.funds}} <span *ngIf='pocket.goal'>/${{pocket.goal}}</span>
+
+    </h3>
+    <p *ngIf='!pocket.goal'>Set an amount and due date to better keep track of your progress.</p>
+    <div *ngIf='pocket.goal' class='pocket-item-progress' [ngClass]='{"completed": getProgress(pocket.id) >= 100}'>
+      <p> <bb-icon-ui name='calendar' size='sm'></bb-icon-ui>Goal Date: {{ pocket.goalDate | bbDate: 'longDate':'GMT+0100' }}</p>
+      <div class='pocket-progress-scale'>
+        <div [ngStyle]="{'width': getProgress(pocket.id) + '%'}"></div>
+      </div>
+      <span>{{getProgress(pocket.id)}}% completed</span>
+    </div>
+  </div>
+
+  <div class='pocket-transactions-container'>
+    <ng-container *ngIf='!groupTransactions()'>
+      <div class='no-transactions'>
+        <bb-icon-ui size='xxl' name='transactions'></bb-icon-ui>
+        <span>Add Money To See Transactions</span>
+        <span>You don't have any transactinos to display yet</span>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf='groupTransactions()'>
+      <div *ngFor='let section of groupTransactions() | keyvalue' class='pocket-transactions-section'>
+        <p>{{ section.key | bbDate: 'longDate':'GMT+0100' }}</p>
+        <div>
+          <div *ngFor='let transaction of section.value' class='pocket-transaction'
+            [ngClass]='{"transaction-incoming": transaction.incoming}'>
+            <div>
+              <bb-icon-ui name='savings-accounts'></bb-icon-ui>
+            </div>
+            <div>
+              <span>{{transaction.account}} Account</span>
+              <span>{{transaction.incoming ? 'Incoming' : 'Outgoing'}}</span>
+            </div>
+            <div class='pocket-transaction-amount'>{{transaction.incoming ? '+' : '-'}}${{transaction.amount}}</div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+  </div>
+</div>
+
+
+</div>

@@ -1,0 +1,37 @@
+<div class="p-3">
+  <div class="mt-3">
+    <bb-header-ui headingType="h2" heading="Finally, Add Money To Your Pocket"></bb-header-ui>
+  </div>
+  <div class="row mt-5">
+    <div class="col-12 mb-4">
+      <bb-account-selector-ui
+        [items]="items"
+        [closeOnSelect]="true"
+        [dropdownPosition]="'bottom'"
+        (change)="onChange($event)"
+        placeholder="Select Account"
+        [searchable]="false"
+        [selectedItems]="selectedAccount"
+      >
+      </bb-account-selector-ui>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="dollar-input-icon">
+        <bb-currency-input-ui
+          [formControl]="amount"
+          integerLabel="Amount"
+          [allowNegativeValue]="false"
+          resultType="string"
+          [integer]="true"
+        ></bb-currency-input-ui>
+      </div>
+    </div>
+  </div>
+  <div class="pt-5 d-flex justify-content-between flex-wrap flex-row flex-sm-row-reverse align-items-center">
+    <div class="d-flex mb-4 mb-sm-0">
+      <button bbButton type="button" color="secondary" (click)="previousStep()" class="mr-2">Back</button>
+      <button bbButton type="button" color="primary" (click)="nextStep()">Review Pocket</button>
+    </div>
+    <button bbButton type="button" color="link-text" (click)="cancelForm()">Cancel</button>
+  </div>
+</div>

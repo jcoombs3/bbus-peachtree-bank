@@ -137,10 +137,10 @@
                                                               "children":[
                                                                  {
                                                                     "classId":"HeadingWidgetComponent",
-                                                                    "buttonClasses":"btn btn-link pl-0 ml-0 mb-3",
+                                                                    "buttonClasses":"btn btn-link-text mb-3 ml-0 mt-4",
                                                                     "buttonTitle":"Back to my accounts",
                                                                     "customClassName":"px-0 pt-4 pb-5 flex-column-reverse align-items-start",
-                                                                    "heading":"Account details",
+                                                                    "heading":"Account Details",
                                                                     "headingType":"h1",
                                                                     "iconClasses":"arrow-back",
                                                                     "output.buttonAction":"router.navigate accounts"
@@ -215,7 +215,91 @@
                                 "route":"pockets",
                                 "navIcon":"style",
                                 "children":[
-
+                                   {
+                                      "classId":"PanelContainerComponent",
+                                      "children":[
+                                         {
+                                            "classId":"PanelContainerComponent",
+                                            "children":[
+                                               {
+                                                  "classId":"DeckContainerComponent",
+                                                  "children":[
+                                                     {
+                                                        "classId":"PanelContainerComponent",
+                                                        "title":"List",
+                                                        "route":"list",
+                                                        "children":[
+                                                           {
+                                                              "name":"bb-heading-widget-ang-_-e5629c44",
+                                                              "classId":"HeadingWidgetComponent",
+                                                              "buttonClasses":"btn btn-primary w-auto bb-button bb-button--xs-hide-text m-0",
+                                                              "buttonTitle":"New Pocket",
+                                                              "customClassName":"px-0 flex-row align-items-center",
+                                                              "heading":"Pockets",
+                                                              "headingType":"h1",
+                                                              "iconClasses":"add",
+                                                              "output.buttonAction":"router.navigate pockets form"
+                                                           },
+                                                           {
+                                                            "classId":"PanelContainerComponent",
+                                                            "children":[
+                                                               {
+                                                                  "classId":"PocketsComponent",
+                                                                  "output.selectPocket": "route-param pocketId"
+                                                               }
+                                                            ]
+                                                         }
+                                                        ]
+                                                     },
+                                                     {
+                                                        "classId":"PanelContainerComponent",
+                                                        "title":"Details",
+                                                        "route":"details",
+                                                        "children":[
+                                                          {
+                                                            "classId":"PanelContainerComponent",
+                                                            "children":[
+                                                               {
+                                                                  "classId":"PocketsDetailsComponent",
+                                                                  "input.pocketId": "route-param pocketId",
+                                                                  "output.goBack": "router.navigate pockets"
+                                                               }
+                                                            ]
+                                                         }
+                                                        ]
+                                                     },
+                                                     {
+                                                        "classId":"PanelContainerComponent",
+                                                        "title":"Form",
+                                                        "route":"form",
+                                                        "children":[
+                                                           {
+                                                              "classId":"HeadingWidgetComponent",
+                                                              "buttonClasses":"btn btn-link-text mt-4 ml-0 mb-3",
+                                                              "buttonTitle":"Back to pockets",
+                                                              "customClassName":"px-0 pt-4 pb-5 flex-column-reverse align-items-start",
+                                                              "heading":"New Pocket",
+                                                              "headingType":"h1",
+                                                              "iconClasses":"arrow-back",
+                                                              "output.buttonAction":"router.navigate pockets"
+                                                           },
+                                                           {
+                                                            "classId":"PanelContainerComponent",
+                                                            "children":[
+                                                               {
+                                                                  "classId":"PocketsFormComponent",
+                                                                  "output.cancel": "router.navigate pockets"
+                                                               }
+                                                            ]
+                                                         }
+                                                        ]
+                                                     }
+                                                  ]
+                                               }
+                                            ]
+                                         }
+                                      ]
+                                   }
                                 ]
                              },
                              {

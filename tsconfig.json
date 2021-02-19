@@ -25,9 +25,8 @@
         "node_modules/@peachtree/*"
       ]
     },
-    "resolveJsonModule": true,
+    "resolveJsonModule": true
   },
-
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
     "strictTemplates": true

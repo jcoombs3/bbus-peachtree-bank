@@ -20,6 +20,9 @@ import { ProductSummaryDetailsWidgetModule } from '@backbase/product-summary-det
 import { ProductSummaryAccountSelectorWidgetModule } from '@backbase/product-summary-account-selector-widget-ang';
 import { UserContextMenuWidgetModule } from '@backbase/retail-ang/access-control';
 import { NotificationsBadgeWidgetModule } from '@backbase/retail-ang/notifications';
+import { PocketsModule } from '@peachtree/pockets';
+import { PocketsFormModule } from '@peachtree/pockets-form';
+import { PocketsDetailsModule } from '@peachtree/pockets-details';
 
 @NgModule({
   declarations: [AppComponent],
@@ -43,6 +46,9 @@ import { NotificationsBadgeWidgetModule } from '@backbase/retail-ang/notificatio
     UserContextMenuWidgetModule,
     NotificationsBadgeWidgetModule,
     ContentWidgetModule,
+    PocketsModule,
+    PocketsFormModule,
+    PocketsDetailsModule,
   ],
   providers: [...(environment.mockProviders || [])],
   bootstrap: [AppComponent],
