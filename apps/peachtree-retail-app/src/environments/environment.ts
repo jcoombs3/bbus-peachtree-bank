@@ -2,6 +2,7 @@ import { ExternalServices } from '@backbase/foundation-ang/start';
 import { Environment } from './type';
 import { mockProviders } from '../mocks/providers';
 import { pageModel } from '../mocks/page-model';
+import { ImageContentItem, StructuredContentItem, ContentType } from '@backbase/foundation-ang/web-sdk';
 
 const services: ExternalServices = {
   auth: () => ({
@@ -55,8 +56,11 @@ const services: ExternalServices = {
     locale: 'en-US',
   }),
   portalContent: () => ({
-    get: (contentRef: any) => {
-      return Promise.resolve({});
+    get: () => {
+      return Promise.resolve({
+        type: ContentType.IMAGE,
+        contentRef: '/../../assets/logo-sml.svg',
+      });
     },
   }),
 };
