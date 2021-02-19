@@ -1,0 +1,47 @@
+pt-pockets-form {
+  bb-currency-input-ui {
+    label::after {
+      content: '(Optional)';
+      font-weight: normal;
+      @extend .text-muted;
+    }
+  }
+}
+
+.pocket-success-icon{
+  background: url('../../assets/images/check.png') no-repeat center;
+  height: 12rem;
+  width: 12rem;
+  padding: 4rem;
+  background-size: 8rem ;
+}
+
+.make-it-yours-icon{
+  background: url('../../assets/images/piggy-bank.png') no-repeat center;
+  height: 12rem;
+  width: 12rem;
+  padding: 4rem;
+  background-size: 8rem ;
+}
+
+.dollar-input-icon {
+  position: relative;
+}
+.dollar-input-icon::before {
+  content: '$';
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+}
+
+.pockets-tac {
+  overflow: scroll;
+  height: 500px;
+}
+
+.pockets-goal-amount {
+  width: 50%;
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}

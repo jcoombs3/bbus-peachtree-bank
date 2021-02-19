@@ -1,0 +1,28 @@
+<div class="p-3">
+  <div class="mt-3">
+    <bb-header-ui headingType="h2" heading="Choose Your Pocket Name"></bb-header-ui>
+    <div class="make-it-yours-icon shadow mr-4 mb-4 mt-5">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <form [formGroup]="pocketForm">
+        <bb-input-text-ui
+          formControlName="name"
+          label="What's this pocket for?"
+          [required]="true"
+          placeholder='i.e., "Payroll"'
+        ></bb-input-text-ui>
+        <div *ngIf="this.pocketForm.touched && !this.pocketForm.valid" class="bb-input-validation-message">
+          Please enter a name.
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="pt-5 d-flex justify-content-between">
+    <button bbButton type="button" color="link-text" (click)="cancelForm()">Cancel</button>
+    <button bbButton type="button" color="primary" [disabled]="!this.pocketForm.valid" (click)="nextStep()">
+      Continue
+    </button>
+  </div>
+</div>

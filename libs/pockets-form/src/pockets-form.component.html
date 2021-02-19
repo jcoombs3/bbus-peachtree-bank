@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-body">
+    <ng-container *ngIf="currentStep < 5; else pocketReady">
+      <pt-pockets-stepper [currentStep]="currentStep"></pt-pockets-stepper>
+      <pt-make-it-yours *ngIf="currentStep === 1" (next)="nextStep()" (cancel)="cancelForm()"></pt-make-it-yours>
+      <pt-set-your-goal
+        *ngIf="currentStep === 2"
+        (next)="nextStep()"
+        (cancel)="cancelForm()"
+        (back)="previousStep()"
+      ></pt-set-your-goal>
+      <pt-fund-your-pocket
+        *ngIf="currentStep === 3"
+        (next)="nextStep()"
+        (cancel)="cancelForm()"
+        (back)="previousStep()"
+      ></pt-fund-your-pocket>
+      <pt-review-pocket
+        *ngIf="currentStep === 4"
+        (next)="nextStep()"
+        (cancel)="cancelForm()"
+        (back)="previousStep()"
+        (showTac)="openTac()"
+      ></pt-review-pocket>
+    </ng-container>
+    <ng-template #pocketReady>
+      <pt-pocket-ready (viewPocket)="cancelForm()"></pt-pocket-ready>
+    </ng-template>
+  </div>
+</div>
+<pt-tac [showDialog]="showTac" (dialogClosed)="closeTac()"></pt-tac>

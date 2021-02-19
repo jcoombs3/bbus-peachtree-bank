@@ -1,0 +1,27 @@
+<bb-stepper-ui>
+  <bb-stepper-step-ui
+    [isActive]="currentStep >= 1"
+    [isChecked]="currentStep >= 1"
+    [isCurrent]="currentStep === 1"
+    label="Make It Yours"
+  >
+  </bb-stepper-step-ui>
+  <bb-stepper-step-ui
+    [isActive]="currentStep >= 2"
+    [isChecked]="currentStep >= 2"
+    [isCurrent]="currentStep === 2"
+    label="Set Your Goal"
+  >
+  </bb-stepper-step-ui>
+  <bb-stepper-step-ui
+    [isActive]="currentStep >= 3"
+    [isChecked]="currentStep >= 3"
+    [isCurrent]="currentStep === 3"
+    label="Fund Your Pocket"
+  ></bb-stepper-step-ui>
+  <bb-stepper-step-ui
+    [isActive]="currentStep === 4"
+    [isCurrent]="currentStep === 4"
+    label="Review and Create"
+  ></bb-stepper-step-ui>
+</bb-stepper-ui>
