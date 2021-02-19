@@ -157,9 +157,9 @@
                                                                  },
                                                                  {
                                                                     "classId":"TabContainerComponent",
+                                                                    "name":"bb-panel-container-ang-_-62bbb87815d0",
                                                                     "children":[
                                                                        {
-                                                                          "name":"bb-panel-container-ang-_-62bbb87815d0",
                                                                           "classId":"PanelContainerComponent",
                                                                           "title":"Activity",
                                                                           "route":"transactions",
