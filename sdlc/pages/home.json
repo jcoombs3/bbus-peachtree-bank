@@ -244,8 +244,7 @@
                                                             "classId":"PanelContainerComponent",
                                                             "children":[
                                                                {
-                                                                  "classId":"PocketsComponent",
-                                                                  "output.cancel": "router.navigate pockets"
+                                                                  "classId":"PocketsComponent"
                                                                }
                                                             ]
                                                          }

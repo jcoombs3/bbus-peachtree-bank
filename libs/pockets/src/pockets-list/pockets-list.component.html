@@ -1,5 +1,5 @@
 <div>
-  <button [title]="pocket.name + ' ' +'Pocket'" *ngFor='let pocket of pockets' class='pockets-list-item card' (click)='pocketDetails(pocket.id)'>
+  <button  [title]="pocket.name + ' ' +'Pocket'" *ngFor='let pocket of pockets' class='pockets-list-item card mx-0' (click)='pocketDetails(pocket.id)'>
     <div></div>
     <div >
       <h3 class='pocket-name'>{{pocket.name}}</h3>
