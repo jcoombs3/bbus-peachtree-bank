@@ -40,7 +40,7 @@ export class UserIdentitySecurityCenterWidgetExtendedComponent implements OnInit
 
   getForm(form: FormGroup) {
     this.formSubject.next(form);
-    this.formSubject.pipe(take(1)).subscribe((form) => {
+    this.form = this.formSubject.pipe(take(1)).subscribe((form) => {
       form.controls.inputNewPassword.setValidators([Validators.minLength(6), lowerCase(), digit(), upperCase()]);
     });
   }
@@ -50,6 +50,8 @@ export class UserIdentitySecurityCenterWidgetExtendedComponent implements OnInit
   }
 
   ngOnDestroy() {
-    this.form.unsubscribe();
+    if (this.form) {
+      this.form.unsubscribe();
+    }
   }
 }
