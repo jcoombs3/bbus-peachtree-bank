@@ -317,7 +317,28 @@
                                             "title":"Personal Info",
                                             "cssClasses":"container",
                                             "route":"personal-info",
-                                            "navIcon":"book"
+                                            "navIcon":"book",
+                                            "children":[
+                                              {
+                                                "name":"bb-heading-widget-ang-_-e5629c44",
+                                                "classId":"HeadingWidgetComponent",
+                                                "buttonClasses":"btn btn-primary w-auto bb-button bb-button--xs-hide-text m-0",
+                                                "buttonTitle":"Change Password",
+                                                "customClassName":"px-0 flex-row align-items-center",
+                                                "heading":"Personal Info",
+                                                "headingType":"h1",
+                                                "iconClasses":"edit",
+                                                "output.buttonAction":"router.navigate self-service/password"
+                                             },
+                                              {
+                                                "classId":"PanelContainerComponent",
+                                                "children":[
+                                                  {
+                                                    "classId":"UserManageProfileWidgetExtendedComponent"
+                                                  }
+                                                ]
+                                              }
+                                            ]
                                          },
                                          {
                                             "classId":"PanelContainerComponent",

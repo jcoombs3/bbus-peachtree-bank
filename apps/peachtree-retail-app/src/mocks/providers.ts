@@ -15,8 +15,6 @@ import {
   ServiceAgreementHttpServiceMocksProvider,
   ServiceAgreementsHttpServiceMocksProvider,
 } from '@backbase/data-ang/accesscontrol';
-import { IdentityManagementServiceMocksProvider } from '@backbase/data-ang/user';
-import { AuthorizedUserServiceMocksProvider } from '@backbase/data-ang/authorized-users';
 
 const userMockProvider = createMocks([
   {
@@ -38,6 +36,71 @@ const userMockProvider = createMocks([
   },
 ]);
 
+const userProfileMockProvider = createMocks([
+  {
+    urlPattern: '/client-api/v2/users/me/profile',
+    method: 'GET',
+    responses: [
+      {
+        status: 200,
+        body: {
+          fullName: 'Mila Example',
+          'phone-addresses': [
+            {
+              key: 'cb7653b5-31b2-481d-b9b5-aa4b415c96e1',
+              type: 'MOBILE',
+              primary: true,
+              number: '07717 371949',
+            },
+            {
+              key: 'cb7653b5-31b2-481d-b9b5-aa4b415c96e2',
+              type: 'LAND_LINE',
+              primary: false,
+              number: '02920 671937',
+            },
+          ],
+          'electronic-addresses': [
+            {
+              key: 'cb7653b5-31b2-481d-b9b5-aa4b415c96e1',
+              type: 'E_MAIL',
+              primary: true,
+              address: 'test@tester.com',
+            },
+            {
+              key: 'cb7653b5-31b2-481d-b9b5-aa4b415c96e2',
+              type: 'PERSONAL',
+              primary: false,
+              address: 'test_personal@tester.com',
+            },
+          ],
+          'postal-addresses': [
+            {
+              key: 'cb7653b5-31b2-481d-b9b5-aa4b415c96e1',
+              type: 'BUSINESS',
+              primary: false,
+              addressLine: 'The Bonded Warehouse',
+              streetName: 'Atlantic Wharf',
+              townName: 'Cardiff',
+              postalCode: 'CF10 4HE',
+              country: 'GB',
+            },
+            {
+              key: 'cb7653b5-31b2-481d-b9b5-aa4b415c96e2',
+              type: 'HOME',
+              primary: true,
+              addressLine: '2 Hertsmere Rd',
+              streetName: 'Canary Wharf',
+              townName: 'London',
+              postalCode: 'E14 4AB ',
+              country: 'GB',
+            },
+          ],
+        },
+      },
+    ],
+  },
+]);
+
 export const mockProviders: Array<Provider> = [
   createMocksInterceptor(),
   userMockProvider,
@@ -50,6 +113,5 @@ export const mockProviders: Array<Provider> = [
   ServiceAgreementHttpServiceMocksProvider,
   ServiceAgreementsHttpServiceMocksProvider,
   NotificationsHttpServiceMocksProvider,
-  IdentityManagementServiceMocksProvider,
-  AuthorizedUserServiceMocksProvider,
+  userProfileMockProvider,
 ];
