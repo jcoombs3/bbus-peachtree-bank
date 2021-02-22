@@ -274,6 +274,40 @@
           }
         }
       }
+    },
+    "user-manage-profile-widget-extended": {
+      "root": "libs/user-manage-profile-widget-extended",
+      "sourceRoot": "libs/user-manage-profile-widget-extended/src",
+      "projectType": "library",
+      "prefix": "pt",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/user-manage-profile-widget-extended/test.ts",
+            "karmaConfig": "./karma.conf.js",
+            "polyfills": "apps/peachtree-retail-app/src/polyfills.ts",
+            "tsConfig": "./tsconfig.spec.json",
+            "environment": "dev",
+            "codeCoverage": true,
+            "codeCoverageExclude": [
+              "test.ts",
+              "**/polyfills.ts"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "files": [
+              "libs/user-manage-profile-widget-extended/**/*.ts"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
