@@ -345,7 +345,24 @@
                                             "title":"Password",
                                             "cssClasses":"container",
                                             "route":"password",
-                                            "navIcon":"https"
+                                            "navIcon":"https",
+                                            "children":[
+                                              {
+                                                "name":"bb-heading-widget-ang-_-e5629c44",
+                                                "classId":"HeadingWidgetComponent",
+                                                "customClassName":"px-0 flex-row align-items-center",
+                                                "heading":"Password",
+                                                "headingType":"h1"
+                                             },
+                                              {
+                                                "classId":"PanelContainerComponent",
+                                                "children":[
+                                                  {
+                                                    "classId":"UserIdentitySecurityCenterWidgetExtendedComponent"
+                                                  }
+                                                ]
+                                              }
+                                            ]
                                          }
                                       ]
                                    }

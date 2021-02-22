@@ -24,6 +24,7 @@ import { PocketsModule } from '@peachtree/pockets';
 import { PocketsFormModule } from '@peachtree/pockets-form';
 import { PocketsDetailsModule } from '@peachtree/pockets-details';
 import { UserManageProfileWidgetExtendedModule } from '@peachtree/user-manage-profile-widget-extended';
+import { UserIdentitySecurityCenterWidgetExtendedModule } from '@peachtree/user-identity-security-center-widget-extended';
 
 @NgModule({
   declarations: [AppComponent],
@@ -51,6 +52,7 @@ import { UserManageProfileWidgetExtendedModule } from '@peachtree/user-manage-pr
     PocketsFormModule,
     PocketsDetailsModule,
     UserManageProfileWidgetExtendedModule,
+    UserIdentitySecurityCenterWidgetExtendedModule,
   ],
   providers: [...(environment.mockProviders || [])],
   bootstrap: [AppComponent],
