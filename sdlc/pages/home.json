@@ -6,7 +6,6 @@
         "area":"0",
         "children":[
            {
-              "name":"bb-layout-container-flex-ang-_-0e8ba1345fa6",
               "classId":"LayoutContainerComponent",
               "navigationType":"horizontal",
               "children":[
@@ -67,7 +66,7 @@
                        {
                           "classId":"MegaMenuNavigationContainerComponent",
                           "displayDescription":"false",
-                          "mainContainer":"pt-deck-container-ang-_-48a2b14d9c5f",
+                          "mainContainer":"bb-deck-container-ang-_-48a2b14d9c5f",
                           "children":[
 
                           ]
@@ -87,7 +86,7 @@
                     "children":[
                        {
                           "classId":"DeckContainerComponent",
-                          "name":"pt-deck-container-ang-_-48a2b14d9c5f",
+                          "name":"bb-deck-container-ang-_-48a2b14d9c5f",
                           "children":[
                              {
                                 "classId":"PanelContainerComponent",
@@ -165,7 +164,6 @@
                                                                           "route":"transactions",
                                                                           "children":[
                                                                              {
-                                                                                "name":"bb-panel-container-ang-_-1110696cec5a",
                                                                                 "classId":"PanelContainerComponent",
                                                                                 "cssClasses":"d-block mt-3",
                                                                                 "children":[
@@ -177,13 +175,11 @@
                                                                           ]
                                                                        },
                                                                        {
-                                                                          "name":"bb-panel-container-ang-_-0405eea48a69",
                                                                           "classId":"PanelContainerComponent",
                                                                           "title":"Account Info",
                                                                           "route":"details",
                                                                           "children":[
                                                                              {
-                                                                                "name":"bb-panel-container-ang-_-95baf9a60c85",
                                                                                 "classId":"PanelContainerComponent",
                                                                                 "cssClasses":"d-block mt-3",
                                                                                 "children":[
@@ -230,7 +226,6 @@
                                                         "route":"list",
                                                         "children":[
                                                            {
-                                                              "name":"bb-heading-widget-ang-_-e5629c44",
                                                               "classId":"HeadingWidgetComponent",
                                                               "buttonClasses":"btn btn-primary w-auto bb-button bb-button--xs-hide-text m-0",
                                                               "buttonTitle":"New Pocket",
@@ -320,7 +315,6 @@
                                             "navIcon":"book",
                                             "children":[
                                               {
-                                                "name":"bb-heading-widget-ang-_-e5629c44",
                                                 "classId":"HeadingWidgetComponent",
                                                 "buttonClasses":"btn btn-primary w-auto bb-button bb-button--xs-hide-text m-0",
                                                 "buttonTitle":"Change Password",
@@ -348,7 +342,6 @@
                                             "navIcon":"https",
                                             "children":[
                                               {
-                                                "name":"bb-heading-widget-ang-_-e5629c44",
                                                 "classId":"HeadingWidgetComponent",
                                                 "customClassName":"px-0 flex-row align-items-center",
                                                 "heading":"Password",

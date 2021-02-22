@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog totalSize="1">
+    <feature>
+        <name>ext-pt-page-loader</name>
+        <tags>
+            <tag type="regular">web-sdk</tag>
+        </tags>
+        <properties>
+            <property name="web-sdk-version" label="Web-SDK Version" readonly="true" viewHint="designModeOnly">
+          <value type="string">1.15.2</value>
+        </property>
+            <property label="Title" name="title" viewHint="text-input,admin" type="string">
+                <value type="string">PT Lean Page Fragments Extention</value>
+            </property>
+            <property name="version" label="Version" readonly="true" viewHint="designModeOnly">
+                <value type="string">1.0.88</value>
+            </property>
+        </properties>
+    </feature>
+</catalog>

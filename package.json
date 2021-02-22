@@ -19,7 +19,8 @@
     "api:check": "bb-ang check-api",
     "api:extract": "bb-ang extract-api",
     "create-experience:retail": "npx sdlc package sdlc/experience.json",
-    "bundle-home-page:retail": "sdlc convert-from sdlc/experience.json sdlc/pages/home.json -l silent --remove-defaults false -o dist/apps/peachtree-retail-app/page-model-mock.json"
+    "bundle-home-page:retail": "sdlc convert-from sdlc/experience.json sdlc/pages/home.json -l silent --remove-defaults false -o dist/apps/peachtree-retail-app/page-model-mock.json",
+    "package:prebuilt": "bb-package project ./prebuilt --prebuilt=prebuilt --output=collections/collection-pt-prebuilt.zip"
   },
   "private": true,
   "dependencies": {

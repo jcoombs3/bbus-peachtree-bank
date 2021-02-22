@@ -7,7 +7,7 @@
   ],
   "properties":{
      "AccessDeniedPage":"peachtree-retail-app/login?error=accessdenied",
-     "DefaultLandingPage":"peachtree-retail-app/select-context",
+     "DefaultLandingPage":"peachtree-retail-app",
      "ErrorPage":"peachtree-retail-app/error",
      "LoginPage":"peachtree-retail-app/login",
      "thumbnailUrl":"/Peachtree Retail App/"
@@ -18,10 +18,21 @@
   "cxSources":[
      "node_modules/@backbase",
      "dist/provisioning-packages/cx6/peachtree-retail-app.zip",
-     "collections/collection-bb-web-sdk-1.15.2.zip"
+     "collections/collection-bb-web-sdk-1.15.2.zip",
+     "collections/collection-pt-prebuilt.zip"
   ],
   "environments":{
      "default":{
+          "authorization": {
+          "authUrl": "http://localhost:8180/auth",
+          "clientId": "bb-web-client",
+          "scope": "openid",
+          "kind": "hybrid",
+          "realm": "backbase",
+          "landingPageUrl": "peachtree-retail-app",
+          "loginPageUrl": "peachtree-retail-app/login",
+          "maxInactivityDuration": 300
+        },
         "provisioning":{
            "type":"cx",
            "permissions":{
@@ -39,7 +50,8 @@
                  "ROLE_group_master page designer":"ADMIN"
               }
            },
-           "outputDir":"experience"
+           "outputDir":"experience",
+           "forcedIncludes": ["ext-pt-page-loader"]
         }
      }
   },
@@ -77,17 +89,16 @@
            }
         },
         {
-           "section":"login",
-           "friendlyUrl":"peachtree-retail-app/login",
-           "title":"Login",
-           "permission":"anonymousConsumer",
-           "page":{
-              "extends":"LeanMasterPage",
-              "title":"Login",
-              "children":[
-
-              ]
-           }
+          "section": "login",
+          "friendlyUrl": "peachtree-retail-app/login",
+          "title": "Login",
+          "permission": "anonymousConsumer",
+          "page": {
+            "extends": "LeanMasterPage",
+            "title": "Login",
+            "extensionPageDefaultName": "ext-pt-page-loader",
+            "children": []
+          }
         }
      ],
      "main":[
@@ -95,7 +106,7 @@
            "section":"index",
            "friendlyUrl":"peachtree-retail-app",
            "title":"Home",
-           "permission":"anonymousConsumer",
+           "permission":"userConsumer",
            "page":{
               "extends":"LeanMasterPage",
               "title":"Home",
