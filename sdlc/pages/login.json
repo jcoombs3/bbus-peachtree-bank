@@ -1,0 +1,10 @@
+{
+  "extends": "container-bb-manageable-area",
+  "children": [
+    {
+      "extends":"pt-peachtree-retail-app-ang",
+			"area": "0",
+			"children": []
+    }
+  ]
+}

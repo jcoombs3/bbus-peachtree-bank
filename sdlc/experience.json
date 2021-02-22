@@ -18,7 +18,8 @@
   "cxSources":[
      "node_modules/@backbase",
      "dist/provisioning-packages/cx6/peachtree-retail-app.zip",
-     "collections/collection-bb-web-sdk-1.15.2.zip"
+     "collections/collection-bb-web-sdk-1.15.2.zip",
+     "collections/collection-pt-prebuilt.zip"
   ],
   "environments":{
      "default":{
@@ -49,7 +50,8 @@
                  "ROLE_group_master page designer":"ADMIN"
               }
            },
-           "outputDir":"experience"
+           "outputDir":"experience",
+           "forcedIncludes": ["ext-pt-page-loader"]
         }
      }
   },
@@ -87,17 +89,16 @@
            }
         },
         {
-           "section":"login",
-           "friendlyUrl":"peachtree-retail-app/login",
-           "title":"Login",
-           "permission":"anonymousConsumer",
-           "page":{
-              "extends":"LeanMasterPage",
-              "title":"Login",
-              "children":[
-
-              ]
-           }
+          "section": "login",
+          "friendlyUrl": "peachtree-retail-app/login",
+          "title": "Login",
+          "permission": "anonymousConsumer",
+          "page": {
+            "extends": "LeanMasterPage",
+            "title": "Login",
+            "extensionPageDefaultName": "ext-pt-page-loader",
+            "children": []
+          }
         }
      ],
      "main":[
