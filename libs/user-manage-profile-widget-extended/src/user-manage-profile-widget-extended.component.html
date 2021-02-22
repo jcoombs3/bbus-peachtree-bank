@@ -1,0 +1,80 @@
+<bb-user-manage-profile-widget></bb-user-manage-profile-widget>
+
+<ng-template bbUserManageWidgetCustomizable let-hostRef>
+  <section>
+    <bb-loading-indicator-ui
+      *ngIf="hostRef.loadingState"
+      i18n-text="User Profile loading message|Message for when the user profile is loading@@bb-user-manage-profile.bb-loading-indicator-ui"
+      text="Loading...">
+    </bb-loading-indicator-ui>
+
+    <bb-common-error-state-ui
+      *ngIf="hostRef.loadingErrorState"
+      class="bb-state-container"
+      [error]="hostRef.loadingError"
+      data-role="user-manage-profile-error-state">
+    </bb-common-error-state-ui>
+
+    <div *ngIf="!hostRef.loadingState && !hostRef.loadingErrorState && hostRef.userProfile">
+      <ng-container *ngIf="hostRef.widgetPreferences | async; let preferences">
+        <ng-container bbUserManageWidgetTitleCustomizable
+          [bbHostRef]="hostRef">
+        </ng-container>
+        <div class="card mb-4">
+          <div class="card-body">
+            <bb-header-ui
+            headingType="h3"
+            heading="Bank Branch">
+          </bb-header-ui>
+          <div class="mt-4">Peachtree Bank Location A</div>
+          <div>10 10th St NE</div>
+          <div>Atlanta, GA 30309</div>
+          <hr>
+          <div>Member since 01/01/2021</div>
+          </div>
+        </div>
+        <div>
+          <div class="bb-block bb-block--xl">
+            <bb-user-manage-email-addresses
+              [emailAddresses]="hostRef.userProfile['electronic-addresses']"
+              (updateProfile)="hostRef.refreshProfileData()"
+              (manageEmail)="hostRef.handleManageAddressOpen()"
+              (cancelManageEmail)="hostRef.handleManageAddressClose()"
+              [disableManage]="hostRef.disableAddressManaging">
+            </bb-user-manage-email-addresses>
+          </div>
+          <div class="bb-block bb-block--xl">
+            <bb-user-manage-phone-numbers
+              [phoneNumbers]="hostRef.userProfile['phone-addresses']"
+              (updateProfile)="hostRef.refreshProfileData()"
+              (managePhoneNumber)="hostRef.handleManageAddressOpen()"
+              (cancelManagePhoneNumber)="hostRef.handleManageAddressClose()"
+              [disableManage]="hostRef.disableAddressManaging">
+            </bb-user-manage-phone-numbers>
+          </div>
+          <div class="bb-block bb-block--xl">
+            <bb-user-manage-postal-addresses
+              [postalAddresses]="hostRef.userProfile['postal-addresses']"
+              (updateProfile)="hostRef.refreshProfileData()"
+              (managePostalAddress)="hostRef.handleManageAddressOpen()"
+              (cancelManagePostalAddress)="hostRef.handleManageAddressClose()"
+              [disableManage]="hostRef.disableAddressManaging">
+            </bb-user-manage-postal-addresses>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </section>
+</ng-template>
+
+
+
+<ng-template bbUserManageWidgetTitleCustomizable let-hostRef>
+  <div class="bb-block bb-block--md mt-2">
+    <bb-header-ui
+      headingType="h2"
+      data-role="user-manage-profile-user-name"
+      [heading]="hostRef.userProfile.fullName">
+    </bb-header-ui>
+  </div>
+</ng-template>

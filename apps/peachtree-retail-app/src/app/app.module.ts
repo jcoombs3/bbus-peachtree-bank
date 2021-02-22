@@ -23,6 +23,7 @@ import { NotificationsBadgeWidgetModule } from '@backbase/retail-ang/notificatio
 import { PocketsModule } from '@peachtree/pockets';
 import { PocketsFormModule } from '@peachtree/pockets-form';
 import { PocketsDetailsModule } from '@peachtree/pockets-details';
+import { UserManageProfileWidgetExtendedModule } from '@peachtree/user-manage-profile-widget-extended';
 
 @NgModule({
   declarations: [AppComponent],
@@ -49,6 +50,7 @@ import { PocketsDetailsModule } from '@peachtree/pockets-details';
     PocketsModule,
     PocketsFormModule,
     PocketsDetailsModule,
+    UserManageProfileWidgetExtendedModule,
   ],
   providers: [...(environment.mockProviders || [])],
   bootstrap: [AppComponent],
