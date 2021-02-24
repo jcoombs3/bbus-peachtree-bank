@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="bb-user-identity-security-center-widget.bb-header-ui" datatype="html">
+        <source>Change Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Header for changing a users password</note>
+      </trans-unit>
+      <trans-unit id="bb-user-identity-security-center-widget.current-password-description" datatype="html">
+        <source> To change your password, we must verify your current one first. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+        <note priority="1" from="description">Label for current password description</note>
+      </trans-unit>
+      <trans-unit id="bb-user-identity-security-center-widget.current-password-input-label" datatype="html">
+        <source>Current password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Label text for current password input</note>
+        <note priority="1" from="meaning">Current password input label</note>
+      </trans-unit>
+      <trans-unit id="bb-user-identity-security-center-widget.new-password-input-label" datatype="html">
+        <source>New password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <note priority="1" from="description">Label text for new password input</note>
+        <note priority="1" from="meaning">New password input label</note>
+      </trans-unit>
+      <trans-unit id="bb-user-identity-security-center-widget.confirm-password-input-label" datatype="html">
+        <source>Confirm new password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <note priority="1" from="description">Label text for confirm password input</note>
+        <note priority="1" from="meaning">Confirm password input label</note>
+      </trans-unit>
+      <trans-unit id="bb-user-identity-security-center-widget.change-password-button-text" datatype="html">
+        <source> Change Password </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">105,106</context>
+        </context-group>
+        <note priority="1" from="description">Text for change password button</note>
+        <note priority="1" from="meaning">Change password button</note>
+      </trans-unit>
+      <trans-unit id="bb-user-identity-security-center-widget.cancel-password-button-text" datatype="html">
+        <source> Cancel </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">116,117</context>
+        </context-group>
+        <note priority="1" from="description">Text for cancel password button</note>
+        <note priority="1" from="meaning">Cancel password button</note>
+      </trans-unit>
+      <trans-unit id="bb-user-identity-security-center-widget.current-password-blank-error-message" datatype="html">
+        <source> You must enter your current password </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+        <note priority="1" from="description">Error message requiring password for current password field</note>
+        <note priority="1" from="meaning">Error message for blank current password field</note>
+      </trans-unit>
+      <trans-unit id="bb-user-identity-security-center-widget.new-password-blank-error-message" datatype="html">
+        <source> You must enter a new password </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+        <note priority="1" from="description">Error message requiring password for new password field</note>
+        <note priority="1" from="meaning">Error message for blank new password field</note>
+      </trans-unit>
+      <trans-unit id="bb-user-identity-security-center-widget.new-password-unique-error-message" datatype="html">
+        <source> New password must be different to current password </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+        <note priority="1" from="description">Error message requiring unique password for new password field</note>
+        <note priority="1" from="meaning">Error message for current password matching new password field</note>
+      </trans-unit>
+      <trans-unit id="bb-user-identity-security-center-widget.confirm-password-mismatch-error-message" datatype="html">
+        <source> Passwords don&apos;t match </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+        <note priority="1" from="description">Error message for mismatch passwords for confirm new password field</note>
+        <note priority="1" from="meaning">Error message for mismatch passwords</note>
+      </trans-unit>
+      <trans-unit id="bb-user-identity-security-center-widget.confirm-password-blank-error-message" datatype="html">
+        <source> You must re-type your new password </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+        <note priority="1" from="description">Error message for blank password for confirm new password field</note>
+        <note priority="1" from="meaning">Error message for blank password</note>
+      </trans-unit>
+      <trans-unit id="bb-user-identity-security-center-widget.password-form-text" datatype="html">
+        <source> Your new password must contain: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">129,130</context>
+        </context-group>
+        <note priority="1" from="description">Text for password form description</note>
+      </trans-unit>
+      <trans-unit id="b2e621b26c2d5788bbebe06b4ee15950d119b2ce" datatype="html">
+        <source> A minimum of 6 characters <x id="START_TAG_BB_ICON_UI" equiv-text="&lt;bb-icon-ui
+        name=&quot;check&quot;
+        size=&quot;sm&quot;
+        [color]=&quot;!hostRef.form.controls.inputNewPassword.errors?.minlength &amp;&amp; (hostRef.form.controls.inputNewPassword.value.length &gt; 0) ? &apos;success&apos; : &apos;danger&apos;&quot;
+        backgroundType=&quot;circle&quot;
+        &gt;&lt;/bb-icon-ui&gt;"/><x id="CLOSE_TAG_BB_ICON_UI" equiv-text="&lt;/bb-icon-ui&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">134,140</context>
+        </context-group>
+        <note priority="1" from="description">Text for minimum length password policy bullet point@bb-user-identity-security-center-widget.password-form-policy-length</note>
+      </trans-unit>
+      <trans-unit id="ae73fbf9b43a8fbfee4d5f2dcba8d4573fd31bae" datatype="html">
+        <source> At least one UPPERCASE letter <x id="START_TAG_BB_ICON_UI" equiv-text="&lt;bb-icon-ui
+        name=&quot;check&quot;
+        size=&quot;sm&quot;
+        [color]=&quot;!hostRef.form.controls.inputNewPassword.errors?.upperCase &amp;&amp; (hostRef.form.controls.inputNewPassword.value.length &gt; 0) ? &apos;success&apos; : &apos;danger&apos;&quot;
+        backgroundType=&quot;circle&quot;
+        &gt;&lt;/bb-icon-ui&gt;"/><x id="CLOSE_TAG_BB_ICON_UI" equiv-text="&lt;/bb-icon-ui&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">144,150</context>
+        </context-group>
+        <note priority="1" from="description">Text for uppercase password policy bullet point@bb-user-identity-security-center-widget.password-form-policy-uppercase</note>
+      </trans-unit>
+      <trans-unit id="fe04155e74efc08e7711b6ca01dfb198bc07a85e" datatype="html">
+        <source> At least one lowercase letter <x id="START_TAG_BB_ICON_UI" equiv-text="&lt;bb-icon-ui
+        name=&quot;check&quot;
+        size=&quot;sm&quot;
+        [color]=&quot;!hostRef.form.controls.inputNewPassword.errors?.lowerCase&amp;&amp; (hostRef.form.controls.inputNewPassword.value.length &gt; 0) ? &apos;success&apos; : &apos;danger&apos;&quot;
+        backgroundType=&quot;circle&quot;
+        &gt;&lt;/bb-icon-ui&gt;"/><x id="CLOSE_TAG_BB_ICON_UI" equiv-text="&lt;/bb-icon-ui&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">154,160</context>
+        </context-group>
+        <note priority="1" from="description">Text for lowercase password policy bullet point@bb-user-identity-security-center-widget.password-form-policy-lowecase</note>
+      </trans-unit>
+      <trans-unit id="398fd3da8b8d50b3f25c5d64bf8765ac16441ee8" datatype="html">
+        <source> At least one digit <x id="START_TAG_BB_ICON_UI" equiv-text="&lt;bb-icon-ui
+        name=&quot;check&quot;
+        size=&quot;sm&quot;
+        [color]=&quot;!hostRef.form.controls.inputNewPassword.errors?.digit &amp;&amp; (hostRef.form.controls.inputNewPassword.value.length &gt; 0) ? &apos;success&apos; : &apos;danger&apos;&quot;
+        backgroundType=&quot;circle&quot;
+        &gt;&lt;/bb-icon-ui&gt;"/><x id="CLOSE_TAG_BB_ICON_UI" equiv-text="&lt;/bb-icon-ui&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">164,170</context>
+        </context-group>
+        <note priority="1" from="description">Text for lowercase password policy bullet point@bb-user-identity-security-center-widget.password-form-policy-lowecase</note>
+      </trans-unit>
+      <trans-unit id="bb-user-identity-security-center-widget.home-password-label" datatype="html">
+        <source> Password </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">191,192</context>
+        </context-group>
+        <note priority="1" from="description">Password list item label text</note>
+      </trans-unit>
+      <trans-unit id="bb-user-identity-security-center-widget.change-button-aria-label" datatype="html">
+        <source>Change My Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">199</context>
+        </context-group>
+        <note priority="1" from="description">Password change button aria label</note>
+      </trans-unit>
+      <trans-unit id="bb-user-identity-security-center-widget.change-button-text" datatype="html">
+        <source> Change </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-identity-security-center-widget-extended/src/user-identity-security-center-widget-extended.component.html</context>
+          <context context-type="linenumber">203,204</context>
+        </context-group>
+        <note priority="1" from="description">Password change button text</note>
+      </trans-unit>
+      <trans-unit id="bb-user-manage-profile.bb-loading-indicator-ui" datatype="html">
+        <source>Loading...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/user-manage-profile-widget-extended/src/user-manage-profile-widget-extended.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Message for when the user profile is loading</note>
+        <note priority="1" from="meaning">User Profile loading message</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
