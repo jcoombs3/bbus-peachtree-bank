@@ -1,9 +1,10 @@
-import { AfterContentInit, AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AbstractControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { ManageProfilePreferencesService, UserDataService } from '@backbase/user-common';
-import { BehaviorSubject, ReplaySubject, Subject, Subscription } from 'rxjs';
-import { take, takeUntil } from 'rxjs/operators';
+import { BehaviorSubject, Subscription } from 'rxjs';
+import { take } from 'rxjs/operators';
 
+/* tslint:disable */
 function lowerCase(): ValidatorFn {
   return (control: AbstractControl): { [key: string]: any } | null => {
     if (control.value) {
@@ -23,6 +24,7 @@ function digit(): ValidatorFn {
   return (control: AbstractControl): { [key: string]: any } | null =>
     /.*\d.*/.test(control.value) ? null : { digit: control.value };
 }
+/* tslint:enable */
 
 @Component({
   selector: 'pt-user-identity-security-center-widget-extended',
@@ -33,15 +35,15 @@ function digit(): ValidatorFn {
 export class UserIdentitySecurityCenterWidgetExtendedComponent implements OnInit, OnDestroy {
   constructor() {}
 
-  private formSubject = new BehaviorSubject<any>(null);
+  private formSubject = new BehaviorSubject<any>(undefined);
   form!: Subscription;
 
   ngOnInit(): void {}
 
-  getForm(form: FormGroup) {
-    this.formSubject.next(form);
-    this.form = this.formSubject.pipe(take(1)).subscribe((form) => {
-      form.controls.inputNewPassword.setValidators([Validators.minLength(6), lowerCase(), digit(), upperCase()]);
+  getForm(hostForm: FormGroup) {
+    this.formSubject.next(hostForm);
+    this.form = this.formSubject.pipe(take(1)).subscribe((f) => {
+      f.controls.inputNewPassword.setValidators([Validators.minLength(6), lowerCase(), digit(), upperCase()]);
     });
   }
 

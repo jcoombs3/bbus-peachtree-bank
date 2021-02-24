@@ -29,7 +29,7 @@ export const mockPockets = [
   },
   {
     id: '2b',
-    goal: null,
+    goal: undefined,
     funds: 0,
     name: 'Savings',
   },
@@ -58,7 +58,7 @@ export class PocketsDetailsComponent implements OnInit {
   pockets: object[] = mockPockets;
   selectedPocket: any;
   pocket: any;
-  loading: boolean = false;
+  loading = false;
 
   @Input() pocketId = '';
 
@@ -77,8 +77,7 @@ export class PocketsDetailsComponent implements OnInit {
   }
 
   getProgress(id: string) {
-    //@ts-ignore
-    let progress = Math.ceil((this.pocket.funds / this.pocket.goal) * 100);
+    const progress = Math.ceil((this.pocket.funds / this.pocket.goal) * 100);
     return progress > 100 ? 100 : progress;
   }
 
