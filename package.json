@@ -21,7 +21,7 @@
     "create-experience:retail": "npx sdlc package sdlc/experience.json",
     "bundle-home-page:retail": "sdlc convert-from sdlc/experience.json sdlc/pages/home.json -l silent --remove-defaults false -o dist/apps/peachtree-retail-app/page-model-mock.json",
     "package:prebuilt": "bb-package project ./prebuilt --prebuilt=prebuilt --output=collections/collection-pt-prebuilt.zip",
-    "create-translations": "ng xi18n --ivy && xliffmerge"
+    "create-translations": "ng xi18n && xliffmerge"
   },
   "private": true,
   "dependencies": {

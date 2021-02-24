@@ -1,13 +1,20 @@
 <div>
-  <button  [title]="pocket.name + ' ' +'Pocket'" *ngFor='let pocket of pockets' class='pockets-list-item card mx-0' (click)='pocketDetails(pocket.id)'>
+  <button
+    [title]="pocket.name + ' ' + 'Pocket'"
+    *ngFor="let pocket of pockets"
+    class="pockets-list-item card mx-0"
+    (click)="pocketDetails(pocket.id)"
+  >
     <div></div>
-    <div >
-      <h3 class='pocket-name'>{{pocket.name}}</h3>
-      <h3 class='pocket-amount'>${{pocket.funds}} <span *ngIf='pocket.goal'>/${{pocket.goal}}</span></h3>
-      <p *ngIf='!pocket.goal'>Set an amount and due date to better keep track of your progress.</p>
-      <div *ngIf='pocket.goal' class='pocket-item-progress' [ngClass]='{"completed": getProgress(pocket.id) >= 100}'>
-        <div class='pocket-progress-scale'><div [ngStyle]="{'width': getProgress(pocket.id) + '%'}"></div></div>
-        <span>{{getProgress(pocket.id)}}% completed</span>
+    <div>
+      <h3 class="pocket-name">{{ pocket.name }}</h3>
+      <h3 class="pocket-amount">
+        ${{ pocket.funds }} <span *ngIf="pocket.goal">/${{ pocket.goal }}</span>
+      </h3>
+      <p *ngIf="!pocket.goal">Set an amount and due date to better keep track of your progress.</p>
+      <div *ngIf="pocket.goal" class="pocket-item-progress" [ngClass]="{ completed: getProgress(pocket.id) >= 100 }">
+        <div class="pocket-progress-scale"><div [ngStyle]="{ width: getProgress(pocket.id) + '%' }"></div></div>
+        <span>{{ getProgress(pocket.id) }}% completed</span>
       </div>
     </div>
   </button>
