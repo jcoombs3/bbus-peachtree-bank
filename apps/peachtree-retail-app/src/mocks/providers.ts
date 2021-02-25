@@ -1,6 +1,7 @@
 import { Provider } from '@angular/core';
 import {
   ProductSummaryHttpServiceMocksProvider,
+  AccountsHttpServiceMocksProvider,
   ArrangementsHttpServiceMocksProvider,
 } from '@backbase/data-ang/arrangements';
 import { createMocks, createMocksInterceptor } from '@backbase/foundation-ang/data-http';
@@ -114,4 +115,5 @@ export const mockProviders: Array<Provider> = [
   ServiceAgreementsHttpServiceMocksProvider,
   NotificationsHttpServiceMocksProvider,
   userProfileMockProvider,
+  AccountsHttpServiceMocksProvider,
 ];

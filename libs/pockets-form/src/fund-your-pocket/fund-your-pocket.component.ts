@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { take, takeUntil } from 'rxjs/operators';
@@ -10,7 +10,7 @@ import { Pocket } from '../pocket.interface';
   selector: 'pt-fund-your-pocket',
   templateUrl: 'fund-your-pocket.component.html',
 })
-export class FundYourPocketComponent implements OnInit {
+export class FundYourPocketComponent implements OnInit, OnDestroy {
   @Output() next = new EventEmitter();
   @Output() cancel = new EventEmitter();
   @Output() back = new EventEmitter();
@@ -22,9 +22,9 @@ export class FundYourPocketComponent implements OnInit {
     currency: 'USD',
   });
 
-  selectedAccount: any = null;
+  selectedAccount: any = undefined;
 
-  account: any = null;
+  account: any = undefined;
 
   constructor(private pocketsFormService: PocketsFormService) {}
   destroy$ = new Subject();
@@ -42,7 +42,6 @@ export class FundYourPocketComponent implements OnInit {
   }
 
   onChange($event: any) {
-    const count = Array.isArray($event) ? $event.length : $event ? 1 : 0;
     this.account = {
       account: {
         id: $event.id,

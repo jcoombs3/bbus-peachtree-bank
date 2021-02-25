@@ -21,7 +21,7 @@ export class ReviewPocketComponent {
 
   pocketForm$ = this.pocketsFormService.pocketForm$;
 
-  tac = new FormControl(null, Validators.required);
+  tac = new FormControl(undefined, Validators.required);
 
   openTac() {
     this.showTac.emit();

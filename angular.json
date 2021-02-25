@@ -5,6 +5,12 @@
   "projects": {
     "peachtree-retail-app": {
       "projectType": "application",
+      "i18n": {
+        "locales": {
+          "es-MX": "apps/peachtree-retail-app/src/locale/messages.es-MX.xlf"
+        },
+        "sourceLocale": "en-US"
+      },
       "schematics": {
         "@schematics/angular:component": {
           "inlineTemplate": true,
@@ -40,6 +46,7 @@
         "build": {
           "builder": "@bb-cli/bb-ang:browser",
           "options": {
+            "localize": true,
             "outputPath": "dist/peachtree-retail-app",
             "index": "apps/peachtree-retail-app/src/index.html",
             "main": "apps/peachtree-retail-app/src/main.ts",
@@ -55,9 +62,7 @@
               "apps/peachtree-retail-app/src/favicon.ico",
               "apps/peachtree-retail-app/src/assets"
             ],
-            "styles": [
-              "themes/peachtree/scss/main.scss"
-            ],
+            "styles": ["themes/peachtree/scss/main.scss"],
             "scripts": []
           },
           "configurations": {
@@ -125,10 +130,7 @@
             "tsConfig": "apps/peachtree-retail-app/src/../../../tsconfig.spec.json",
             "environment": "dev",
             "codeCoverage": true,
-            "codeCoverageExclude": [
-              "test.ts",
-              "**/polyfills.ts"
-            ]
+            "codeCoverageExclude": ["test.ts", "**/polyfills.ts"]
           }
         },
         "lint": {
@@ -138,9 +140,7 @@
               "apps/peachtree-retail-app/tsconfig.app.json",
               "apps/peachtree-retail-app/src/../../../tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -166,9 +166,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/peachtree-retail-app-e2e/tsconfig.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -188,21 +186,14 @@
             "tsConfig": "./tsconfig.spec.json",
             "environment": "dev",
             "codeCoverage": true,
-            "codeCoverageExclude": [
-              "test.ts",
-              "**/polyfills.ts"
-            ]
+            "codeCoverageExclude": ["test.ts", "**/polyfills.ts"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "files": [
-              "libs/pockets/**/*.ts"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "files": ["libs/pockets/**/*.ts"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -222,21 +213,14 @@
             "tsConfig": "./tsconfig.spec.json",
             "environment": "dev",
             "codeCoverage": true,
-            "codeCoverageExclude": [
-              "test.ts",
-              "**/polyfills.ts"
-            ]
+            "codeCoverageExclude": ["test.ts", "**/polyfills.ts"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "files": [
-              "libs/pockets-form/**/*.ts"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "files": ["libs/pockets-form/**/*.ts"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -256,21 +240,14 @@
             "tsConfig": "./tsconfig.spec.json",
             "environment": "dev",
             "codeCoverage": true,
-            "codeCoverageExclude": [
-              "test.ts",
-              "**/polyfills.ts"
-            ]
+            "codeCoverageExclude": ["test.ts", "**/polyfills.ts"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "files": [
-              "libs/pockets-details/**/*.ts"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "files": ["libs/pockets-details/**/*.ts"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -290,21 +267,14 @@
             "tsConfig": "./tsconfig.spec.json",
             "environment": "dev",
             "codeCoverage": true,
-            "codeCoverageExclude": [
-              "test.ts",
-              "**/polyfills.ts"
-            ]
+            "codeCoverageExclude": ["test.ts", "**/polyfills.ts"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "files": [
-              "libs/user-manage-profile-widget-extended/**/*.ts"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "files": ["libs/user-manage-profile-widget-extended/**/*.ts"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -324,21 +294,14 @@
             "tsConfig": "./tsconfig.spec.json",
             "environment": "dev",
             "codeCoverage": true,
-            "codeCoverageExclude": [
-              "test.ts",
-              "**/polyfills.ts"
-            ]
+            "codeCoverageExclude": ["test.ts", "**/polyfills.ts"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "files": [
-              "libs/user-identity-security-center-widget-extended/**/*.ts"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "files": ["libs/user-identity-security-center-widget-extended/**/*.ts"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }

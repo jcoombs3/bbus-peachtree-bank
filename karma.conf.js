@@ -16,8 +16,7 @@ const tryRequire = (file) => {
 
 module.exports = function (config) {
   const packagePath = config.buildWebpack.webpackConfig.context;
-  const customTestThresholds = tryRequire(require('path').join(
-    packagePath, 'unit-test-thresholds.json'));
+  const customTestThresholds = tryRequire(require('path').join(packagePath, 'unit-test-thresholds.json'));
   const unitTestTreshHolds = customTestThresholds || defaultTestThresholds;
 
   config.set({
@@ -28,17 +27,17 @@ module.exports = function (config) {
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
-      require('@angular-devkit/build-angular/plugins/karma')
+      require('@angular-devkit/build-angular/plugins/karma'),
     ],
-    client:{
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
+    client: {
+      clearContext: false, // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
       reports: ['html', 'lcovonly', 'text-summary', 'json'],
       dir: require('path').join(packagePath, 'coverage'),
       fixWebpackSourcePaths: true,
       thresholds: unitTestTreshHolds,
-      'report-config': {  html: { subdir: 'html' } },
+      'report-config': { html: { subdir: 'html' } },
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,

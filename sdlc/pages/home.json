@@ -1,373 +1,265 @@
 {
-  "extends":"container-bb-manageable-area",
-  "children":[
-     {
-        "extends":"pt-peachtree-retail-app-ang",
-        "area":"0",
-        "children":[
-           {
-              "classId":"LayoutContainerComponent",
-              "navigationType":"horizontal",
-              "children":[
-                 {
-                    "classId":"PanelContainerComponent",
-                    "title":"Branding Area",
-                    "children":[
-                       {
-                          "classId":"PanelContainerComponent",
-                          "cssClasses":"d-block px-4",
-                          "children":[
-                             {
-                                "classId":"ContentWidgetComponent",
-                                "content-defaultContent":{
-                                   "kind":"content",
-                                   "path":"logo-sml.svg"
-                                }
-                             }
-                          ]
-                       }
-                    ]
-                 },
-                 {
-                    "classId":"PanelContainerComponent",
-                    "title":"Right Topbar Area",
-                    "cssClasses":"mr-2 mr-sm-0",
-                    "children":[
-                       {
-                          "classId":"ColumnContainerComponent",
-                          "children":[
-                             {
-                                "classId":"PanelContainerComponent",
-                                "cssClasses":"d-sm-block",
-                                "columnClass":"d-flex align-items-center",
-                                "children":[
-                                   {
-                                      "classId":"NotificationsBadgeWidgetComponent"
-                                   }
-                                ]
-                             },
-                             {
-                                "classId":"PanelContainerComponent",
-                                "columnClass":"d-flex align-items-center ",
-                                "children":[
-                                   {
-                                      "classId":"UserContextMenuWidgetComponent"
-                                   }
-                                ]
-                             }
-                          ]
-                       }
-                    ]
-                 },
-                 {
-                    "classId":"PanelContainerComponent",
-                    "title":"Sidebar Area",
-                    "children":[
-                       {
-                          "classId":"MegaMenuNavigationContainerComponent",
-                          "displayDescription":"false",
-                          "mainContainer":"bb-deck-container-ang-_-48a2b14d9c5f",
-                          "children":[
-
-                          ]
-                       }
-                    ]
-                 },
-                 {
-                    "classId":"PanelContainerComponent",
-                    "title":"Header Area",
-                    "children":[
-
-                    ]
-                 },
-                 {
-                    "classId":"PanelContainerComponent",
-                    "title":"Main Content Area",
-                    "children":[
-                       {
-                          "classId":"DeckContainerComponent",
-                          "name":"bb-deck-container-ang-_-48a2b14d9c5f",
-                          "children":[
-                             {
-                                "classId":"PanelContainerComponent",
-                                "title":"Accounts",
-                                "cssClasses":"container",
-                                "route":"accounts",
-                                "navIcon":"accounts",
-                                "children":[
-                                   {
-                                      "classId":"PanelContainerComponent",
-                                      "children":[
-                                         {
-                                            "classId":"PanelContainerComponent",
-                                            "children":[
-                                               {
-                                                  "classId":"DeckContainerComponent",
-                                                  "children":[
-                                                     {
-                                                        "classId":"PanelContainerComponent",
-                                                        "title":"List",
-                                                        "route":"list",
-                                                        "children":[
-                                                           {
-                                                              "classId":"HeadingWidgetComponent",
-                                                              "customClassName":"px-0",
-                                                              "heading":"My Accounts",
-                                                              "headingType":"h1"
-                                                           },
-                                                           {
-                                                              "classId":"PanelContainerComponent",
-                                                              "children":[
-                                                                 {
-                                                                    "classId":"ProductSummaryListWidgetComponent",
-                                                                    "output.selectedAccount":"router.navigate accounts details {selectedAccount}"
-                                                                 }
-                                                              ]
-                                                           }
-                                                        ]
-                                                     },
-                                                     {
-                                                        "classId":"PanelContainerComponent",
-                                                        "title":"Details",
-                                                        "route":"details",
-                                                        "children":[
-                                                           {
-                                                              "classId":"PanelContainerComponent",
-                                                              "children":[
-                                                                 {
-                                                                    "classId":"HeadingWidgetComponent",
-                                                                    "buttonClasses":"btn btn-link-text mb-3 ml-0 mt-4",
-                                                                    "buttonTitle":"Back to my accounts",
-                                                                    "customClassName":"px-0 pt-4 pb-5 flex-column-reverse align-items-start",
-                                                                    "heading":"Account Details",
-                                                                    "headingType":"h1",
-                                                                    "iconClasses":"arrow-back",
-                                                                    "output.buttonAction":"router.navigate accounts"
-                                                                 },
-                                                                 {
-                                                                    "classId":"PanelContainerComponent",
-                                                                    "cssClasses":"d-block container-medium px-0 mb-2",
-                                                                    "children":[
-                                                                       {
-                                                                          "classId":"ProductSummaryAccountSelectorWidgetComponent",
-                                                                          "output.selectedAccount":"navigation:bb-panel-container-ang-_-62bbb87815d0"
-                                                                       }
-                                                                    ]
-                                                                 },
-                                                                 {
-                                                                    "classId":"TabContainerComponent",
-                                                                    "name":"bb-panel-container-ang-_-62bbb87815d0",
-                                                                    "children":[
-                                                                       {
-                                                                          "classId":"PanelContainerComponent",
-                                                                          "title":"Activity",
-                                                                          "route":"transactions",
-                                                                          "children":[
-                                                                             {
-                                                                                "classId":"PanelContainerComponent",
-                                                                                "cssClasses":"d-block mt-3",
-                                                                                "children":[
-                                                                                   {
-                                                                                      "classId":"TransactionsListWidgetComponent"
-                                                                                   }
-                                                                                ]
-                                                                             }
-                                                                          ]
-                                                                       },
-                                                                       {
-                                                                          "classId":"PanelContainerComponent",
-                                                                          "title":"Account Info",
-                                                                          "route":"details",
-                                                                          "children":[
-                                                                             {
-                                                                                "classId":"PanelContainerComponent",
-                                                                                "cssClasses":"d-block mt-3",
-                                                                                "children":[
-                                                                                   {
-                                                                                      "classId":"ProductSummaryDetailsWidgetComponent"
-                                                                                   }
-                                                                                ]
-                                                                             }
-                                                                          ]
-                                                                       }
-                                                                    ]
-                                                                 }
-                                                              ]
-                                                           }
-                                                        ]
-                                                     }
-                                                  ]
-                                               }
-                                            ]
-                                         }
-                                      ]
-                                   }
-                                ]
-                             },
-                             {
-                                "classId":"PanelContainerComponent",
-                                "title":"Pockets",
-                                "cssClasses":"container",
-                                "route":"pockets",
-                                "navIcon":"style",
-                                "children":[
-                                   {
-                                      "classId":"PanelContainerComponent",
-                                      "children":[
-                                         {
-                                            "classId":"PanelContainerComponent",
-                                            "children":[
-                                               {
-                                                  "classId":"DeckContainerComponent",
-                                                  "children":[
-                                                     {
-                                                        "classId":"PanelContainerComponent",
-                                                        "title":"List",
-                                                        "route":"list",
-                                                        "children":[
-                                                           {
-                                                              "classId":"HeadingWidgetComponent",
-                                                              "buttonClasses":"btn btn-primary w-auto bb-button bb-button--xs-hide-text m-0",
-                                                              "buttonTitle":"New Pocket",
-                                                              "customClassName":"px-0 flex-row align-items-center",
-                                                              "heading":"Pockets",
-                                                              "headingType":"h1",
-                                                              "iconClasses":"add",
-                                                              "output.buttonAction":"router.navigate pockets form"
-                                                           },
-                                                           {
-                                                            "classId":"PanelContainerComponent",
-                                                            "children":[
-                                                               {
-                                                                  "classId":"PocketsComponent",
-                                                                  "output.selectPocket": "route-param pocketId"
-                                                               }
-                                                            ]
-                                                         }
-                                                        ]
-                                                     },
-                                                     {
-                                                        "classId":"PanelContainerComponent",
-                                                        "title":"Details",
-                                                        "route":"details",
-                                                        "children":[
-                                                          {
-                                                            "classId":"PanelContainerComponent",
-                                                            "children":[
-                                                               {
-                                                                  "classId":"PocketsDetailsComponent",
-                                                                  "input.pocketId": "route-param pocketId",
-                                                                  "output.goBack": "router.navigate pockets"
-                                                               }
-                                                            ]
-                                                         }
-                                                        ]
-                                                     },
-                                                     {
-                                                        "classId":"PanelContainerComponent",
-                                                        "title":"Form",
-                                                        "route":"form",
-                                                        "children":[
-                                                           {
-                                                              "classId":"HeadingWidgetComponent",
-                                                              "buttonClasses":"btn btn-link-text mt-4 ml-0 mb-3",
-                                                              "buttonTitle":"Back to pockets",
-                                                              "customClassName":"px-0 pt-4 pb-5 flex-column-reverse align-items-start",
-                                                              "heading":"New Pocket",
-                                                              "headingType":"h1",
-                                                              "iconClasses":"arrow-back",
-                                                              "output.buttonAction":"router.navigate pockets"
-                                                           },
-                                                           {
-                                                            "classId":"PanelContainerComponent",
-                                                            "children":[
-                                                               {
-                                                                  "classId":"PocketsFormComponent",
-                                                                  "output.cancel": "router.navigate pockets"
-                                                               }
-                                                            ]
-                                                         }
-                                                        ]
-                                                     }
-                                                  ]
-                                               }
-                                            ]
-                                         }
-                                      ]
-                                   }
-                                ]
-                             },
-                             {
-                                "classId":"PanelContainerComponent",
-                                "title":"Self Service",
-                                "cssClasses":"container",
-                                "route":"self-service",
-                                "navIcon":"user",
-                                "children":[
-                                   {
-                                      "classId":"DeckContainerComponent",
-                                      "children":[
-                                         {
-                                            "classId":"PanelContainerComponent",
-                                            "title":"Personal Info",
-                                            "cssClasses":"container",
-                                            "route":"personal-info",
-                                            "navIcon":"book",
-                                            "children":[
-                                              {
-                                                "classId":"HeadingWidgetComponent",
-                                                "buttonClasses":"btn btn-primary w-auto bb-button bb-button--xs-hide-text m-0",
-                                                "buttonTitle":"Change Password",
-                                                "customClassName":"px-0 flex-row align-items-center",
-                                                "heading":"Personal Info",
-                                                "headingType":"h1",
-                                                "iconClasses":"edit",
-                                                "output.buttonAction":"router.navigate self-service/password"
-                                             },
-                                              {
-                                                "classId":"PanelContainerComponent",
-                                                "children":[
-                                                  {
-                                                    "classId":"UserManageProfileWidgetExtendedComponent"
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                         },
-                                         {
-                                            "classId":"PanelContainerComponent",
-                                            "title":"Password",
-                                            "cssClasses":"container",
-                                            "route":"password",
-                                            "navIcon":"https",
-                                            "children":[
-                                              {
-                                                "classId":"HeadingWidgetComponent",
-                                                "customClassName":"px-0 flex-row align-items-center",
-                                                "heading":"Password",
-                                                "headingType":"h1"
-                                             },
-                                              {
-                                                "classId":"PanelContainerComponent",
-                                                "children":[
-                                                  {
-                                                    "classId":"UserIdentitySecurityCenterWidgetExtendedComponent"
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                         }
-                                      ]
-                                   }
-                                ]
-                             }
-                          ]
-                       }
-                    ]
-                 }
+  "extends": "container-bb-manageable-area",
+  "children": [
+    {
+      "extends": "pt-peachtree-retail-app-ang",
+      "area": "0",
+      "children": [
+        {
+          "classId": "LayoutContainerComponent",
+          "navigationType": "horizontal",
+          "children": [
+            {
+              "classId": "PanelContainerComponent",
+              "title": "Branding Area",
+              "children": [
+                {
+                  "classId": "PanelContainerComponent",
+                  "cssClasses": "d-block px-4",
+                  "children": [
+                    {
+                      "classId": "ContentWidgetComponent",
+                      "content-defaultContent": {
+                        "kind": "content",
+                        "path": "logo-sml.svg"
+                      }
+                    }
+                  ]
+                }
               ]
-           }
-        ]
-     }
+            },
+            {
+              "classId": "PanelContainerComponent",
+              "title": "Right Topbar Area",
+              "cssClasses": "mr-2 mr-sm-0",
+              "children": [
+                {
+                  "classId": "ColumnContainerComponent",
+                  "children": [
+                    {
+                      "classId": "PanelContainerComponent",
+                      "cssClasses": "d-sm-block",
+                      "columnClass": "d-flex align-items-center",
+                      "children": [
+                        {
+                          "classId": "NotificationsBadgeWidgetComponent"
+                        }
+                      ]
+                    },
+                    {
+                      "classId": "PanelContainerComponent",
+                      "columnClass": "d-flex align-items-center ",
+                      "children": [
+                        {
+                          "classId": "UserContextMenuWidgetComponent"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "classId": "PanelContainerComponent",
+              "title": "Sidebar Area",
+              "children": [
+                {
+                  "classId": "MegaMenuNavigationContainerComponent",
+                  "displayDescription": "false",
+                  "mainContainer": "bb-deck-container-ang-_-48a2b14d9c5f",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "classId": "PanelContainerComponent",
+              "title": "Header Area",
+              "children": []
+            },
+            {
+              "classId": "PanelContainerComponent",
+              "title": "Main Content Area",
+              "children": [
+                {
+                  "classId": "DeckContainerComponent",
+                  "name": "bb-deck-container-ang-_-48a2b14d9c5f",
+                  "children": [
+                    {
+                      "classId": "PanelContainerComponent",
+                      "title": "Accounts",
+                      "cssClasses": "container",
+                      "route": "accounts",
+                      "navIcon": "accounts",
+                      "children": [
+                        {
+                          "classId": "AccountsTransactionsJourneyBundleModule"
+                        }
+                      ]
+                    },
+                    {
+                      "classId": "PanelContainerComponent",
+                      "title": "Pockets",
+                      "cssClasses": "container",
+                      "route": "pockets",
+                      "navIcon": "style",
+                      "children": [
+                        {
+                          "classId": "PanelContainerComponent",
+                          "children": [
+                            {
+                              "classId": "PanelContainerComponent",
+                              "children": [
+                                {
+                                  "classId": "DeckContainerComponent",
+                                  "children": [
+                                    {
+                                      "classId": "PanelContainerComponent",
+                                      "title": "List",
+                                      "route": "list",
+                                      "children": [
+                                        {
+                                          "classId": "HeadingWidgetComponent",
+                                          "buttonClasses": "btn btn-primary w-auto bb-button bb-button--xs-hide-text m-0",
+                                          "buttonTitle": "New Pocket",
+                                          "customClassName": "px-0 flex-row align-items-center",
+                                          "heading": "Pockets",
+                                          "headingType": "h1",
+                                          "iconClasses": "add",
+                                          "output.buttonAction": "router.navigate pockets form"
+                                        },
+                                        {
+                                          "classId": "PanelContainerComponent",
+                                          "children": [
+                                            {
+                                              "classId": "PocketsComponent",
+                                              "output.selectPocket": "route-param pocketId"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classId": "PanelContainerComponent",
+                                      "title": "Details",
+                                      "route": "details",
+                                      "children": [
+                                        {
+                                          "classId": "PanelContainerComponent",
+                                          "children": [
+                                            {
+                                              "classId": "PocketsDetailsComponent",
+                                              "input.pocketId": "route-param pocketId",
+                                              "output.goBack": "router.navigate pockets"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classId": "PanelContainerComponent",
+                                      "title": "Form",
+                                      "route": "form",
+                                      "children": [
+                                        {
+                                          "classId": "HeadingWidgetComponent",
+                                          "buttonClasses": "btn btn-link-text mt-4 ml-0 mb-3",
+                                          "buttonTitle": "Back to pockets",
+                                          "customClassName": "px-0 pt-4 pb-5 flex-column-reverse align-items-start",
+                                          "heading": "New Pocket",
+                                          "headingType": "h1",
+                                          "iconClasses": "arrow-back",
+                                          "output.buttonAction": "router.navigate pockets"
+                                        },
+                                        {
+                                          "classId": "PanelContainerComponent",
+                                          "children": [
+                                            {
+                                              "classId": "PocketsFormComponent",
+                                              "output.cancel": "router.navigate pockets"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "classId": "PanelContainerComponent",
+                      "title": "Self Service",
+                      "cssClasses": "container",
+                      "route": "self-service",
+                      "navIcon": "user",
+                      "children": [
+                        {
+                          "classId": "DeckContainerComponent",
+                          "children": [
+                            {
+                              "classId": "PanelContainerComponent",
+                              "title": "Personal Info",
+                              "cssClasses": "container",
+                              "route": "personal-info",
+                              "navIcon": "book",
+                              "children": [
+                                {
+                                  "classId": "HeadingWidgetComponent",
+                                  "buttonClasses": "btn btn-primary w-auto bb-button bb-button--xs-hide-text m-0",
+                                  "buttonTitle": "Change Password",
+                                  "customClassName": "px-0 flex-row align-items-center",
+                                  "heading": "Personal Info",
+                                  "headingType": "h1",
+                                  "iconClasses": "edit",
+                                  "output.buttonAction": "router.navigate self-service/password"
+                                },
+                                {
+                                  "classId": "PanelContainerComponent",
+                                  "children": [
+                                    {
+                                      "classId": "UserManageProfileWidgetExtendedComponent"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "classId": "PanelContainerComponent",
+                              "title": "Password",
+                              "cssClasses": "container",
+                              "route": "password",
+                              "navIcon": "https",
+                              "children": [
+                                {
+                                  "classId": "HeadingWidgetComponent",
+                                  "customClassName": "px-0 flex-row align-items-center",
+                                  "heading": "Password",
+                                  "headingType": "h1"
+                                },
+                                {
+                                  "classId": "PanelContainerComponent",
+                                  "children": [
+                                    {
+                                      "classId": "UserIdentitySecurityCenterWidgetExtendedComponent"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   ]
 }
