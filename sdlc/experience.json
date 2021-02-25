@@ -2,7 +2,7 @@
   "$schema": "../../../node_modules/@backbase/sdlc-convert/node_modules/@backbase/sdlc-schema/experience.schema.json",
   "name": "peachtree-retail-app",
   "title": "Peachtree Retail App",
-  "locales": ["en-US"],
+  "locales": ["en-US", "es-MX"],
   "properties": {
     "AccessDeniedPage": "peachtree-retail-app/login?error=accessdenied",
     "DefaultLandingPage": "peachtree-retail-app",

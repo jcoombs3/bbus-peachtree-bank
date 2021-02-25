@@ -5,6 +5,12 @@
   "projects": {
     "peachtree-retail-app": {
       "projectType": "application",
+      "i18n": {
+        "locales": {
+          "es-MX": "apps/peachtree-retail-app/src/locale/messages.es-MX.xlf"
+        },
+        "sourceLocale": "en-US"
+      },
       "schematics": {
         "@schematics/angular:component": {
           "inlineTemplate": true,
@@ -40,6 +46,7 @@
         "build": {
           "builder": "@bb-cli/bb-ang:browser",
           "options": {
+            "localize": true,
             "outputPath": "dist/peachtree-retail-app",
             "index": "apps/peachtree-retail-app/src/index.html",
             "main": "apps/peachtree-retail-app/src/main.ts",

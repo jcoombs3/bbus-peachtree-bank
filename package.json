@@ -20,7 +20,8 @@
     "api:extract": "bb-ang extract-api",
     "create-experience:retail": "npx sdlc package sdlc/experience.json",
     "bundle-home-page:retail": "sdlc convert-from sdlc/experience.json sdlc/pages/home.json -l silent --remove-defaults false -o dist/apps/peachtree-retail-app/page-model-mock.json",
-    "package:prebuilt": "bb-package project ./prebuilt --prebuilt=prebuilt --output=collections/collection-pt-prebuilt.zip"
+    "package:prebuilt": "bb-package project ./prebuilt --prebuilt=prebuilt --output=collections/collection-pt-prebuilt.zip",
+    "create-translations": "ng xi18n && xliffmerge"
   },
   "private": true,
   "dependencies": {
@@ -59,7 +60,7 @@
     "@angular/compiler-cli": "~10.1.0",
     "@angular/language-service": "~10.1.0",
     "@backbase/sdlc-convert": "^0.12.23",
-    "@bb-cli/bb-ang": "~4.3.0",
+    "@bb-cli/bb-ang": "~4.4.0",
     "@bb-cli/schematics": "4.4.2",
     "@types/jasmine": "^3.5.0",
     "@types/jasminewd2": "^2.0.6",
@@ -79,6 +80,31 @@
     "tslib": "^2.0.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
+  },
+  "xliffmergeOptions": {
+    "srcDir": "apps/peachtree-retail-app",
+    "genDir": "apps/peachtree-retail-app/src/locale",
+    "i18nFile": "messages.xlf",
+    "i18nBaseFile": "messages",
+    "i18nFormat": "xlf",
+    "encoding": "UTF-8",
+    "defaultLanguage": "en-US",
+    "languages": [
+      "es-MX"
+    ],
+    "removeUnusedIds": true,
+    "supportNgxTranslate": false,
+    "ngxTranslateExtractionPattern": "@@|ngx-translate",
+    "useSourceAsTarget": true,
+    "targetPraefix": "",
+    "targetSuffix": "",
+    "beautifyOutput": false,
+    "allowIdChange": false,
+    "autotranslate": false,
+    "apikey": "",
+    "apikeyfile": "",
+    "verbose": false,
+    "quiet": false
   },
   "engines": {
     "node": "^10.13.0 || ^12.16.1",
