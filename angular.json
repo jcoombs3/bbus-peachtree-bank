@@ -46,7 +46,7 @@
         "build": {
           "builder": "@bb-cli/bb-ang:browser",
           "options": {
-            "localize": ["es-MX"],
+            "localize": false,
             "outputPath": "dist/peachtree-retail-app",
             "index": "apps/peachtree-retail-app/src/index.html",
             "main": "apps/peachtree-retail-app/src/main.ts",

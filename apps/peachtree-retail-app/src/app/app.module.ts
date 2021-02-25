@@ -12,6 +12,8 @@ import { LayoutContainerModule } from '@backbase/universal-ang/layouts';
 import { MegaMenuNavigationContainerModule } from '@backbase/universal-ang/navigation';
 import { bundlesDefinition } from './bundles-definition';
 import { HeadingWidgetModule } from '@backbase/universal-ang/heading';
+import { AccountsTransactionsJourneyModule } from '@backbase/accounts-transactions-journey-ang';
+import { AccountsTransactionsConfigProvider } from '../app/config.providers';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,8 +30,9 @@ import { HeadingWidgetModule } from '@backbase/universal-ang/heading';
     LayoutContainerModule,
     MegaMenuNavigationContainerModule,
     HeadingWidgetModule,
+    AccountsTransactionsJourneyModule,
   ],
-  providers: [...(environment.mockProviders || [])],
+  providers: [...(environment.mockProviders || []), AccountsTransactionsConfigProvider],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

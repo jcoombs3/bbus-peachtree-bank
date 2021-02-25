@@ -2,6 +2,13 @@ import { LazyConfig } from '@backbase/foundation-ang/core';
 
 export const bundlesDefinition: LazyConfig = [
   {
+    module: 'AccountsTransactionsJourneyBundleModule',
+    loadChildren: () =>
+      import('../bundles/accounts-transactions-journey-bundle.module').then(
+        (m) => m.AccountsTransactionsJourneyBundleModule,
+      ),
+  },
+  {
     components: [
       'ContentWidgetComponent',
       'NotificationsBadgeWidgetComponent',
