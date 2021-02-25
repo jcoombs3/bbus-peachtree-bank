@@ -9,5 +9,7 @@ export const AccountsTransactionsConfigProvider: Provider = {
   useValue: <Partial<AccountsTransactionsJourneyConfiguration>>{
     showCheckImages: true,
     maskIndicator: true,
+    enableTransferButton: false,
+    enableManageAccounts: false,
   },
 };

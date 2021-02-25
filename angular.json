@@ -36,17 +36,10 @@
       "root": "apps/peachtree-retail-app",
       "sourceRoot": "apps/peachtree-retail-app/src",
       "prefix": "pt",
-      "i18n": {
-        "sourceLocale": "en-US",
-        "locales": {
-          "es-MX": "apps/peachtree-retail-app/src/locale/messages.es-MX.xlf"
-        }
-      },
       "architect": {
         "build": {
           "builder": "@bb-cli/bb-ang:browser",
           "options": {
-            "localize": false,
             "outputPath": "dist/peachtree-retail-app",
             "index": "apps/peachtree-retail-app/src/index.html",
             "main": "apps/peachtree-retail-app/src/main.ts",
