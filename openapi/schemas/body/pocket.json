@@ -15,6 +15,9 @@
     },
     "goalDate": {
       "type": "string"
+    },
+    "transactions": {
+      "$ref": "./pocket-transactions.json"
     }
   },
   "required": [
