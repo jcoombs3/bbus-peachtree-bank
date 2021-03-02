@@ -16,6 +16,8 @@ paths:
         required: true
         content:
           application/json:
+            example:
+              $ref: 'examples/body/pockets-post.json'
             schema:
               $ref: '#/components/schemas/PocketPostRequestBody'
       responses:
@@ -30,6 +32,8 @@ paths:
           description: A JSON array of pockets
           content:
             application/json:
+              example:
+                $ref: 'examples/body/pockets-list.json'
               schema:
                 $ref: '#/components/schemas/PocketList'
   /pockets/{id}:
