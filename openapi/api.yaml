@@ -19,4 +19,47 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'schemas/body/pockets-list.json'
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Pocket'
+  /pockets/{id}:
+    get:
+      summary: Returns a pocket by ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Parameter description in CommonMark or HTML.
+          schema:
+            type : string
+      responses:
+        '200':
+          description: A pocker object
+          content:
+            application/json:
+              example:
+                $ref: 'examples/body/pockets-detail.json'
+              schema:
+                $ref: '#/components/schemas/Pocket'
+components:
+  schemas:
+    Pocket:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        balance:
+          type: string
+        goalBalance:
+          type: string
+        goalDate:
+          type: string
+        transactions:
+          $ref: '#/components/schemas/PocketTransactions'
+      required:
+        - id
+        - name
+    PocketTransactions:
+      $ref: schemas/body/pocket-transactions.json
