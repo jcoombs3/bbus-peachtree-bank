@@ -8,6 +8,15 @@
       },
       "name": {
         "type": "string"
+      },
+      "currentBalance": {
+        "type": "string"
+      },
+      "goalBalance": {
+        "type": "string"
+      },
+      "goalDate": {
+        "type": "string"
       }
     }
   }
