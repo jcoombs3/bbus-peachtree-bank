@@ -18,6 +18,10 @@
       "goalDate": {
         "type": "string"
       }
-    }
+    },
+    "required": [
+      "id",
+      "name"
+    ]
   }
 }

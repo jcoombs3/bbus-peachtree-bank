@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "currentBalance": {
+      "type": "string"
+    },
+    "goalBalance": {
+      "type": "string"
+    },
+    "goalDate": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ]
+}
