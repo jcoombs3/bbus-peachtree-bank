@@ -19,9 +19,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items: 
-                  $ref: '#/components/schemas/Pocket'
+                $ref: '#/components/schemas/PocketList'
   /pockets/{id}:
     get:
       summary: Returns a pocket by ID.
@@ -43,6 +41,10 @@ paths:
                 $ref: '#/components/schemas/Pocket'
 components:
   schemas:
+    PocketList:
+      type: array
+      items: 
+        $ref: '#/components/schemas/Pocket'
     Pocket:
       type: object
       properties:
@@ -50,16 +52,35 @@ components:
           type: string
         name:
           type: string
-        balance:
-          type: string
-        goalBalance:
-          type: string
+        funds:
+          type: number
+        goal:
+          type: number
         goalDate:
           type: string
         transactions:
-          $ref: '#/components/schemas/PocketTransactions'
+          type: array
+          items:
+            $ref: '#/components/schemas/PocketTransaction'
       required:
         - id
         - name
-    PocketTransactions:
-      $ref: schemas/body/pocket-transactions.json
+    PocketTransaction:
+      type: object
+      properties:
+        id:
+          type: string
+        amount:
+          type: number
+        account:
+          type: string
+        incoming:
+          type: boolean
+        date:
+          type: string
+      required:
+        - id
+        - amount
+        - account
+        - incoming
+        - date

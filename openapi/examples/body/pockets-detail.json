@@ -1,8 +1,29 @@
 {
-  "id": "000",
-  "name": "Pocket One",
-  "currentBalance": "47.46",
-  "goalBalance": "1500.00",
-  "goalDate": "2021-04-20T04:00:00.000Z",
-  "transactions": []
+  id: '1a',
+  name: 'Travel',
+  funds: 47.46,
+  goal: 1500,
+  goalDate: '2021-04-20T04:00:00.000Z',
+  transactions: [
+    {
+      id: '1aa',
+      amount: 9.34,
+      account: 'Saving',
+      incoming: true,
+      date: '2019-05-11T04:00:00.000Z',
+    },
+    {
+      id: '1bb',
+      amount: 5.00,
+      account: 'Current',
+      date: '2019-05-11T04:00:00.000Z',
+    },
+    {
+      id: '1cc',
+      amount: 43.12,
+      account: 'Shared',
+      incoming: true,
+      date: '2020-12-01T04:00:00.000Z',
+    }
+  ]
 }
