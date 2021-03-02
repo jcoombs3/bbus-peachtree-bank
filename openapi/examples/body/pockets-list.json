@@ -1,17 +1,23 @@
 [
   {
-    "id": "000",
-    "name": "Pocket One",
-    "currentBalance": "47.46",
-    "goalBalance": "1500.00",
+    "id": "1a",
+    "name": "Travel",
+    "funds": {
+      "currency": "USD",
+      "amount": 47.5
+    },
+    "goal": {
+      "currency": "USD",
+      "amount": 1500
+    },
     "goalDate": "2021-04-20T04:00:00.000Z"
   },
   {
-    "id": "111",
-    "name": "Pocket Two"
+    "id": "2b",
+    "name": "Food"
   },
   {
-    "id": "222",
-    "name": "Pocket Three"
+    "id": "3c",
+    "name": "Supplies"
   }
 ]

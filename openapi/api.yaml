@@ -9,10 +9,22 @@ servers:
   - url: 'http://localhost:4201/api'
     description: 'Optional server description, e.g. Main (production) server'
 paths:
+  /pocket:
+    post:
+      summary: Request to submit a new pocket
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PocketPostRequestBody'
+      responses:
+        200:
+          description: Request pocket submission accepted
   /pockets:
     get:
       summary: Returns a list of pockets.
-      description: Optional extended description in CommonMark or HTML.
+      operationId: postPocket
       responses:
         '200':
           description: A JSON array of pockets
@@ -53,9 +65,9 @@ components:
         name:
           type: string
         funds:
-          type: number
+          $ref: '#/components/schemas/PocketCurrency'
         goal:
-          type: number
+          $ref: '#/components/schemas/PocketCurrency'
         goalDate:
           type: string
         transactions:
@@ -71,7 +83,7 @@ components:
         id:
           type: string
         amount:
-          type: number
+          $ref: '#/components/schemas/PocketCurrency'
         account:
           type: string
         incoming:
@@ -84,3 +96,26 @@ components:
         - account
         - incoming
         - date
+    PocketPostRequestBody:
+      type: object
+      properties:
+        name:
+          type: string
+        goal:
+          $ref: '#/components/schemas/PocketCurrency'
+        arrangementId:
+          type: string
+        fundAmount:
+          $ref: '#/components/schemas/PocketCurrency'
+      required:
+        - name
+    PocketCurrency:
+      type: object
+      properties:
+        currency:
+          type: string
+        amount:
+          type: number
+      required:
+        - currency
+        - amount
