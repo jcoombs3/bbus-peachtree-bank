@@ -1,0 +1,24 @@
+openapi: 3.0.1
+info:
+  title: Sample Pockets API
+  description: >-
+    Optional multiline or single-line description in
+    [CommonMark](http://commonmark.org/help/) or HTML.
+  version: 0.1.9
+servers:
+  - url: 'http://localhost:4201/api'
+    description: 'Optional server description, e.g. Main (production) server'
+paths:
+  /pockets:
+    get:
+      summary: Returns a list of pockets.
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        '200':
+          description: A JSON array of pockets
+          content:
+            application/json:
+              example:
+                $ref: 'examples/body/pockets.json'
+              schema:
+                $ref: 'schemas/body/pockets.json'

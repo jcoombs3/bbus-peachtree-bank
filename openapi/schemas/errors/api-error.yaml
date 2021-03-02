@@ -1,0 +1,16 @@
+type: object
+description: Represents a API Error
+properties:
+  key:
+    description: Error key
+    type: string
+  message:
+    description: Further Information
+    type: string
+  errors:
+    description: Detailed error information
+    type: array
+    items:
+      $ref: ../../lib/schemas/error-item.yaml
+required:
+  - message

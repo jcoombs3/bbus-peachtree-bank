@@ -21,7 +21,9 @@
     "create-experience:retail": "npx sdlc package sdlc/experience.json",
     "bundle-home-page:retail": "sdlc convert-from sdlc/experience.json sdlc/pages/home.json -l silent --remove-defaults false -o dist/apps/peachtree-retail-app/page-model-mock.json",
     "package:prebuilt": "bb-package project ./prebuilt --prebuilt=prebuilt --output=collections/collection-pt-prebuilt.zip",
-    "create-translations": "ng xi18n && xliffmerge"
+    "create-translations": "ng xi18n && xliffmerge",
+    "precreate-generate-openapi": "mkdir -p ./dist/openapi",
+    "generate-openapi": "openapi-generator-cli generate -g typescript-angular -i openapi/api.yaml -o ./dist/openapi"
   },
   "private": true,
   "dependencies": {
@@ -47,6 +49,7 @@
     "@ng-select/ng-select": "~5.0.0",
     "@ngrx/effects": "~10.0.0",
     "@ngrx/store": "~10.0.0",
+    "@openapitools/openapi-generator-cli": "^2.1.26",
     "@swimlane/ngx-charts": "^16.0.0",
     "@types/googlemaps": "^3.43.3",
     "core-js": "~2.6.5",
