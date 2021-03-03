@@ -114,11 +114,11 @@ const pocketsListMockProvider = createMocks([
             id: '1a',
             goal: 1500,
             goalDate: '2021-04-20',
-            funds: 47.46,
+            funds: 50,
             name: 'Travel',
             transactions: [
               {
-                amount: '9.34',
+                amount: '10.00',
                 account: 'Saving',
                 incoming: true,
                 date: '2019-11-8',
@@ -129,7 +129,7 @@ const pocketsListMockProvider = createMocks([
                 date: '2019-07-12',
               },
               {
-                amount: '43.12',
+                amount: '45.00',
                 account: 'Shared',
                 incoming: true,
                 date: '2019-07-12',
@@ -141,7 +141,6 @@ const pocketsListMockProvider = createMocks([
             goal: undefined,
             funds: 0,
             name: 'Savings',
-            // img: 'https://img.icons8.com/ios/452/safe.png'
           },
           {
             id: '3c',
@@ -179,7 +178,7 @@ const pocket1aMockProvider = createMocks([
           name: 'Travel',
           transactions: [
             {
-              amount: '9.34',
+              amount: '10.00',
               account: 'Saving',
               incoming: true,
               date: '2019-11-8',
@@ -190,7 +189,7 @@ const pocket1aMockProvider = createMocks([
               date: '2019-07-12',
             },
             {
-              amount: '43.12',
+              amount: '45.00',
               account: 'Shared',
               incoming: true,
               date: '2019-07-12',

@@ -28,7 +28,6 @@ export class PocketsDetailsComponent implements OnInit {
   getProgress(pocket: Pocket) {
     if (pocket.funds?.amount && pocket.goal?.amount) {
       const progress = Math.ceil((pocket.funds.amount / pocket.goal.amount) * 100);
-      console.log(progress);
       return progress > 100 ? 100 : progress;
     } else {
       return 0;

@@ -35,6 +35,7 @@ export class ReviewPocketComponent implements OnDestroy {
   }
 
   nextStep(pocketForm: any) {
+    console.log(pocketForm);
     this.loading = true;
     this.PocketsService.pocketPost(pocketForm)
       .pipe(
@@ -59,15 +60,6 @@ export class ReviewPocketComponent implements OnDestroy {
   }
   cancelForm() {
     this.cancel.emit();
-  }
-
-  showFailTransferlNotification() {
-    this.notificationService.showNotification({
-      header: 'Failed To Transfer Money',
-      message: 'Please try again',
-      modifier: 'error',
-      dismissible: true,
-    });
   }
 
   showFailCreateNotification() {
