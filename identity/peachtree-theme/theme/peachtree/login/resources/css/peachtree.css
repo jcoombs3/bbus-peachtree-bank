@@ -1,0 +1,71 @@
+body {
+  background-image: none !important;
+  background: aliceblue !important;
+}
+.identity-container__form {
+  width: 400px;
+  padding: 1rem;
+}
+.bb-form-field--md {
+  max-width: 100%;
+}
+.btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+.bb-subtitle {
+  display: none;
+}
+
+.peachtree-logo {
+  height: 4rem;
+  width: 4rem;
+  background-image: url("../img/peach.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 1rem;
+}
+
+.peachtree-header {
+  display: flex;
+  align-items: center;
+}
+
+.identity-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+title {
+  display: none !important;
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.password-input-container #password-visibility-toggle-button {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(50%);
+  cursor: pointer;
+}
+
+.password-input-container #password-visibility-toggle-button:focus-visible {
+  outline: 1px dotted;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
