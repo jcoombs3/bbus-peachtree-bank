@@ -24,43 +24,49 @@
     </div>
   </div>
   <ng-container *ngIf="pocketForm.arrangementId">
-    <bb-header-ui headingType="h3" heading="Transfer Details"></bb-header-ui>
-    <span class="text-muted small mt-2">Amount</span>
-    <h4>
-      <bb-amount-ui
-        [currency]="'USD'"
-        [amount]="pocketForm.fundAmount?.amount ? pocketForm.fundAmount!.amount : '0'"
-        [mapCurrency]="true"
-        [showPlusSign]="false"
-        [hideDecimals]="false"
-        [abbreviate]="false"
-        [highlight]="false"
-      ></bb-amount-ui>
-    </h4>
-    <div class="d-flex mb-4" *ngIf="account$ | async as account">
-      <div class="mr-4">
-        <span class="text-muted small">From</span>
-        <h5 class="mb-0">{{ account?.name }}</h5>
-        <span class="text-muted small mt-n4">****{{ account?.number }}</span>
-        <h5>
-          <bb-amount-ui
-            *ngIf="account.availableBalance"
-            [currency]="'USD'"
-            [amount]="account.availableBalance"
-            [mapCurrency]="true"
-            [showPlusSign]="false"
-            [hideDecimals]="false"
-            [abbreviate]="false"
-            [highlight]="false"
-          ></bb-amount-ui>
-        </h5>
+    <ng-container *ngIf="account$ | async as account">
+      <bb-header-ui headingType="h3" heading="Transfer Details"></bb-header-ui>
+      <span class="text-muted small mt-2">Amount</span>
+      <h4>
+        <bb-amount-ui
+          [currency]="'USD'"
+          [amount]="pocketForm.fundAmount?.amount ? pocketForm.fundAmount!.amount : '0'"
+          [mapCurrency]="true"
+          [showPlusSign]="false"
+          [hideDecimals]="false"
+          [abbreviate]="false"
+          [highlight]="false"
+        ></bb-amount-ui>
+      </h4>
+      <div class="d-flex mb-4">
+        <div class="mr-4">
+          <span class="text-muted small">From</span>
+          <h5 class="mb-0">{{ account?.name }}</h5>
+          <span class="text-muted small mt-n4">****{{ account?.number }}</span>
+          <h5>
+            <bb-amount-ui
+              *ngIf="account.availableBalance"
+              [currency]="'USD'"
+              [amount]="account.availableBalance"
+              [mapCurrency]="true"
+              [showPlusSign]="false"
+              [hideDecimals]="false"
+              [abbreviate]="false"
+              [highlight]="false"
+            ></bb-amount-ui>
+          </h5>
+        </div>
+        <bb-icon-ui name="arrow-forward" size="lg" class="mr-4"></bb-icon-ui>
+        <div>
+          <span class="text-muted small">To</span>
+          <bb-header-ui headingType="h5" [heading]="pocketForm.name"></bb-header-ui>
+        </div>
       </div>
-      <bb-icon-ui name="arrow-forward" size="lg" class="mr-4"></bb-icon-ui>
-      <div>
-        <span class="text-muted small">To</span>
-        <bb-header-ui headingType="h5" [heading]="pocketForm.name"></bb-header-ui>
-      </div>
-    </div>
+    </ng-container>
+    <ng-container *ngIf="!(account$ | async)"
+      ><div class="d-flex align-items-start flex-row">
+        <bb-loading-indicator-ui loaderSize="lg"></bb-loading-indicator-ui></div
+    ></ng-container>
   </ng-container>
   <div class="d-flex align-items-center flex-wrap">
     <bb-input-checkbox-ui [formControl]="tac" class="mt-n2"></bb-input-checkbox-ui>

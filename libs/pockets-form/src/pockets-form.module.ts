@@ -15,6 +15,7 @@ import {
   AmountModule,
   NotificationModule,
   LoadButtonModule,
+  LoadingIndicatorModule,
 } from '@backbase/ui-ang';
 import { PocketsStepperComponent } from './pocket-stepper/pockets-stepper.component';
 import { MakeItYoursComponent } from './make-it-yours/make-it-yours.component';
@@ -58,6 +59,7 @@ import { ProductSummaryAccountsService } from '@backbase/product-summary-common-
     NotificationModule,
     LoadButtonModule,
     ProductSummaryAccountSelectorWidgetModule,
+    LoadingIndicatorModule,
   ],
   providers: [PocketsFormService, ProductSummaryAccountsService],
 })

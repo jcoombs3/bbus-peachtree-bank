@@ -35,9 +35,6 @@ export class FundYourPocketComponent implements OnInit, OnDestroy {
           this.amount.value.amount = pocket.fundAmount.amount;
           this.amount.value.currency = pocket.fundAmount.currency;
         }
-        // if (pocket.arrangementId) {
-        //   this.selectedAccount = pocket.arrangementId;
-        // }
       });
   }
 

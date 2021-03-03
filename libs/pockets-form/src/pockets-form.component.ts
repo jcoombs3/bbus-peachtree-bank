@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PocketsFormService } from './pockets-form.service';
 
 @Component({
@@ -10,11 +11,13 @@ export class PocketsFormComponent implements OnInit {
   @Output() cancel = new EventEmitter();
   showTac = false;
   currentStep = 1;
-  constructor(private pocketsFormSerivce: PocketsFormService) {
+  constructor(private pocketsFormSerivce: PocketsFormService, private router: Router) {
     this.pocketsFormSerivce.clearForm();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.router.navigate(['/pockets/form']);
+  }
 
   closeTac() {
     this.showTac = false;

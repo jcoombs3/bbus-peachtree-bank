@@ -29,7 +29,7 @@ export class ReviewPocketComponent implements OnDestroy {
     private cd: ChangeDetectorRef,
     private productSummaryAccountsService: ProductSummaryAccountsService,
   ) {
-    this.pocketsFormService.pocketForm$.pipe(take(1)).subscribe((res) => {
+    this.pocketsFormService.pocketForm$.pipe(take(1), takeUntil(this.destroy$)).subscribe((res) => {
       if (res.arrangementId) {
         this.account$ = this.productSummaryAccountsService.getAccountById(res.arrangementId);
       }
