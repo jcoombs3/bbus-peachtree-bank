@@ -14,6 +14,7 @@ import {
   ModalModule,
   AmountModule,
   NotificationModule,
+  LoadButtonModule,
 } from '@backbase/ui-ang';
 import { PocketsStepperComponent } from './pocket-stepper/pockets-stepper.component';
 import { MakeItYoursComponent } from './make-it-yours/make-it-yours.component';
@@ -52,6 +53,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     AmountModule,
     NotificationModule,
+    LoadButtonModule,
   ],
   providers: [PocketsFormService],
 })

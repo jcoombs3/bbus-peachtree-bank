@@ -254,8 +254,21 @@ const pocket3cMockProvider = createMocks([
   },
 ]);
 
+const pocketPostMockProvider = createMocks([
+  {
+    urlPattern: 'http://localhost:4201/api/pocket',
+    method: 'POST',
+    responses: [
+      {
+        status: 200,
+      },
+    ],
+  },
+]);
+
 export const mockProviders: Array<Provider> = [
   createMocksInterceptor(),
+  pocketPostMockProvider,
   pocket1aMockProvider,
   pocket2bMockProvider,
   pocket3cMockProvider,

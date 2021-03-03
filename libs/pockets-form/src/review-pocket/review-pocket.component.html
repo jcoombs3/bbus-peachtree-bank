@@ -3,8 +3,7 @@
     <bb-header-ui headingType="h2" heading="Review Pocket"></bb-header-ui>
   </div>
   <div class="mt-5 d-flex mb-3 mb-sm-5 flex-wrap">
-    <div class="make-it-yours-icon shadow mr-4 mb-3 mt-sm-0">
-    </div>
+    <div class="make-it-yours-icon shadow mr-4 mb-3 mt-sm-0"></div>
     <div class="d-flex flex-column">
       <span class="text-muted small">Pocket</span>
       <bb-header-ui headingType="h3" [heading]="pocketForm.name"></bb-header-ui>
@@ -72,15 +71,15 @@
   <div class="pt-5 d-flex justify-content-between flex-wrap flex-row flex-sm-row-reverse align-items-center">
     <div class="d-flex mb-4 mb-sm-0">
       <button bbButton type="button" color="secondary" (click)="previousStep()" class="mr-2">Back</button>
-      <button
-        bbButton
+      <bb-load-button-ui
         type="button"
         color="primary"
-        (click)="nextStep()"
-        [disabled]="tac.value === false || !tac.valid"
+        (click)="nextStep(pocketForm)"
+        [disabled]="tac.value === false || !tac.valid || loading"
+        [isLoading]="loading"
       >
         Create Pocket
-      </button>
+      </bb-load-button-ui>
     </div>
     <button bbButton type="button" color="link-text" (click)="cancelForm()">Cancel</button>
   </div>
