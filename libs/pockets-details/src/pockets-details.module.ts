@@ -4,6 +4,8 @@ import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
 import { PocketsDetailsComponent } from './pockets-details.component';
 import { BbDatePipeModule } from '@backbase/ui-ang';
 import { ButtonModule, IconModule, ModalModule } from '@backbase/ui-ang';
+import { PocketsService } from '@peachtree/pt-openapi';
+import { LoadingIndicatorModule } from '@backbase/ui-ang';
 
 @NgModule({
   declarations: [PocketsDetailsComponent],
@@ -16,6 +18,8 @@ import { ButtonModule, IconModule, ModalModule } from '@backbase/ui-ang';
     IconModule,
     ModalModule,
     BbDatePipeModule,
+    LoadingIndicatorModule,
   ],
+  providers: [PocketsService],
 })
 export class PocketsDetailsModule {}

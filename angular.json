@@ -62,7 +62,9 @@
               "apps/peachtree-retail-app/src/favicon.ico",
               "apps/peachtree-retail-app/src/assets"
             ],
-            "styles": ["themes/peachtree/scss/main.scss"],
+            "styles": [
+              "themes/peachtree/scss/main.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -130,7 +132,10 @@
             "tsConfig": "apps/peachtree-retail-app/src/../../../tsconfig.spec.json",
             "environment": "dev",
             "codeCoverage": true,
-            "codeCoverageExclude": ["test.ts", "**/polyfills.ts"]
+            "codeCoverageExclude": [
+              "test.ts",
+              "**/polyfills.ts"
+            ]
           }
         },
         "lint": {
@@ -140,7 +145,9 @@
               "apps/peachtree-retail-app/tsconfig.app.json",
               "apps/peachtree-retail-app/src/../../../tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
@@ -166,7 +173,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/peachtree-retail-app-e2e/tsconfig.json",
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
@@ -186,14 +195,21 @@
             "tsConfig": "./tsconfig.spec.json",
             "environment": "dev",
             "codeCoverage": true,
-            "codeCoverageExclude": ["test.ts", "**/polyfills.ts"]
+            "codeCoverageExclude": [
+              "test.ts",
+              "**/polyfills.ts"
+            ]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "files": ["libs/pockets/**/*.ts"],
-            "exclude": ["**/node_modules/**"]
+            "files": [
+              "libs/pockets/**/*.ts"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
@@ -213,14 +229,21 @@
             "tsConfig": "./tsconfig.spec.json",
             "environment": "dev",
             "codeCoverage": true,
-            "codeCoverageExclude": ["test.ts", "**/polyfills.ts"]
+            "codeCoverageExclude": [
+              "test.ts",
+              "**/polyfills.ts"
+            ]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "files": ["libs/pockets-form/**/*.ts"],
-            "exclude": ["**/node_modules/**"]
+            "files": [
+              "libs/pockets-form/**/*.ts"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
@@ -240,14 +263,21 @@
             "tsConfig": "./tsconfig.spec.json",
             "environment": "dev",
             "codeCoverage": true,
-            "codeCoverageExclude": ["test.ts", "**/polyfills.ts"]
+            "codeCoverageExclude": [
+              "test.ts",
+              "**/polyfills.ts"
+            ]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "files": ["libs/pockets-details/**/*.ts"],
-            "exclude": ["**/node_modules/**"]
+            "files": [
+              "libs/pockets-details/**/*.ts"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
@@ -267,14 +297,21 @@
             "tsConfig": "./tsconfig.spec.json",
             "environment": "dev",
             "codeCoverage": true,
-            "codeCoverageExclude": ["test.ts", "**/polyfills.ts"]
+            "codeCoverageExclude": [
+              "test.ts",
+              "**/polyfills.ts"
+            ]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "files": ["libs/user-manage-profile-widget-extended/**/*.ts"],
-            "exclude": ["**/node_modules/**"]
+            "files": [
+              "libs/user-manage-profile-widget-extended/**/*.ts"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
@@ -294,14 +331,55 @@
             "tsConfig": "./tsconfig.spec.json",
             "environment": "dev",
             "codeCoverage": true,
-            "codeCoverageExclude": ["test.ts", "**/polyfills.ts"]
+            "codeCoverageExclude": [
+              "test.ts",
+              "**/polyfills.ts"
+            ]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "files": ["libs/user-identity-security-center-widget-extended/**/*.ts"],
-            "exclude": ["**/node_modules/**"]
+            "files": [
+              "libs/user-identity-security-center-widget-extended/**/*.ts"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "pt-openapi": {
+      "root": "libs/pt-openapi",
+      "sourceRoot": "libs/pt-openapi/src",
+      "projectType": "library",
+      "prefix": "pt",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/pt-openapi/test.ts",
+            "karmaConfig": "./karma.conf.js",
+            "polyfills": "apps/peachtree-retail-app/src/polyfills.ts",
+            "tsConfig": "./tsconfig.spec.json",
+            "environment": "dev",
+            "codeCoverage": true,
+            "codeCoverageExclude": [
+              "test.ts",
+              "**/polyfills.ts"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "files": [
+              "libs/pt-openapi/**/*.ts"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

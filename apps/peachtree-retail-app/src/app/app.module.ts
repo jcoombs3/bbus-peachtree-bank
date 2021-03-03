@@ -14,6 +14,7 @@ import { bundlesDefinition } from './bundles-definition';
 import { HeadingWidgetModule } from '@backbase/universal-ang/heading';
 import { AccountsTransactionsJourneyModule } from '@backbase/accounts-transactions-journey-ang';
 import { AccountsTransactionsConfigProvider } from '../app/config.providers';
+import { PtOpenapiModule } from '@peachtree/pt-openapi';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,6 +32,7 @@ import { AccountsTransactionsConfigProvider } from '../app/config.providers';
     MegaMenuNavigationContainerModule,
     HeadingWidgetModule,
     AccountsTransactionsJourneyModule,
+    PtOpenapiModule,
   ],
   providers: [...(environment.mockProviders || []), AccountsTransactionsConfigProvider],
   bootstrap: [AppComponent],

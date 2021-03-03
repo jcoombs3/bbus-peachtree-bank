@@ -1,23 +1,30 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, NgZone, OnDestroy, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { NotificationService } from '@backbase/ui-ang';
+import { PocketsService } from '@peachtree/pt-openapi';
 import { Subject } from 'rxjs';
+import { finalize, takeUntil, take } from 'rxjs/operators';
 import { PocketsFormService } from '../pockets-form.service';
 
 @Component({
   selector: 'pt-review-pocket',
   templateUrl: 'review-pocket.component.html',
 })
-export class ReviewPocketComponent {
+export class ReviewPocketComponent implements OnDestroy {
   destroy$ = new Subject();
   @Output() next = new EventEmitter();
   @Output() cancel = new EventEmitter();
   @Output() back = new EventEmitter();
   @Output() showTac = new EventEmitter();
 
-  notificationDemoCounter = 0;
+  loading = false;
 
-  constructor(private pocketsFormService: PocketsFormService, private notificationService: NotificationService) {}
+  constructor(
+    private pocketsFormService: PocketsFormService,
+    private notificationService: NotificationService,
+    private PocketsService: PocketsService,
+    private cd: ChangeDetectorRef,
+  ) {}
 
   pocketForm$ = this.pocketsFormService.pocketForm$;
 
@@ -27,17 +34,25 @@ export class ReviewPocketComponent {
     this.showTac.emit();
   }
 
-  nextStep() {
-    if (this.notificationDemoCounter === 0) {
-      this.showFailTransferlNotification();
-    }
-    if (this.notificationDemoCounter === 1) {
-      this.showFailCreateNotification();
-    }
-    if (this.notificationDemoCounter === 2) {
-      this.next.emit();
-    }
-    this.notificationDemoCounter++;
+  nextStep(pocketForm: any) {
+    this.loading = true;
+    this.PocketsService.pocketPost(pocketForm)
+      .pipe(
+        take(1),
+        takeUntil(this.destroy$),
+        finalize(() => {
+          this.loading = false;
+          this.cd.markForCheck();
+        }),
+      )
+      .subscribe(
+        () => {
+          this.next.emit();
+        },
+        () => {
+          this.showFailCreateNotification();
+        },
+      );
   }
   previousStep() {
     this.back.emit();
@@ -62,5 +77,10 @@ export class ReviewPocketComponent {
       modifier: 'error',
       dismissible: true,
     });
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next(true);
+    this.destroy$.complete();
   }
 }

@@ -102,8 +102,177 @@ const userProfileMockProvider = createMocks([
   },
 ]);
 
+const pocketsListMockProvider = createMocks([
+  {
+    urlPattern: 'http://localhost:4201/api/pockets',
+    method: 'GET',
+    responses: [
+      {
+        status: 200,
+        body: [
+          {
+            id: '1a',
+            goal: 1500,
+            goalDate: '2021-04-20',
+            funds: 47.46,
+            name: 'Travel',
+            transactions: [
+              {
+                amount: '9.34',
+                account: 'Saving',
+                incoming: true,
+                date: '2019-11-8',
+              },
+              {
+                amount: '5.00',
+                account: 'Current',
+                date: '2019-07-12',
+              },
+              {
+                amount: '43.12',
+                account: 'Shared',
+                incoming: true,
+                date: '2019-07-12',
+              },
+            ],
+          },
+          {
+            id: '2b',
+            goal: undefined,
+            funds: 0,
+            name: 'Savings',
+            // img: 'https://img.icons8.com/ios/452/safe.png'
+          },
+          {
+            id: '3c',
+            goal: 500,
+            goalDate: '2021-04-19',
+            funds: 250,
+            name: 'Transportation',
+            transactions: [
+              {
+                amount: '250',
+                account: 'Saving',
+                incoming: true,
+                date: '2020-09-11',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+]);
+
+const pocket1aMockProvider = createMocks([
+  {
+    urlPattern: 'http://localhost:4201/api/pockets/1a',
+    method: 'GET',
+    responses: [
+      {
+        status: 200,
+        body: {
+          id: '1a',
+          goal: { amount: 1500, currency: 'USD' },
+          goalDate: '2021-04-20',
+          funds: { amount: 50, currency: 'USD' },
+          name: 'Travel',
+          transactions: [
+            {
+              amount: '9.34',
+              account: 'Saving',
+              incoming: true,
+              date: '2019-11-8',
+            },
+            {
+              amount: '5.00',
+              account: 'Current',
+              date: '2019-07-12',
+            },
+            {
+              amount: '43.12',
+              account: 'Shared',
+              incoming: true,
+              date: '2019-07-12',
+            },
+          ],
+        },
+      },
+    ],
+  },
+]);
+
+const pocket2bMockProvider = createMocks([
+  {
+    urlPattern: 'http://localhost:4201/api/pockets/2b',
+    method: 'GET',
+    responses: [
+      {
+        status: 200,
+        body: {
+          id: '2b',
+          goal: undefined,
+          funds: {
+            amount: 0,
+            currency: 'USD',
+          },
+          name: 'Savings',
+          // img: 'https://img.icons8.com/ios/452/safe.png'
+        },
+      },
+    ],
+  },
+]);
+
+const pocket3cMockProvider = createMocks([
+  {
+    urlPattern: 'http://localhost:4201/api/pockets/3c',
+    method: 'GET',
+    responses: [
+      {
+        status: 200,
+        body: {
+          id: '3c',
+          goal: {
+            amount: 500,
+            currency: 'USD',
+          },
+          goalDate: '2021-04-19',
+          funds: { amount: 250, currency: 'USD' },
+          name: 'Transportation',
+          transactions: [
+            {
+              amount: '250',
+              account: 'Saving',
+              incoming: true,
+              date: '2020-09-11',
+            },
+          ],
+        },
+      },
+    ],
+  },
+]);
+
+const pocketPostMockProvider = createMocks([
+  {
+    urlPattern: 'http://localhost:4201/api/pocket',
+    method: 'POST',
+    responses: [
+      {
+        status: 200,
+      },
+    ],
+  },
+]);
+
 export const mockProviders: Array<Provider> = [
   createMocksInterceptor(),
+  pocketPostMockProvider,
+  pocket1aMockProvider,
+  pocket2bMockProvider,
+  pocket3cMockProvider,
+  pocketsListMockProvider,
   userMockProvider,
   ProductSummaryHttpServiceMocksProvider,
   CategoryPeriodTotalsHttpServiceMocksProvider,
