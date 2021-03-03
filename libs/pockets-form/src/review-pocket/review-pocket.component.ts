@@ -35,7 +35,6 @@ export class ReviewPocketComponent implements OnDestroy {
   }
 
   nextStep(pocketForm: any) {
-    console.log(pocketForm);
     this.loading = true;
     this.PocketsService.pocketPost(pocketForm)
       .pipe(
