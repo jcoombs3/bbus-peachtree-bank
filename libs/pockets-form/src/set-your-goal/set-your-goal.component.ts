@@ -3,7 +3,6 @@ import { FormControl } from '@angular/forms';
 import { PocketPostRequestBody } from '@peachtree/pt-openapi';
 import { Subject } from 'rxjs';
 import { take, takeUntil } from 'rxjs/operators';
-import { Pocket } from '../pocket.interface';
 import { PocketsFormService } from '../pockets-form.service';
 
 @Component({

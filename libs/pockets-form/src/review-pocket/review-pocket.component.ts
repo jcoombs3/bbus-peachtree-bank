@@ -1,9 +1,9 @@
-import { ChangeDetectorRef, Component, EventEmitter, NgZone, OnDestroy, Output } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, OnDestroy, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { NotificationService } from '@backbase/ui-ang';
 import { PocketsService } from '@peachtree/pt-openapi';
-import { Observable, of, Subject } from 'rxjs';
-import { finalize, takeUntil, take, tap } from 'rxjs/operators';
+import { Observable, Subject } from 'rxjs';
+import { finalize, takeUntil, take } from 'rxjs/operators';
 import { PocketsFormService } from '../pockets-form.service';
 import { ProductSummaryAccountsService } from '@backbase/product-summary-common-ang';
 import { AccountArrangementItem } from '@backbase/data-ang/arrangements';
@@ -25,7 +25,7 @@ export class ReviewPocketComponent implements OnDestroy {
   constructor(
     private pocketsFormService: PocketsFormService,
     private notificationService: NotificationService,
-    private PocketsService: PocketsService,
+    private pocketsService: PocketsService,
     private cd: ChangeDetectorRef,
     private productSummaryAccountsService: ProductSummaryAccountsService,
   ) {
@@ -46,7 +46,8 @@ export class ReviewPocketComponent implements OnDestroy {
 
   nextStep(pocketForm: any) {
     this.loading = true;
-    this.PocketsService.pocketPost(pocketForm)
+    this.pocketsService
+      .pocketPost(pocketForm)
       .pipe(
         take(1),
         takeUntil(this.destroy$),
