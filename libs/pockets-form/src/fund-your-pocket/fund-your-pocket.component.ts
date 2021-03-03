@@ -3,9 +3,8 @@ import { FormControl } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { take, takeUntil } from 'rxjs/operators';
 import { PocketsFormService } from '../pockets-form.service';
-import { accounts } from './mock-accounts';
-import { Pocket } from '../pocket.interface';
 import { PocketPostRequestBody } from '@peachtree/pt-openapi';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'pt-fund-your-pocket',
@@ -16,8 +15,6 @@ export class FundYourPocketComponent implements OnInit, OnDestroy {
   @Output() cancel = new EventEmitter();
   @Output() back = new EventEmitter();
 
-  items = accounts;
-
   amount = new FormControl({
     amount: '',
     currency: 'USD',
@@ -27,7 +24,7 @@ export class FundYourPocketComponent implements OnInit, OnDestroy {
 
   arrangementId: any = undefined;
 
-  constructor(private pocketsFormService: PocketsFormService) {}
+  constructor(private pocketsFormService: PocketsFormService, private router: Router, private route: ActivatedRoute) {}
   destroy$ = new Subject();
 
   ngOnInit() {
@@ -44,10 +41,11 @@ export class FundYourPocketComponent implements OnInit, OnDestroy {
       });
   }
 
-  onChange($event: any) {
+  onChange(selectedAccount: string) {
+    this.router.navigate([{ selectedAccount }], { relativeTo: this.route });
     this.arrangementId = {
       arrangementId: {
-        arrangementId: $event,
+        arrangementId: selectedAccount,
       },
     };
   }
