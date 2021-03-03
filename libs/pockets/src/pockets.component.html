@@ -1,1 +1,6 @@
-<pt-pockets-list [pockets]='pockets' (navigateToPocket)='navigateToPocket($event)'></pt-pockets-list>
+<ng-container *ngIf="pockets$ | async as pockets">
+  <pt-pockets-list [pockets]="pockets" (navigateToPocket)="navigateToPocket($event)"></pt-pockets-list>
+</ng-container>
+<ng-container *ngIf="!(pockets$ | async)">
+  <bb-loading-indicator-ui loaderSize="lg" text="Loading..."></bb-loading-indicator-ui
+></ng-container>

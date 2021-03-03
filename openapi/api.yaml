@@ -26,7 +26,6 @@ paths:
   /pockets:
     get:
       summary: Returns a list of pockets.
-      operationId: postPocket
       responses:
         '200':
           description: A JSON array of pockets
@@ -45,7 +44,7 @@ paths:
           required: true
           description: Parameter description in CommonMark or HTML.
           schema:
-            type : string
+            type: string
       responses:
         '200':
           description: A pocker object
@@ -59,7 +58,7 @@ components:
   schemas:
     PocketList:
       type: array
-      items: 
+      items:
         $ref: '#/components/schemas/Pocket'
     Pocket:
       type: object

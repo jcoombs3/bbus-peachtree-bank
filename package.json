@@ -52,6 +52,7 @@
     "@openapitools/openapi-generator-cli": "^2.1.26",
     "@swimlane/ngx-charts": "^16.0.0",
     "@types/googlemaps": "^3.43.3",
+    "bignumber.js": "^9.0.1",
     "core-js": "~2.6.5",
     "rxjs": "~6.6.2",
     "zone.js": "~0.10.3"
