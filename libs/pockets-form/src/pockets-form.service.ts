@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+import { PocketPostRequestBody } from '@peachtree/pt-openapi';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Pocket } from './pocket.interface';
 
 @Injectable()
 export class PocketsFormService {
-  private pocketFormSubject$: BehaviorSubject<Pocket> = new BehaviorSubject<Pocket>({ name: '' });
-  readonly pocketForm$: Observable<Pocket> = this.pocketFormSubject$.asObservable();
+  private pocketFormSubject$: BehaviorSubject<PocketPostRequestBody> = new BehaviorSubject<PocketPostRequestBody>({
+    name: '',
+  });
+  readonly pocketForm$: Observable<PocketPostRequestBody> = this.pocketFormSubject$.asObservable();
 
   clearForm() {
     this.pocketFormSubject$.next({ name: '' });

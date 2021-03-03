@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { PocketPostRequestBody } from '@peachtree/pt-openapi';
 import { Subject } from 'rxjs';
 import { take, takeUntil } from 'rxjs/operators';
 import { Pocket } from '../pocket.interface';
@@ -24,12 +25,14 @@ export class SetYourGoalComponent implements OnInit, OnDestroy {
   constructor(private pocketsFormService: PocketsFormService) {}
 
   ngOnInit() {
-    this.pocketsFormService.pocketForm$.pipe(take(1), takeUntil(this.destroy$)).subscribe((data: Pocket) => {
-      if (data.goal) {
-        this.amount.value.amount = data.goal.amount;
-        this.amount.value.currency = data.goal.currency;
-      }
-    });
+    this.pocketsFormService.pocketForm$
+      .pipe(take(1), takeUntil(this.destroy$))
+      .subscribe((pocket: PocketPostRequestBody) => {
+        if (pocket.goal) {
+          this.amount.value.amount = pocket.goal.amount;
+          this.amount.value.currency = pocket.goal.currency;
+        }
+      });
   }
 
   nextStep() {

@@ -23,7 +23,7 @@
       </ng-container>
     </div>
   </div>
-  <ng-container *ngIf="pocketForm.account">
+  <ng-container *ngIf="pocketForm.arrangementId">
     <bb-header-ui headingType="h3" heading="Transfer Details"></bb-header-ui>
     <span class="text-muted small mt-2">Amount</span>
     <h4>
@@ -37,15 +37,16 @@
         [highlight]="false"
       ></bb-amount-ui>
     </h4>
-    <div class="d-flex mb-4">
+    <div class="d-flex mb-4" *ngIf="account$ | async as account">
       <div class="mr-4">
         <span class="text-muted small">From</span>
-        <h5 class="mb-0">{{ pocketForm.account?.name }}</h5>
-        <span class="text-muted small mt-n4">****{{ pocketForm.account?.number }}</span>
+        <h5 class="mb-0">{{ account?.name }}</h5>
+        <span class="text-muted small mt-n4">****{{ account?.number }}</span>
         <h5>
           <bb-amount-ui
+            *ngIf="account.availableBalance"
             [currency]="'USD'"
-            [amount]="pocketForm.account!.availableBalance"
+            [amount]="account.availableBalance"
             [mapCurrency]="true"
             [showPlusSign]="false"
             [hideDecimals]="false"

@@ -4,7 +4,7 @@
   </div>
   <div class="row mt-5">
     <div class="col-12 mb-4">
-      <bb-account-selector-ui
+      <!-- <bb-account-selector-ui
         [items]="items"
         [closeOnSelect]="true"
         [dropdownPosition]="'bottom'"
@@ -13,7 +13,11 @@
         [searchable]="false"
         [selectedItems]="selectedAccount"
       >
-      </bb-account-selector-ui>
+      </bb-account-selector-ui> -->
+      <bb-product-summary-account-selector-widget
+        [clickable]="true"
+        (selectedAccount)="onChange($event)"
+      ></bb-product-summary-account-selector-widget>
     </div>
     <div class="col-12 col-sm-6">
       <div class="dollar-input-icon">

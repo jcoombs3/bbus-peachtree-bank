@@ -1,8 +1,8 @@
 import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { PocketPostRequestBody } from '@peachtree/pt-openapi';
 import { Subject } from 'rxjs';
 import { take, takeUntil } from 'rxjs/operators';
-import { Pocket } from '../pocket.interface';
 import { PocketsFormService } from '../pockets-form.service';
 
 @Component({
@@ -21,9 +21,11 @@ export class MakeItYoursComponent implements OnInit, OnDestroy {
   constructor(private pocketsFormSercive: PocketsFormService) {}
 
   ngOnInit(): void {
-    this.pocketsFormSercive.pocketForm$.pipe(take(1), takeUntil(this.destroy$)).subscribe((data: Pocket) => {
-      this.pocketForm.controls.name.setValue(data.name);
-    });
+    this.pocketsFormSercive.pocketForm$
+      .pipe(take(1), takeUntil(this.destroy$))
+      .subscribe((pocket: PocketPostRequestBody) => {
+        this.pocketForm.controls.name.setValue(pocket.name);
+      });
   }
 
   nextStep() {
