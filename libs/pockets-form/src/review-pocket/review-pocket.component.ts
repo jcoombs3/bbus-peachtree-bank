@@ -1,10 +1,12 @@
-import { ChangeDetectorRef, Component, EventEmitter, NgZone, OnDestroy, Output } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, OnDestroy, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { NotificationService } from '@backbase/ui-ang';
 import { PocketsService } from '@peachtree/pt-openapi';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { finalize, takeUntil, take } from 'rxjs/operators';
 import { PocketsFormService } from '../pockets-form.service';
+import { ProductSummaryAccountsService } from '@backbase/product-summary-common-ang';
+import { AccountArrangementItem } from '@backbase/data-ang/arrangements';
 
 @Component({
   selector: 'pt-review-pocket',
@@ -18,13 +20,21 @@ export class ReviewPocketComponent implements OnDestroy {
   @Output() showTac = new EventEmitter();
 
   loading = false;
+  account$!: Observable<AccountArrangementItem>;
 
   constructor(
     private pocketsFormService: PocketsFormService,
     private notificationService: NotificationService,
-    private PocketsService: PocketsService,
+    private pocketsService: PocketsService,
     private cd: ChangeDetectorRef,
-  ) {}
+    private productSummaryAccountsService: ProductSummaryAccountsService,
+  ) {
+    this.pocketsFormService.pocketForm$.pipe(take(1), takeUntil(this.destroy$)).subscribe((res) => {
+      if (res.arrangementId) {
+        this.account$ = this.productSummaryAccountsService.getAccountById(res.arrangementId);
+      }
+    });
+  }
 
   pocketForm$ = this.pocketsFormService.pocketForm$;
 
@@ -36,7 +46,8 @@ export class ReviewPocketComponent implements OnDestroy {
 
   nextStep(pocketForm: any) {
     this.loading = true;
-    this.PocketsService.pocketPost(pocketForm)
+    this.pocketsService
+      .pocketPost(pocketForm)
       .pipe(
         take(1),
         takeUntil(this.destroy$),

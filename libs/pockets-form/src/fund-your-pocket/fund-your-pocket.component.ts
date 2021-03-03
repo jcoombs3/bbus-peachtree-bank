@@ -3,8 +3,8 @@ import { FormControl } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { take, takeUntil } from 'rxjs/operators';
 import { PocketsFormService } from '../pockets-form.service';
-import { accounts } from './mock-accounts';
-import { Pocket } from '../pocket.interface';
+import { PocketPostRequestBody } from '@peachtree/pt-openapi';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'pt-fund-your-pocket',
@@ -15,8 +15,6 @@ export class FundYourPocketComponent implements OnInit, OnDestroy {
   @Output() cancel = new EventEmitter();
   @Output() back = new EventEmitter();
 
-  items = accounts;
-
   amount = new FormControl({
     amount: '',
     currency: 'USD',
@@ -24,39 +22,35 @@ export class FundYourPocketComponent implements OnInit, OnDestroy {
 
   selectedAccount: any = undefined;
 
-  account: any = undefined;
+  arrangementId: any = undefined;
 
-  constructor(private pocketsFormService: PocketsFormService) {}
+  constructor(private pocketsFormService: PocketsFormService, private router: Router, private route: ActivatedRoute) {}
   destroy$ = new Subject();
 
   ngOnInit() {
-    this.pocketsFormService.pocketForm$.pipe(take(1), takeUntil(this.destroy$)).subscribe((data: Pocket) => {
-      if (data.fundAmount) {
-        this.amount.value.amount = data.fundAmount.amount;
-        this.amount.value.currency = data.fundAmount.currency;
-      }
-      if (data.account) {
-        this.selectedAccount = data.account;
-      }
-    });
+    this.pocketsFormService.pocketForm$
+      .pipe(take(1), takeUntil(this.destroy$))
+      .subscribe((pocket: PocketPostRequestBody) => {
+        if (pocket.fundAmount) {
+          this.amount.value.amount = pocket.fundAmount.amount;
+          this.amount.value.currency = pocket.fundAmount.currency;
+        }
+      });
   }
 
-  onChange($event: any) {
-    this.account = {
-      account: {
-        id: $event.id,
-        name: $event.name,
-        number: $event.number,
-        availableBalance: $event.availableBalance,
+  onChange(selectedAccount: string) {
+    this.router.navigate([{ selectedAccount }], { relativeTo: this.route });
+    this.arrangementId = {
+      arrangementId: {
+        arrangementId: selectedAccount,
       },
     };
-    console.log(this.account);
   }
 
   nextStep() {
     const fundAmount = { fundAmount: this.amount.value };
     this.pocketsFormService.setForm(fundAmount);
-    this.pocketsFormService.setForm(this.account);
+    this.pocketsFormService.setForm(this.arrangementId);
     this.next.emit();
   }
   previousStep() {

@@ -15,6 +15,7 @@ import {
   AmountModule,
   NotificationModule,
   LoadButtonModule,
+  LoadingIndicatorModule,
 } from '@backbase/ui-ang';
 import { PocketsStepperComponent } from './pocket-stepper/pockets-stepper.component';
 import { MakeItYoursComponent } from './make-it-yours/make-it-yours.component';
@@ -25,6 +26,9 @@ import { TacComponent } from './tac/tac.component';
 import { PocketReadyComponent } from './pocket-ready/pocket-ready.component';
 import { PocketsFormService } from './pockets-form.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductSummaryAccountSelectorWidgetModule } from '@backbase/product-summary-account-selector-widget-ang';
+import { ProductSummaryAccountsService } from '@backbase/product-summary-common-ang';
+
 @NgModule({
   declarations: [
     PocketsFormComponent,
@@ -54,7 +58,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AmountModule,
     NotificationModule,
     LoadButtonModule,
+    ProductSummaryAccountSelectorWidgetModule,
+    LoadingIndicatorModule,
   ],
-  providers: [PocketsFormService],
+  providers: [PocketsFormService, ProductSummaryAccountsService],
 })
 export class PocketsFormModule {}
