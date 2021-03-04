@@ -7,13 +7,17 @@ import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
 import { environment } from '../environments/environment';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+
+// Required universal-ang
 import { ContainersModule } from '@backbase/universal-ang/containers';
 import { LayoutContainerModule } from '@backbase/universal-ang/layouts';
 import { MegaMenuNavigationContainerModule } from '@backbase/universal-ang/navigation';
-import { bundlesDefinition } from './bundles-definition';
 import { HeadingWidgetModule } from '@backbase/universal-ang/heading';
-import { AccountsTransactionsJourneyModule } from '@backbase/accounts-transactions-journey-ang';
-import { AccountsTransactionsConfigProvider } from '../app/config.providers';
+
+// Lazy Loading Bundles
+import { bundlesDefinition } from './bundles-definition';
+
+// Open API module
 import { PtOpenapiModule } from '@peachtree/pt-openapi';
 
 @NgModule({
@@ -31,10 +35,9 @@ import { PtOpenapiModule } from '@peachtree/pt-openapi';
     LayoutContainerModule,
     MegaMenuNavigationContainerModule,
     HeadingWidgetModule,
-    AccountsTransactionsJourneyModule,
     PtOpenapiModule,
   ],
-  providers: [...(environment.mockProviders || []), AccountsTransactionsConfigProvider],
+  providers: [...(environment.mockProviders || [])],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
