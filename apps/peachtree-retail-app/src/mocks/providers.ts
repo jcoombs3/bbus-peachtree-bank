@@ -253,7 +253,7 @@ const pocketPostMockProvider = createMocks([
     method: 'POST',
     responses: [
       {
-        status: 200,
+        status: 400,
       },
     ],
   },
