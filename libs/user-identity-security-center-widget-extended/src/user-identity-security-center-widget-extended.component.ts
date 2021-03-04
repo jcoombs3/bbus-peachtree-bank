@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { AbstractControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { ManageProfilePreferencesService, UserDataService } from '@backbase/user-common';
 import { BehaviorSubject, Subscription } from 'rxjs';
@@ -32,13 +32,11 @@ function digit(): ValidatorFn {
   styles: [],
   providers: [ManageProfilePreferencesService, UserDataService],
 })
-export class UserIdentitySecurityCenterWidgetExtendedComponent implements OnInit, OnDestroy {
+export class UserIdentitySecurityCenterWidgetExtendedComponent implements OnDestroy {
   constructor() {}
 
   private formSubject = new BehaviorSubject<any>(undefined);
   form!: Subscription;
-
-  ngOnInit(): void {}
 
   getForm(hostForm: FormGroup) {
     this.formSubject.next(hostForm);
