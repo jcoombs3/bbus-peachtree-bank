@@ -5,12 +5,7 @@ import {
   ArrangementsHttpServiceMocksProvider,
 } from '@backbase/data-ang/arrangements';
 import { createMocks, createMocksInterceptor } from '@backbase/foundation-ang/data-http';
-import {
-  CategoryPeriodTotalsHttpServiceMocksProvider,
-  CategoryTotalsHttpServiceMocksProvider,
-  TransactionClientHttpServiceMocksProvider,
-} from '@backbase/data-ang/transactions';
-import { NotificationsMocksProvider } from '@backbase/notifications-mocks-provider-ang';
+import { TransactionClientHttpServiceMocksProvider } from '@backbase/data-ang/transactions';
 import { NotificationsHttpServiceMocksProvider } from '@backbase/data-ang/notifications';
 import {
   ServiceAgreementHttpServiceMocksProvider,
@@ -216,7 +211,6 @@ const pocket2bMockProvider = createMocks([
             currency: 'USD',
           },
           name: 'Savings',
-          // img: 'https://img.icons8.com/ios/452/safe.png'
         },
       },
     ],
@@ -265,6 +259,243 @@ const pocketPostMockProvider = createMocks([
   },
 ]);
 
+const accessControlMocks = createMocks([
+  {
+    urlPattern: '/client-api/v2/accessgroups/usercontext/serviceagreements',
+    method: 'GET',
+    responses: [
+      {
+        status: 200,
+        body: [
+          {
+            id: 'a1198a205a404eb7b47fa553db920429',
+            name: 'Online Banking Service Agreement',
+            description: 'Service Agreement between Online Banking and Backbase',
+            isMaster: false,
+          },
+          {
+            id: '37115f7b556a4e11ba0bfd07e2567b1d',
+            name: 'Doe Corporation Service Agreement',
+            description: 'Service Agreement for Doe Corp.',
+            isMaster: true,
+          },
+        ],
+      },
+    ],
+  },
+]);
+
+const categoriesMocks = createMocks([
+  {
+    urlPattern: '/client-api/v2/categories',
+    method: 'GET',
+    responses: [
+      {
+        status: 200,
+        body: [
+          {
+            categoryId: 1,
+            categoryName: 'Home',
+            categoryType: 'Expenses',
+            subCategories: [
+              {
+                categoryId: 2,
+                categoryName: 'Mortgage',
+                categoryType: 'Expenses',
+                parentId: 1,
+              },
+              {
+                categoryId: 3,
+                categoryName: 'Rent',
+                categoryType: 'Expenses',
+                parentId: 1,
+              },
+            ],
+          },
+          {
+            categoryId: 4,
+            categoryName: 'Food & Drinks',
+            categoryType: 'Expenses',
+            subCategories: [
+              {
+                categoryId: 5,
+                categoryName: 'Alcohol & Bars',
+                categoryType: 'Expenses',
+                parentId: 4,
+              },
+              {
+                categoryId: 6,
+                categoryName: 'Fast Food',
+                categoryType: 'Expenses',
+                parentId: 4,
+              },
+              {
+                categoryId: 7,
+                categoryName: 'Groceries',
+                categoryType: 'Expenses',
+                parentId: 4,
+              },
+              {
+                categoryId: 8,
+                categoryName: 'Restaurants',
+                categoryType: 'Expenses',
+                parentId: 4,
+              },
+            ],
+          },
+          {
+            categoryId: 9,
+            categoryName: 'Health & Beauty',
+            categoryType: 'Expenses',
+            subCategories: [
+              {
+                categoryId: 10,
+                categoryName: 'Beauty',
+                categoryType: 'Expenses',
+                parentId: 9,
+              },
+              {
+                categoryId: 11,
+                categoryName: 'Health & Fitness',
+                categoryType: 'Expenses',
+                parentId: 9,
+              },
+            ],
+          },
+          {
+            categoryId: 12,
+            categoryName: 'Transportation',
+            categoryType: 'Expenses',
+            subCategories: [
+              {
+                categoryId: 13,
+                categoryName: 'Car',
+                categoryType: 'Expenses',
+                parentId: 12,
+              },
+              {
+                categoryId: 14,
+                categoryName: 'Public Transport',
+                categoryType: 'Expenses',
+                parentId: 12,
+              },
+            ],
+          },
+          {
+            categoryId: 15,
+            categoryName: 'Shopping',
+            categoryType: 'Expenses',
+            subCategories: [
+              {
+                categoryId: 16,
+                categoryName: 'Clothing',
+                categoryType: 'Expenses',
+                parentId: 15,
+              },
+              {
+                categoryId: 17,
+                categoryName: 'Electronics',
+                categoryType: 'Expenses',
+                parentId: 15,
+              },
+            ],
+          },
+          {
+            categoryId: 18,
+            categoryName: 'Hobbies & Entertainment',
+            categoryType: 'Expenses',
+          },
+          {
+            categoryId: 19,
+            categoryName: 'Bills & Utilities',
+            categoryType: 'Expenses',
+            subCategories: [
+              {
+                categoryId: 20,
+                categoryName: 'Internet',
+                categoryType: 'Expenses',
+                parentId: 19,
+              },
+              {
+                categoryId: 21,
+                categoryName: 'Mobile Phone',
+                categoryType: 'Expenses',
+                parentId: 19,
+              },
+              {
+                categoryId: 22,
+                categoryName: 'Utilities',
+                categoryType: 'Expenses',
+                parentId: 19,
+              },
+            ],
+          },
+          {
+            categoryId: 23,
+            categoryName: 'Income',
+            categoryType: 'Income',
+            subCategories: [
+              {
+                categoryId: 24,
+                categoryName: 'Bonus',
+                categoryType: 'Income',
+                parentId: 23,
+              },
+              {
+                categoryId: 25,
+                categoryName: 'Salary/Wages',
+                categoryType: 'Income',
+                parentId: 23,
+              },
+            ],
+          },
+          {
+            categoryId: 26,
+            categoryName: 'Other Income',
+            categoryType: 'Income',
+            subCategories: [
+              {
+                categoryId: 27,
+                categoryName: 'Interest Income',
+                categoryType: 'Income',
+                parentId: 26,
+              },
+              {
+                categoryId: 28,
+                categoryName: 'Rental Income',
+                categoryType: 'Income',
+                parentId: 26,
+              },
+            ],
+          },
+          {
+            categoryId: 29,
+            categoryName: 'Transfers',
+            categoryType: 'Transfer',
+          },
+          {
+            categoryId: 30,
+            categoryName: 'Uncategorised',
+            categoryType: 'General',
+          },
+        ],
+      },
+    ],
+  },
+]);
+
+const userContextMocks = createMocks([
+  {
+    urlPattern: '/client-api/v2/accessgroups/usercontext',
+    method: 'POST',
+    responses: [
+      {
+        status: 200,
+      },
+    ],
+  },
+]);
+
 export const mockProviders: Array<Provider> = [
   createMocksInterceptor(),
   pocketPostMockProvider,
@@ -274,14 +505,14 @@ export const mockProviders: Array<Provider> = [
   pocketsListMockProvider,
   userMockProvider,
   ProductSummaryHttpServiceMocksProvider,
-  CategoryPeriodTotalsHttpServiceMocksProvider,
-  CategoryTotalsHttpServiceMocksProvider,
   TransactionClientHttpServiceMocksProvider,
   ArrangementsHttpServiceMocksProvider,
-  NotificationsMocksProvider,
   ServiceAgreementHttpServiceMocksProvider,
-  ServiceAgreementsHttpServiceMocksProvider,
   NotificationsHttpServiceMocksProvider,
   userProfileMockProvider,
+  accessControlMocks,
+  categoriesMocks,
+  ServiceAgreementsHttpServiceMocksProvider,
   AccountsHttpServiceMocksProvider,
+  userContextMocks,
 ];
