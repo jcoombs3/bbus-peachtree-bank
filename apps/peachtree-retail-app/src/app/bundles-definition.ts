@@ -9,15 +9,7 @@ export const bundlesDefinition: LazyConfig = [
       ),
   },
   {
-    components: [
-      'ContentWidgetComponent',
-      'NotificationsBadgeWidgetComponent',
-      'UserContextMenuWidgetComponent',
-      'ProductSummaryListWidgetComponent',
-      'ProductSummaryAccountSelectorWidgetComponent',
-      'TransactionsListWidgetComponent',
-      'ProductSummaryDetailsWidgetComponent',
-    ],
+    components: ['ContentWidgetComponent', 'NotificationsBadgeWidgetComponent', 'UserContextMenuWidgetComponent'],
     loadChildren: () => import('../bundles/bundle-1').then((m) => m.Bundle1Module),
   },
   {
