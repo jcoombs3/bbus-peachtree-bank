@@ -461,6 +461,24 @@
           <context context-type="linenumber">76</context>
         </context-group>
         <note priority="1" from="description">Account closed status</note>
+      </trans-unit><trans-unit id="product-item-base-account.accountNumber.label" datatype="html">
+        <source>
+        ; Account number:
+      </source><target state="new">
+        ; Account number:
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/ui-ang/src/bb-product-item-basic-account-ui/product-item-basic-account.component.d.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <note priority="1" from="description">Account number screen reader label</note>
+      </trans-unit><trans-unit id="product-item-base-account.balance.label" datatype="html">
+        <source>; Balance:</source><target state="new">; Balance:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/ui-ang/src/bb-product-item-basic-account-ui/product-item-basic-account.component.d.ts</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+        <note priority="1" from="description">Balance screen reader label</note>
       </trans-unit>
       <trans-unit id="bb-rich-text-editor-ui.length-warning" datatype="html">
         <source>You typed <x id="INTERPOLATION" equiv-text="{{ getMessageText(value).length }}"/> of <x id="INTERPOLATION_1" equiv-text="{{ maxLength }}"/> allowed characters in this field.</source><target state="new">You typed <x id="INTERPOLATION" equiv-text="{{ getMessageText(value).length }}"/> of <x id="INTERPOLATION_1" equiv-text="{{ maxLength }}"/> allowed characters in this field.</target>
@@ -855,15 +873,12 @@
       </source><target state="new">
         Account is required.
       </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/ui-ang/src/bb-account-selector-ui/showcase/account-selector-showcase.component.d.ts</context>
-          <context context-type="linenumber">132</context>
-        </context-group>
+        
         <note priority="1" from="description">Required error message for account
           selector</note>
         <note priority="1" from="meaning">
            account required error text </note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/ui-ang/src/bb-account-selector-ui/showcase/account-selector-showcase.component.d.ts</context><context context-type="linenumber">160</context></context-group></trans-unit>
       <trans-unit id="accountStatement.filter.form.categories.placeholder" datatype="html">
         <source>– select a category –</source><target state="new">– select a category –</target>
         <context-group purpose="location">
@@ -1076,6 +1091,12 @@
             devices</note>
         <note priority="1" from="meaning">
              Back to Main Menu</note>
+      </trans-unit><trans-unit id="navigation-link-widget.navigation.heading" datatype="html">
+        <source>Navigation</source><target state="new">Navigation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/navigation-link-widget-ang/src/navigation-link-widget.component.d.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="9d5886568929b9904834716e2da5b67d7c575ebc" datatype="html">
         <source>See more options</source><target state="new">See more options</target>
@@ -5051,7 +5072,7 @@
       </trans-unit>
       <trans-unit id="notifications-capability-icon.origin.label" datatype="html">
         <source>
-      <x id="ICU" equiv-text="{ origin, select, Transaction {...} MessageCenter {...} Limits {...} Payment {...} AccountStatement {...} Contact {...} PFM {...}}"/>
+      <x id="ICU" equiv-text="{ origin, select, Transaction {...} MessageCenter {...} Limits {...} Payment {...} AccountStatement {...} Contact {...} PFM {...} FinancialInsights {...}}"/>
     </source><target state="new">
       <x id="ICU" equiv-text="{ origin, select, Transaction {...} MessageCenter {...} Limits {...} Payment {...} AccountStatement {...} Contact {...} PFM {...}}"/>
     </target>
@@ -5060,14 +5081,14 @@
           <context context-type="linenumber">21</context>
         </context-group>
         <note priority="1" from="description">Notification origin label</note>
-      </trans-unit>
-      <trans-unit id="1972f7ae3dfde5787fb713d6ec1652afeed1e14f" datatype="html">
-        <source>{VAR_SELECT, select, Transaction {Transactions} MessageCenter {Messages} Limits {Limits} Payment {Payments} AccountStatement {Account Statement} Contact {Contact} PFM {Saving Goals} }</source><target state="new">{VAR_SELECT, select, Transaction {Transactions} MessageCenter {Messages} Limits {Limits} Payment {Payments} AccountStatement {Account Statement} Contact {Contact} PFM {Saving Goals} }</target>
+      </trans-unit><trans-unit id="674af68a46d6b04be48ec9418b75ded3e6f29355" datatype="html">
+        <source>{VAR_SELECT, select, Transaction {Transactions} MessageCenter {Messages} Limits {Limits} Payment {Payments} AccountStatement {Account Statement} Contact {Contact} PFM {Saving Goals} FinancialInsights {Financial Insights} }</source><target state="new">{VAR_SELECT, select, Transaction {Transactions} MessageCenter {Messages} Limits {Limits} Payment {Payments} AccountStatement {Account Statement} Contact {Contact} PFM {Saving Goals} FinancialInsights {Financial Insights} }</target>
         <context-group purpose="location">
           <context context-type="sourcefile">../../node_modules/@backbase/notifications-common-ang/src/components/notifications-capability-icon/notifications-capability-icon.component.d.ts</context>
           <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
+      
       <trans-unit id="33e7a6073d549c94b530ae2143b71d68ce760eaf" datatype="html">
         <source>
         <x id="ICU" equiv-text="{ unreadCount || 0, plural, =0 {...} =1 {...} other {...}}"/>
@@ -5173,12 +5194,9 @@
       </trans-unit>
       <trans-unit id="notifications.notification-settings.aria-label" datatype="html">
         <source>Redirect to notification settings</source><target state="new">Redirect to notification settings</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context>
-          <context context-type="linenumber">42</context>
-        </context-group>
+        
         <note priority="1" from="description">Aria-label for settings button</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context><context context-type="linenumber">43</context></context-group></trans-unit>
       <trans-unit id="notifications.new-notifications-available.button" datatype="html">
         <source>
       <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>New Notification available. Click to refresh<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
@@ -5187,167 +5205,132 @@
       <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>New Notification available. Click to refresh<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
       <x id="START_TAG_BB-ICON-UI" ctype="x-bb-icon-ui" equiv-text="&lt;bb-icon-ui>"/><x id="CLOSE_TAG_BB-ICON-UI" ctype="x-bb-icon-ui" equiv-text="&lt;/bb-icon-ui>"/>
     </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context>
-          <context context-type="linenumber">62</context>
-        </context-group>
+        
         <note priority="1" from="description">Label for new notifications loading button</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context><context context-type="linenumber">63</context></context-group></trans-unit>
       <trans-unit id="notifications.new-notifications-available.aria-label" datatype="html">
         <source>New Notification available. Click to refresh</source><target state="new">New Notification available. Click to refresh</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context>
-          <context context-type="linenumber">56</context>
-        </context-group>
+        
         <note priority="1" from="description">
         Aria-label for new notifications loading button</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context><context context-type="linenumber">57</context></context-group></trans-unit>
       <trans-unit id="notifications.mark-all-read.alert.title" datatype="html">
         <source>Error! Couldn’t mark all as read.</source><target state="new">Error! Couldn’t mark all as read.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context>
-          <context context-type="linenumber">70</context>
-        </context-group>
+        
         <note priority="1" from="description">Label for mark all as read error</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context><context context-type="linenumber">71</context></context-group></trans-unit>
       <trans-unit id="notifications.mark-all-read.alert.aria-label" datatype="html">
         <source>Error! Couldn’t mark all as read.</source><target state="new">Error! Couldn’t mark all as read.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context>
-          <context context-type="linenumber">72</context>
-        </context-group>
+        
         <note priority="1" from="description">Aria-label for mark all as read error</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context><context context-type="linenumber">73</context></context-group></trans-unit>
       <trans-unit id="notifications.mark-all-read.label" datatype="html">
         <source>Mark all as read</source><target state="new">Mark all as read</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context>
-          <context context-type="linenumber">89</context>
-        </context-group>
+        
         <note priority="1" from="description">Label for mark all as read button</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context><context context-type="linenumber">90</context></context-group></trans-unit>
       <trans-unit id="notifications.mark-all-read.aria-label" datatype="html">
         <source>Mark all notifcations as read</source><target state="new">Mark all notifcations as read</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context>
-          <context context-type="linenumber">84</context>
-        </context-group>
+        
         <note priority="1" from="description">Aria-label for mark all as read button</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context><context context-type="linenumber">85</context></context-group></trans-unit>
       <trans-unit id="notifications.new-loaded-notifications-available" datatype="html">
         <source>
           <x id="ICU" equiv-text="{ notifications.length, plural, =1 {...} other {...}}"/>
         </source><target state="new">
           <x id="ICU" equiv-text="{ notifications.length, plural, =1 {...} other {...}}"/>
         </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context>
-          <context context-type="linenumber">101</context>
-        </context-group>
+        
         <note priority="1" from="description">Label for new loaded notifications available</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context><context context-type="linenumber">102</context></context-group></trans-unit>
       <trans-unit id="a2be9416f19a5c286533d07591c7332509eb7a4d" datatype="html">
         <source>{VAR_PLURAL, plural, =1 {new notification of <x id="INTERPOLATION" equiv-text="{{ totalCount }}"/>available} other {<x id="INTERPOLATION_1" equiv-text="{{ notifications.length }}"/> new notifications of <x id="INTERPOLATION" equiv-text="{{ totalCount }}"/>available } }</source><target state="new">{VAR_PLURAL, plural, =1 {new notification of <x id="INTERPOLATION" equiv-text="{{ totalCount }}"/>available} other {<x id="INTERPOLATION_1" equiv-text="{{ notifications.length }}"/> new notifications of <x id="INTERPOLATION" equiv-text="{{ totalCount }}"/>available } }</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context>
-          <context context-type="linenumber">102</context>
-        </context-group>
-      </trans-unit>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context><context context-type="linenumber">103</context></context-group></trans-unit>
       <trans-unit id="notifications.notification-list.load-more" datatype="html">
         <source>
                 Load More
               </source><target state="new">
                 Load More
               </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context>
-          <context context-type="linenumber">137</context>
-        </context-group>
+        
         <note priority="1" from="description">Load more button</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context><context context-type="linenumber">140</context></context-group></trans-unit>
       <trans-unit id="notifications.notification-list.load-more-disabled" datatype="html">
         <source>
                 You’ve reached the end of the list.
               </source><target state="new">
                 You’ve reached the end of the list.
               </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context>
-          <context context-type="linenumber">146</context>
-        </context-group>
+        
         <note priority="1" from="description">Load more disabled text</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context><context context-type="linenumber">149</context></context-group></trans-unit>
       <trans-unit id="notifications.error-state.title" datatype="html">
         <source>Notifications couldn’t load</source><target state="new">Notifications couldn’t load</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context>
-          <context context-type="linenumber">171</context>
-        </context-group>
+        
         <note priority="1" from="description">Notifications are not loading title</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context><context context-type="linenumber">174</context></context-group></trans-unit>
       <trans-unit id="notifications.error-state.subtitle" datatype="html">
         <source>Try to reload the page or contact the system administrator.</source><target state="new">Try to reload the page or contact the system administrator.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context>
-          <context context-type="linenumber">173</context>
-        </context-group>
+        
         <note priority="1" from="description">Notifications are not loading subtitle</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context><context context-type="linenumber">176</context></context-group></trans-unit>
       <trans-unit id="notifications.state.no-notifications.title" datatype="html">
         <source>No Notifications</source><target state="new">No Notifications</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context>
-          <context context-type="linenumber">183</context>
-        </context-group>
+        
         <note priority="1" from="description">Notifications empty state message title</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context><context context-type="linenumber">186</context></context-group></trans-unit>
       <trans-unit id="notifications.state.no-notifications.subtitle" datatype="html">
         <source>You don't have any notifications to be displayed</source><target state="new">You don't have any notifications to be displayed</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context>
-          <context context-type="linenumber">187</context>
-        </context-group>
+        
         <note priority="1" from="description">Notifications empty state message</note>
-      </trans-unit>
-      <trans-unit id="notifications.list.notification-details.severity-level" datatype="html">
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list/notifications-list.component.d.ts</context><context context-type="linenumber">190</context></context-group></trans-unit><trans-unit id="notifications.list.notification-details.read-unread-status" datatype="html">
         <source>
-      <x id="ICU" equiv-text="{ hostRef.notification.level, select, ALERT {...} INFO {...} SUCCESS {...} WARNING {...}}"/>,
+      <x id="ICU" equiv-text="{ hostRef.notification.read, select, true {...} false {...}}"/> notification,
     </source><target state="new">
-      <x id="ICU" equiv-text="{ hostRef.notification.level, select, ALERT {...} INFO {...} SUCCESS {...} WARNING {...}}"/>,
+      <x id="ICU" equiv-text="{ hostRef.notification.read, select, true {...} false {...}}"/> notification,
     </target>
         <context-group purpose="location">
           <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list-item/notifications-list-item.component.d.ts</context>
           <context context-type="linenumber">24</context>
         </context-group>
-        <note priority="1" from="description">Notification item severity level</note>
-      </trans-unit>
-      <trans-unit id="28f75a2320f3c0701b20321b31d12d68f5057728" datatype="html">
-        <source>{VAR_SELECT, select, ALERT {Alert } INFO {Info } SUCCESS {Success } WARNING {Warning } }</source><target state="new">{VAR_SELECT, select, ALERT {Alert } INFO {Info } SUCCESS {Success } WARNING {Warning } }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list-item/notifications-list-item.component.d.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Notification item read/unread status</note>
+      </trans-unit><trans-unit id="92d408ea4879639323166d99de4dbd499dc5682d" datatype="html">
+        <source>{VAR_SELECT, select, true {viewed } false {new } }</source><target state="new">{VAR_SELECT, select, true {viewed } false {new } }</target>
         <context-group purpose="location">
           <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list-item/notifications-list-item.component.d.ts</context>
           <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="notifications.list.show-more.button" datatype="html">
+      
+      <trans-unit id="28f75a2320f3c0701b20321b31d12d68f5057728" datatype="html">
+        <source>{VAR_SELECT, select, ALERT {Alert } INFO {Info } SUCCESS {Success } WARNING {Warning } }</source><target state="new">{VAR_SELECT, select, ALERT {Alert } INFO {Info } SUCCESS {Success } WARNING {Warning } }</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list-item/notifications-list-item.component.d.ts</context><context context-type="linenumber">31</context></context-group></trans-unit><trans-unit id="notifications.list.see-more.button" datatype="html">
         <source>
-        Show more
+        <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>See more<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
       </source><target state="new">
-        Show more
+        <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>See more<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
       </target>
         <context-group purpose="location">
           <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list-item/notifications-list-item.component.d.ts</context>
-          <context context-type="linenumber">73</context>
+          <context context-type="linenumber">80</context>
         </context-group>
-        <note priority="1" from="description">Notification badge Show More button</note>
-      </trans-unit>
-      <trans-unit id="notifications.list.show-more.button.aria-label" datatype="html">
-        <source>Show more notification details</source><target state="new">Show more notification details</target>
+        <note priority="1" from="description">Notification badge See more button</note>
+      </trans-unit><trans-unit id="notifications.list.see-more.button.aria-label" datatype="html">
+        <source>See more notification details</source><target state="new">See more notification details</target>
         <context-group purpose="location">
           <context context-type="sourcefile">../../node_modules/@backbase/notifications-badge-widget-ang/src/components/notifications-list-item/notifications-list-item.component.d.ts</context>
-          <context context-type="linenumber">70</context>
+          <context context-type="linenumber">77</context>
         </context-group>
-        <note priority="1" from="description">Aria-label for Show More button</note>
+        <note priority="1" from="description">Aria-label for See more button</note>
       </trans-unit>
+      
+      
       <trans-unit id="manage-limits-modal.header.title" datatype="html">
         <source>Limits</source><target state="new">Limits</target>
         <context-group purpose="location">
@@ -5949,15 +5932,19 @@
           <context context-type="linenumber">10</context>
         </context-group>
         <note priority="1" from="description">Employee</note>
-      </trans-unit>
-      <trans-unit id="business.function.group.other" datatype="html">
-        <source>Other</source><target state="new">Other</target>
+      </trans-unit><trans-unit id="business.function.group.ortfolio" datatype="html">
+        <source>Portfolio Summary</source><target state="new">Portfolio Summary</target>
         <context-group purpose="location">
           <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/business-function-group-name/business-function-group-name.component.d.ts</context>
           <context context-type="linenumber">11</context>
         </context-group>
-        <note priority="1" from="description">Other</note>
+        <note priority="1" from="description">Employee</note>
       </trans-unit>
+      <trans-unit id="business.function.group.other" datatype="html">
+        <source>Other</source><target state="new">Other</target>
+        
+        <note priority="1" from="description">Other</note>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/business-function-group-name/business-function-group-name.component.d.ts</context><context context-type="linenumber">12</context></context-group></trans-unit>
       <trans-unit id="business.function.transactions" datatype="html">
         <source>Transactions</source><target state="new">Transactions</target>
         <context-group purpose="location">
@@ -6581,6 +6568,83 @@
           <context context-type="linenumber">79</context>
         </context-group>
         <note priority="1" from="description">Manage Arrangement Alias</note>
+      </trans-unit><trans-unit id="business.function.revoke.access" datatype="html">
+        <source>Revoke Access</source><target state="new">Revoke Access</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/business-function-name/business-function-name.component.d.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+        <note priority="1" from="description">Revoke Access</note>
+      </trans-unit><trans-unit id="business.function.product.summary.limited.view" datatype="html">
+        <source>Product Summary Limited View</source><target state="new">Product Summary Limited View</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/business-function-name/business-function-name.component.d.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+        <note priority="1" from="description">Product Summary Limited View</note>
+      </trans-unit><trans-unit id="business.function.manage.engagement.events" datatype="html">
+        <source>Manage Engagement Events</source><target state="new">Manage Engagement Events</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/business-function-name/business-function-name.component.d.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <note priority="1" from="description">Manage Engagement Events</note>
+      </trans-unit><trans-unit id="business.function.manage.pockets" datatype="html">
+        <source>Manage Pockets</source><target state="new">Manage Pockets</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/business-function-name/business-function-name.component.d.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+        <note priority="1" from="description">Manage Pockets</note>
+      </trans-unit><trans-unit id="business.function.manage.portfolio" datatype="html">
+        <source>Manage Portfolio</source><target state="new">Manage Portfolio</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/business-function-name/business-function-name.component.d.ts</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+        <note priority="1" from="description">Manage Portfolio</note>
+      </trans-unit><trans-unit id="business.function.manage.order" datatype="html">
+        <source>Manage Order</source><target state="new">Manage Order</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/business-function-name/business-function-name.component.d.ts</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+        <note priority="1" from="description">Manage Order</note>
+      </trans-unit><trans-unit id="business.function.manage.cards" datatype="html">
+        <source>Manage Cards</source><target state="new">Manage Cards</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/business-function-name/business-function-name.component.d.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <note priority="1" from="description">Manage Cards</note>
+      </trans-unit><trans-unit id="business.function.places" datatype="html">
+        <source>Places</source><target state="new">Places</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/business-function-name/business-function-name.component.d.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+        <note priority="1" from="description">Places</note>
+      </trans-unit><trans-unit id="business.function.remote.deposit.capture" datatype="html">
+        <source>Remote Deposit Capture</source><target state="new">Remote Deposit Capture</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/business-function-name/business-function-name.component.d.ts</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+        <note priority="1" from="description">Remote Deposit Capture</note>
+      </trans-unit><trans-unit id="business.function.audit.emulation" datatype="html">
+        <source>Audit Emulation</source><target state="new">Audit Emulation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/business-function-name/business-function-name.component.d.ts</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+        <note priority="1" from="description">Audit Emulation</note>
+      </trans-unit><trans-unit id="business.function.identity.impersonation" datatype="html">
+        <source>Identity Impersonation</source><target state="new">Identity Impersonation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/business-function-name/business-function-name.component.d.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <note priority="1" from="description">Identity Impersonation</note>
       </trans-unit>
       <trans-unit id="function-group-list.details.permission.aria.permitted" datatype="html">
         <source>Permitted</source><target state="new">Permitted</target>
@@ -6945,16 +7009,10 @@
       </trans-unit>
       <trans-unit id="user-permissions-item.label.remove-account-group" datatype="html">
         <source>Remove account group</source><target state="new">Remove account group</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">122</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">576</context>
-        </context-group>
+        
+        
         <note priority="1" from="description">Remove account group</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">122</context></context-group><context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">619</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.label.allPayeesLinked" datatype="html">
         <source><x id="ICU" equiv-text="{
                 selectedDg?.payees?.length, plural, =1 {...} other {...}}"/>
@@ -7048,11 +7106,19 @@
                    </source><target state="new">
                      These are the payee group(s) linked with account group(s) assigned to <x id="INTERPOLATION" equiv-text="{{ _userPermissions.name}}"/> Job Role
                    </target>
+        
+        <note priority="1" from="description">Payee Groups table header tooltip text</note>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">262</context></context-group></trans-unit><trans-unit id="user-permissions-item.table.header.payee-group.tooltip.aria-label.text" datatype="html">
+        <source>
+                   These are the payee group(s) linked with account group(s) assigned to <x id="INTERPOLATION" equiv-text="{{ _userPermissions.name}}"/> Job Role
+                 </source><target state="new">
+                   These are the payee group(s) linked with account group(s) assigned to <x id="INTERPOLATION" equiv-text="{{ _userPermissions.name}}"/> Job Role
+                 </target>
         <context-group purpose="location">
           <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">260</context>
+          <context context-type="linenumber">266</context>
         </context-group>
-        <note priority="1" from="description">Payee Groups table header tooltip text</note>
+        <note priority="1" from="description">Payee Groups table header tooltip aria-label text</note>
       </trans-unit>
       <trans-unit id="user-permissions-item.table.header.account-group.name" datatype="html">
         <source>
@@ -7060,23 +7126,28 @@
               </source><target state="new">
                 Account Groups <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(<x id="INTERPOLATION" equiv-text="{{dataGroups.length}}"/>)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
               </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">272</context>
-        </context-group>
+        
         <note priority="1" from="description">Account Groups table header name</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">277</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.table.header.account-group.tooltip.text" datatype="html">
         <source>
                      These are the account group(s) assigned to <x id="INTERPOLATION" equiv-text="{{ _userPermissions.name}}"/> Job Role
                    </source><target state="new">
                      These are the account group(s) assigned to <x id="INTERPOLATION" equiv-text="{{ _userPermissions.name}}"/> Job Role
                    </target>
+        
+        <note priority="1" from="description">Account Groups table header tooltip text</note>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">291</context></context-group></trans-unit><trans-unit id="user-permissions-item.table.header.account-group.tooltip.aria-label.text" datatype="html">
+        <source>
+                    These are the account group(s) assigned to <x id="INTERPOLATION" equiv-text="{{ _userPermissions.name}}"/> Job Role
+                  </source><target state="new">
+                    These are the account group(s) assigned to <x id="INTERPOLATION" equiv-text="{{ _userPermissions.name}}"/> Job Role
+                  </target>
         <context-group purpose="location">
           <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">284</context>
+          <context context-type="linenumber">295</context>
         </context-group>
-        <note priority="1" from="description">Account Groups table header tooltip text</note>
+        <note priority="1" from="description">Account Groups table header tooltip aria-label text</note>
       </trans-unit>
       <trans-unit id="user-permissions-item.table.no-assigned.text" datatype="html">
         <source>
@@ -7084,375 +7155,277 @@
             </source><target state="new">
                Not assigned
             </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">344</context>
-        </context-group>
+        
         <note priority="1" from="description">Not assigned payee groups</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">365</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.label.add-account-group" datatype="html">
         <source>Add Account Groups</source><target state="new">Add Account Groups</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">419</context>
-        </context-group>
+        
         <note priority="1" from="description">Add Account Group</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">441</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.button.edit-payees" datatype="html">
         <source>
           edit
         </source><target state="new">
           edit
         </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">429</context>
-        </context-group>
+        
         <note priority="1" from="description">Edit payees button</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">451</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.saveButton" datatype="html">
         <source>
                   Save
                 </source><target state="new">
                   Save
                 </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">441</context>
-        </context-group>
+        
         <note priority="1" from="description">Button to save form
                   </note>
         <note priority="1" from="meaning">Save button</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">463</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.cancelButton" datatype="html">
         <source>
                 Cancel
               </source><target state="new">
                 Cancel
               </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">452</context>
-        </context-group>
+        
         <note priority="1" from="description">Button to cancel
                 </note>
         <note priority="1" from="meaning">Cancel Button</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">474</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.label.remove-payee-group" datatype="html">
         <source>Remove payee group</source><target state="new">Remove payee group</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">474</context>
-        </context-group>
+        
         <note priority="1" from="description">Remove payee group</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">517</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.remove-payee-group.btn.tooltip.text" datatype="html">
         <source>
      Remove '<x id="INTERPOLATION" equiv-text="{{payee.name}}"/>' Payee Group from '<x id="INTERPOLATION_1" equiv-text="{{dataGroup.name}}"/>' Account Group
    </source><target state="new">
      Remove '<x id="INTERPOLATION" equiv-text="{{payee.name}}"/>' Payee Group from '<x id="INTERPOLATION_1" equiv-text="{{dataGroup.name}}"/>' Account Group
    </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">483</context>
-        </context-group>
+        
         <note priority="1" from="description">Remove payee group tooltip text</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">526</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.label.remove-payee-group-linking" datatype="html">
         <source>Remove payee group linking</source><target state="new">Remove payee group linking</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">498</context>
-        </context-group>
+        
         <note priority="1" from="description">Remove payee group linking</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">541</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.unassign-payee-group.btn.tooltip.text" datatype="html">
         <source>
     Remove '<x id="INTERPOLATION" equiv-text="{{payee.name}}"/>' Payee Group from Account Group(s)
    </source><target state="new">
     Remove '<x id="INTERPOLATION" equiv-text="{{payee.name}}"/>' Payee Group from Account Group(s)
    </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">517</context>
-        </context-group>
+        
         <note priority="1" from="description">Unassign payee group tooltip text</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">560</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.label.assign-payee-group" datatype="html">
         <source>Assign payee group</source><target state="new">Assign payee group</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">532</context>
-        </context-group>
+        
         <note priority="1" from="description">Assign payee group</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">575</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.add-payee-group.btn.tooltip.text" datatype="html">
         <source>
     Add payee group(s) to '<x id="INTERPOLATION" equiv-text="{{dataGroup.name}}"/>' Account Group
    </source><target state="new">
     Add payee group(s) to '<x id="INTERPOLATION" equiv-text="{{dataGroup.name}}"/>' Account Group
    </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">539</context>
-        </context-group>
+        
         <note priority="1" from="description">Add payee group(s) tooltip text</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">582</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.label.assign-account-group-to-payee" datatype="html">
         <source>Assign account group to payee</source><target state="new">Assign account group to payee</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">554</context>
-        </context-group>
+        
         <note priority="1" from="description">Assign account group to payee group</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">597</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.assign-account-group-to-payee.btn.tooltip.text" datatype="html">
         <source>
     Add '<x id="INTERPOLATION" equiv-text="{{payee.name}}"/>' Payee Group to Account Group(s)
    </source><target state="new">
     Add '<x id="INTERPOLATION" equiv-text="{{payee.name}}"/>' Payee Group to Account Group(s)
    </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">561</context>
-        </context-group>
+        
         <note priority="1" from="description">Assign Account Group to Payee tooltip text</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">604</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.label.remove-account-group-from-payee" datatype="html">
         <source>Remove account group from payee</source><target state="new">Remove account group from payee</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">602</context>
-        </context-group>
+        
         <note priority="1" from="description">Remove account group from payee</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">645</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.remove-account-group-from-payee.btn.tooltip.text" datatype="html">
         <source>
   Remove '<x id="INTERPOLATION" equiv-text="{{payee.name}}"/>' Payee Group from '<x id="INTERPOLATION_1" equiv-text="{{dataGroup.name}}"/>' Account Group
    </source><target state="new">
   Remove '<x id="INTERPOLATION" equiv-text="{{payee.name}}"/>' Payee Group from '<x id="INTERPOLATION_1" equiv-text="{{dataGroup.name}}"/>' Account Group
    </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">609</context>
-        </context-group>
+        
         <note priority="1" from="description">Remove Account group tooltip text</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">652</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.remove-account-group.btn.tooltip.text" datatype="html">
         <source>
      Unassign Account group
    </source><target state="new">
      Unassign Account group
    </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">616</context>
-        </context-group>
+        
         <note priority="1" from="description">Unassign account group tooltip text</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">659</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-groups-modal.header.column-all" datatype="html">
         <source>
       All
     </source><target state="new">
       All
     </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">637</context>
-        </context-group>
+        
         <note priority="1" from="description">All</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">680</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-groups-modal.empty.title" datatype="html">
         <source>No Account Groups available</source><target state="new">No Account Groups available</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">655</context>
-        </context-group>
+        
         <note priority="1" from="description">No Account Groups available</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">698</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-groups-modal.empty.subtitle" datatype="html">
         <source>You can create an account group within the 'Account Groups' section.</source><target state="new">You can create an account group within the 'Account Groups' section.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">657</context>
-        </context-group>
+        
         <note priority="1" from="description">You can create an account group within the 'Account Groups' section.</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">700</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-groups-modal.search.empty.title" datatype="html">
         <source>No search results found</source><target state="new">No search results found</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">667</context>
-        </context-group>
+        
         <note priority="1" from="description">No search results found</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">710</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-groups-modal.empty.search.subtitle" datatype="html">
         <source>We can't find what you're looking for. Please try a different criteria.</source><target state="new">We can't find what you're looking for. Please try a different criteria.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">669</context>
-        </context-group>
+        
         <note priority="1" from="description">Please try a different criteria</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">712</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-groups-modal.title" datatype="html">
         <source>Assign Account Group(s)</source><target state="new">Assign Account Group(s)</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">623</context>
-        </context-group>
+        
         <note priority="1" from="description">Assign Account Group(s)</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">666</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-groups-modal.submit" datatype="html">
         <source>Assign</source><target state="new">Assign</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">626</context>
-        </context-group>
+        
         <note priority="1" from="description">Assign Account Group</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">669</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-groups-modal.search" datatype="html">
         <source>Search for Account Group(s)</source><target state="new">Search for Account Group(s)</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">628</context>
-        </context-group>
+        
         <note priority="1" from="description">Search for Account Group(s)</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">671</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-linked-groups-modal.header.column-all" datatype="html">
         <source>
       All
     </source><target state="new">
       All
     </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">694</context>
-        </context-group>
+        
         <note priority="1" from="description">All</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">737</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-linked-groups-modal.empty.title" datatype="html">
         <source>No Account Groups available</source><target state="new">No Account Groups available</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">711</context>
-        </context-group>
+        
         <note priority="1" from="description">No Account Groups available</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">754</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-linked-groups-modal.empty.subtitle" datatype="html">
         <source>All account groups assigned to "<x id="INTERPOLATION" equiv-text="{{_userPermissions?.name}}"/>" Job Role already linked to "<x id="INTERPOLATION_1" equiv-text="{{selectedForAssignAccountGroupForPayee?.name}}"/>" payee group.</source><target state="new">All account groups assigned to "<x id="INTERPOLATION" equiv-text="{{_userPermissions?.name}}"/>" Job Role already linked to "<x id="INTERPOLATION_1" equiv-text="{{selectedForAssignAccountGroupForPayee?.name}}"/>" payee group.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">713</context>
-        </context-group>
+        
         <note priority="1" from="description">All already linked.</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">756</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-linked-groups-modal.search.empty.title" datatype="html">
         <source>No search results found</source><target state="new">No search results found</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">723</context>
-        </context-group>
+        
         <note priority="1" from="description">No search results found</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">766</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-linked-groups-modal.empty.search.subtitle" datatype="html">
         <source>We can't find what you're looking for. Please try a different criteria.</source><target state="new">We can't find what you're looking for. Please try a different criteria.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">725</context>
-        </context-group>
+        
         <note priority="1" from="description">Please try a different criteria</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">768</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-linked-groups-modal.title" datatype="html">
         <source>Link Account Group(s) to "<x id="INTERPOLATION" equiv-text="{{selectedForAssignAccountGroupForPayee?.name}}"/>" Payee Group</source><target state="new">Link Account Group(s) to "<x id="INTERPOLATION" equiv-text="{{selectedForAssignAccountGroupForPayee?.name}}"/>" Payee Group</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">680</context>
-        </context-group>
+        
         <note priority="1" from="description">Link Account Group(s)</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">723</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-linked-groups-modal.submit" datatype="html">
         <source>Assign</source><target state="new">Assign</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">683</context>
-        </context-group>
+        
         <note priority="1" from="description">Assign Account Group</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">726</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-account-linked-groups-modal.search" datatype="html">
         <source>Search for Account Group(s)</source><target state="new">Search for Account Group(s)</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">685</context>
-        </context-group>
+        
         <note priority="1" from="description">Search for Account Group(s)</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">728</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-payee-groups-modal.header.column-all" datatype="html">
         <source>
       All
     </source><target state="new">
       All
     </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">751</context>
-        </context-group>
+        
         <note priority="1" from="description">All</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">794</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-payee-groups-modal.empty.title" datatype="html">
         <source>No Payee Groups available</source><target state="new">No Payee Groups available</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">768</context>
-        </context-group>
+        
         <note priority="1" from="description">No Payee Groups available</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">811</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-payee-groups-modal.empty.subtitle" datatype="html">
         <source>You can create a payee group within the 'Payee Groups' section.</source><target state="new">You can create a payee group within the 'Payee Groups' section.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">770</context>
-        </context-group>
+        
         <note priority="1" from="description">You can create a payee group within the 'Payee Groups' section.</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">813</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-payee-groups-modal.search.empty.title" datatype="html">
         <source>No search results found</source><target state="new">No search results found</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">780</context>
-        </context-group>
+        
         <note priority="1" from="description">No search results found</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">823</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-payee-groups-modal.empty.search.subtitle" datatype="html">
         <source>We can't find what you're looking for. Please try a different criteria.</source><target state="new">We can't find what you're looking for. Please try a different criteria.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">782</context>
-        </context-group>
+        
         <note priority="1" from="description">Please try a different criteria</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">825</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-payee-groups-modal.title" datatype="html">
         <source>Assign Payee Group(s) to "<x id="INTERPOLATION" equiv-text="{{selectedForAssignAccountGroup?.name}}"/>" Account Group</source><target state="new">Assign Payee Group(s) to "<x id="INTERPOLATION" equiv-text="{{selectedForAssignAccountGroup?.name}}"/>" Account Group</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">737</context>
-        </context-group>
+        
         <note priority="1" from="description">Assign Payee Group(s)</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">780</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-payee-groups-modal.submit" datatype="html">
         <source>Assign</source><target state="new">Assign</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">740</context>
-        </context-group>
+        
         <note priority="1" from="description">Assign Account Group</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">783</context></context-group></trans-unit>
       <trans-unit id="user-permissions-item.select-payee-groups-modal.search" datatype="html">
         <source>Search for Payee Group(s)</source><target state="new">Search for Payee Group(s)</target>
+        
+        <note priority="1" from="description">Search for Payee Group(s)</note>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context><context context-type="linenumber">785</context></context-group></trans-unit><trans-unit id="user-permissions-item.number-of-payee.tooltip.text" datatype="html">
+        <source>
+     Number of contact in Payee Group.
+   </source><target state="new">
+     Number of contact in Payee Group.
+   </target>
         <context-group purpose="location">
           <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
-          <context context-type="linenumber">742</context>
+          <context context-type="linenumber">838</context>
         </context-group>
-        <note priority="1" from="description">Search for Payee Group(s)</note>
+        <note priority="1" from="description">Number of payee Group</note>
+      </trans-unit><trans-unit id="user-permissions-item.number-of-account.tooltip.text" datatype="html">
+        <source>
+     Number of account in Account Group.
+   </source><target state="new">
+     Number of account in Account Group.
+   </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/user-permissions-item/user-permissions-item.component.d.ts</context>
+          <context context-type="linenumber">844</context>
+        </context-group>
+        <note priority="1" from="description">Number of account Group</note>
       </trans-unit>
       <trans-unit id="time-bounds.label.validity-period" datatype="html">
         <source>
@@ -7605,11 +7578,114 @@
       </trans-unit>
       <trans-unit id="d7b35c384aecd25a516200d6921836374613dfe7" datatype="html">
         <source>Cancel</source><target state="new">Cancel</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/unassign-data-group/unassign-data-group-modal.component.d.ts</context>
-          <context context-type="linenumber">39</context>
-        </context-group>
+        
         <note priority="1" from="description">Cancel button@payee-group-delete-modal.cancel-btn</note>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/unassign-data-group/unassign-data-group-modal.component.d.ts</context><context context-type="linenumber">39</context></context-group><context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/payee-group-detail-modal/payee-group-detail-modal.component.d.ts</context><context context-type="linenumber">85</context></context-group><context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/account-group-detail-modal/account-group-detail-modal.component.d.ts</context><context context-type="linenumber">120</context></context-group></trans-unit><trans-unit id="payee-group-detail-modal.search.placeholder" datatype="html">
+        <source>Search</source><target state="new">Search</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/payee-group-detail-modal/payee-group-detail-modal.component.d.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <note priority="1" from="description">Search placeholder</note>
+      </trans-unit><trans-unit id="payee-group-detail-modal.row.header.name" datatype="html">
+        <source>Name</source><target state="new">Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/payee-group-detail-modal/payee-group-detail-modal.component.d.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <note priority="1" from="description">Table header name</note>
+      </trans-unit><trans-unit id="payee-group-detail-modal.unknown.title" datatype="html">
+        <source>Unknown Error</source><target state="new">Unknown Error</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/payee-group-detail-modal/payee-group-detail-modal.component.d.ts</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+        <note priority="1" from="description">Title for error state for payee group errors</note>
+      </trans-unit><trans-unit id="payee-group-detail-modal.unknown.subtitle" datatype="html">
+        <source>Try to reload the page or contact the system&lt;br> administrator.</source><target state="new">Try to reload the page or contact the system&lt;br> administrator.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/payee-group-detail-modal/payee-group-detail-modal.component.d.ts</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+        <note priority="1" from="description">Message for error state for payee group errors</note>
+      </trans-unit><trans-unit id="payee-group-detail-modal.empty.title" datatype="html">
+        <source>No payees found</source><target state="new">No payees found</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/payee-group-detail-modal/payee-group-detail-modal.component.d.ts</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+        <note priority="1" from="description">Label for empty list of payees</note>
+      </trans-unit><trans-unit id="payee-group-detail-modal.empty.subtitle" datatype="html">
+        <source>You don't have any payees to be displayed.</source><target state="new">You don't have any payees to be displayed.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/payee-group-detail-modal/payee-group-detail-modal.component.d.ts</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+        <note priority="1" from="description">Payees empty state message</note>
+      </trans-unit><trans-unit id="account-group-detail-modal.search.placeholder" datatype="html">
+        <source>Search</source><target state="new">Search</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/account-group-detail-modal/account-group-detail-modal.component.d.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">Search placeholder</note>
+      </trans-unit><trans-unit id="account-group-detail-modal.row.header.name" datatype="html">
+        <source>Name</source><target state="new">Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/account-group-detail-modal/account-group-detail-modal.component.d.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <note priority="1" from="description">Table header name</note>
+      </trans-unit><trans-unit id="account-group-detail-modal.row.header.number" datatype="html">
+        <source>
+                          Number
+                        </source><target state="new">
+                          Number
+                        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/account-group-detail-modal/account-group-detail-modal.component.d.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description">Table header name</note>
+      </trans-unit><trans-unit id="account-group-detail-modal.row.header.currency" datatype="html">
+        <source>
+                               Currency
+                            </source><target state="new">
+                               Currency
+                            </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/account-group-detail-modal/account-group-detail-modal.component.d.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <note priority="1" from="description">Table header name</note>
+      </trans-unit><trans-unit id="account-group-detail-modal.unknown.title" datatype="html">
+        <source>Unknown Error</source><target state="new">Unknown Error</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/account-group-detail-modal/account-group-detail-modal.component.d.ts</context>
+          <context context-type="linenumber">137</context>
+        </context-group>
+        <note priority="1" from="description">Title for error state for account group errors</note>
+      </trans-unit><trans-unit id="account-group-detail-modal.unknown.subtitle" datatype="html">
+        <source>Try to reload the page or contact the system&lt;br> administrator.</source><target state="new">Try to reload the page or contact the system&lt;br> administrator.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/account-group-detail-modal/account-group-detail-modal.component.d.ts</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+        <note priority="1" from="description">Message for error state for account group errors</note>
+      </trans-unit><trans-unit id="account-group-detail-modal.empty.title" datatype="html">
+        <source>No accounts found</source><target state="new">No accounts found</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/account-group-detail-modal/account-group-detail-modal.component.d.ts</context>
+          <context context-type="linenumber">151</context>
+        </context-group>
+        <note priority="1" from="description">Label for empty list of accounts</note>
+      </trans-unit><trans-unit id="account-group-detail-modal.empty.subtitle" datatype="html">
+        <source>You don't have any accounts to be displayed.</source><target state="new">You don't have any accounts to be displayed.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@backbase/accessgroup-ui/src/account-group-detail-modal/account-group-detail-modal.component.d.ts</context>
+          <context context-type="linenumber">153</context>
+        </context-group>
+        <note priority="1" from="description">Accounts empty state message</note>
       </trans-unit>
       <trans-unit id="select-context.label.selectContext" datatype="html">
         <source>Select context</source><target state="new">Select context</target>
@@ -7851,24 +7927,18 @@
       </trans-unit>
       <trans-unit id="user-context-menu.ariaLabel.text" datatype="html">
         <source>User Context Menu</source><target state="new">User Context Menu</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/user-context-menu-widget-ang/src/user-context-menu-widget/user-context-menu-container/user-context-menu-container.component.d.ts</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
+        
         <note priority="1" from="description">User Context Menu ariaLabel</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/user-context-menu-widget-ang/src/user-context-menu-widget/user-context-menu-container/user-context-menu-container.component.d.ts</context><context context-type="linenumber">24</context></context-group></trans-unit>
       <trans-unit id="user-context-menu.label.cancelButton" datatype="html">
         <source>
           Cancel
         </source><target state="new">
           Cancel
         </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/user-context-menu-widget-ang/src/user-context-menu-widget/user-context-menu-container/user-context-menu-container.component.d.ts</context>
-          <context context-type="linenumber">60</context>
-        </context-group>
+        
         <note priority="1" from="description">Cancel button text</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@backbase/user-context-menu-widget-ang/src/user-context-menu-widget/user-context-menu-container/user-context-menu-container.component.d.ts</context><context context-type="linenumber">63</context></context-group></trans-unit>
       <trans-unit id="user-context-menu.label.clickToChange" datatype="html">
         <source>
           (click to change context)
@@ -7895,26 +7965,8 @@
         <note priority="1" from="description">Click to log out label</note>
         <note priority="1" from="meaning">Log out</note>
       </trans-unit>
-      <trans-unit id="f266b247032f6caed96b38ea27bcb5ccac3e226b" datatype="html">
-        <source>
-    Show more
-  </source><target state="new">
-    Show more
-  </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-popups-widget-ang/src/components/notifications-popups-item/notifications-popups-item.component.d.ts</context>
-          <context context-type="linenumber">32</context>
-        </context-group>
-        <note priority="1" from="description">Notification pop-up show more button@notification.popup.show-more.button</note>
-      </trans-unit>
-      <trans-unit id="notification.popup.show-more.button.aria-label" datatype="html">
-        <source>Show more notification details</source><target state="new">Show more notification details</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">../../node_modules/@backbase/notifications-popups-widget-ang/src/components/notifications-popups-item/notifications-popups-item.component.d.ts</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
-        <note priority="1" from="description">Aria-label for show more button</note>
-      </trans-unit>
+      
+      
       <trans-unit id="bb-cancel-modal.title" datatype="html">
         <source>Discard Changes</source><target state="new">Discard Changes</target>
         <context-group purpose="location">
@@ -9179,7 +9231,7 @@
       </trans-unit>
       <trans-unit id="bb-user-identity-security-center-widget.new-password-unique-error-message" datatype="html">
         <source>
-              New password must be different to current password
+              New password must be different to current password 
             </source><target state="new">
               New password must be different to current password
             </target>
