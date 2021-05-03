@@ -11,6 +11,13 @@ import {
   ServiceAgreementHttpServiceMocksProvider,
   ServiceAgreementsHttpServiceMocksProvider,
 } from '@backbase/data-ang/accesscontrol';
+import {
+  IdentityManagementServiceMocksProvider,
+  UserManagementServiceMocksProvider,
+  UserProfileManagementServiceMocksProvider,
+} from '@backbase/user-http-ang';
+import { CategoriesHttpServiceMocksProvider } from '@backbase/categories-management-http-ang';
+import { AuthorizedUserServiceMocksProvider } from '@backbase/authorized-user-http-ang';
 
 const userMockProvider = createMocks([
   {
@@ -26,71 +33,6 @@ const userMockProvider = createMocks([
           legalEntityName: 'BANK A',
           id: '3da7e7fb-857f-44c2-92aa-80572f6394e2',
           fullName: 'Henry Duncan',
-        },
-      },
-    ],
-  },
-]);
-
-const userProfileMockProvider = createMocks([
-  {
-    urlPattern: '/client-api/v2/users/me/profile',
-    method: 'GET',
-    responses: [
-      {
-        status: 200,
-        body: {
-          fullName: 'Mila Example',
-          'phone-addresses': [
-            {
-              key: 'cb7653b5-31b2-481d-b9b5-aa4b415c96e1',
-              type: 'MOBILE',
-              primary: true,
-              number: '07717 371949',
-            },
-            {
-              key: 'cb7653b5-31b2-481d-b9b5-aa4b415c96e2',
-              type: 'LAND_LINE',
-              primary: false,
-              number: '02920 671937',
-            },
-          ],
-          'electronic-addresses': [
-            {
-              key: 'cb7653b5-31b2-481d-b9b5-aa4b415c96e1',
-              type: 'E_MAIL',
-              primary: true,
-              address: 'test@tester.com',
-            },
-            {
-              key: 'cb7653b5-31b2-481d-b9b5-aa4b415c96e2',
-              type: 'PERSONAL',
-              primary: false,
-              address: 'test_personal@tester.com',
-            },
-          ],
-          'postal-addresses': [
-            {
-              key: 'cb7653b5-31b2-481d-b9b5-aa4b415c96e1',
-              type: 'BUSINESS',
-              primary: false,
-              addressLine: 'The Bonded Warehouse',
-              streetName: 'Atlantic Wharf',
-              townName: 'Cardiff',
-              postalCode: 'CF10 4HE',
-              country: 'GB',
-            },
-            {
-              key: 'cb7653b5-31b2-481d-b9b5-aa4b415c96e2',
-              type: 'HOME',
-              primary: true,
-              addressLine: '2 Hertsmere Rd',
-              streetName: 'Canary Wharf',
-              townName: 'London',
-              postalCode: 'E14 4AB ',
-              country: 'GB',
-            },
-          ],
         },
       },
     ],
@@ -253,7 +195,7 @@ const pocketPostMockProvider = createMocks([
     method: 'POST',
     responses: [
       {
-        status: 400,
+        status: 200,
       },
     ],
   },
@@ -285,217 +227,6 @@ const accessControlMocks = createMocks([
   },
 ]);
 
-const categoriesMocks = createMocks([
-  {
-    urlPattern: '/client-api/v2/categories',
-    method: 'GET',
-    responses: [
-      {
-        status: 200,
-        body: [
-          {
-            categoryId: 1,
-            categoryName: 'Home',
-            categoryType: 'Expenses',
-            subCategories: [
-              {
-                categoryId: 2,
-                categoryName: 'Mortgage',
-                categoryType: 'Expenses',
-                parentId: 1,
-              },
-              {
-                categoryId: 3,
-                categoryName: 'Rent',
-                categoryType: 'Expenses',
-                parentId: 1,
-              },
-            ],
-          },
-          {
-            categoryId: 4,
-            categoryName: 'Food & Drinks',
-            categoryType: 'Expenses',
-            subCategories: [
-              {
-                categoryId: 5,
-                categoryName: 'Alcohol & Bars',
-                categoryType: 'Expenses',
-                parentId: 4,
-              },
-              {
-                categoryId: 6,
-                categoryName: 'Fast Food',
-                categoryType: 'Expenses',
-                parentId: 4,
-              },
-              {
-                categoryId: 7,
-                categoryName: 'Groceries',
-                categoryType: 'Expenses',
-                parentId: 4,
-              },
-              {
-                categoryId: 8,
-                categoryName: 'Restaurants',
-                categoryType: 'Expenses',
-                parentId: 4,
-              },
-            ],
-          },
-          {
-            categoryId: 9,
-            categoryName: 'Health & Beauty',
-            categoryType: 'Expenses',
-            subCategories: [
-              {
-                categoryId: 10,
-                categoryName: 'Beauty',
-                categoryType: 'Expenses',
-                parentId: 9,
-              },
-              {
-                categoryId: 11,
-                categoryName: 'Health & Fitness',
-                categoryType: 'Expenses',
-                parentId: 9,
-              },
-            ],
-          },
-          {
-            categoryId: 12,
-            categoryName: 'Transportation',
-            categoryType: 'Expenses',
-            subCategories: [
-              {
-                categoryId: 13,
-                categoryName: 'Car',
-                categoryType: 'Expenses',
-                parentId: 12,
-              },
-              {
-                categoryId: 14,
-                categoryName: 'Public Transport',
-                categoryType: 'Expenses',
-                parentId: 12,
-              },
-            ],
-          },
-          {
-            categoryId: 15,
-            categoryName: 'Shopping',
-            categoryType: 'Expenses',
-            subCategories: [
-              {
-                categoryId: 16,
-                categoryName: 'Clothing',
-                categoryType: 'Expenses',
-                parentId: 15,
-              },
-              {
-                categoryId: 17,
-                categoryName: 'Electronics',
-                categoryType: 'Expenses',
-                parentId: 15,
-              },
-            ],
-          },
-          {
-            categoryId: 18,
-            categoryName: 'Hobbies & Entertainment',
-            categoryType: 'Expenses',
-          },
-          {
-            categoryId: 19,
-            categoryName: 'Bills & Utilities',
-            categoryType: 'Expenses',
-            subCategories: [
-              {
-                categoryId: 20,
-                categoryName: 'Internet',
-                categoryType: 'Expenses',
-                parentId: 19,
-              },
-              {
-                categoryId: 21,
-                categoryName: 'Mobile Phone',
-                categoryType: 'Expenses',
-                parentId: 19,
-              },
-              {
-                categoryId: 22,
-                categoryName: 'Utilities',
-                categoryType: 'Expenses',
-                parentId: 19,
-              },
-            ],
-          },
-          {
-            categoryId: 23,
-            categoryName: 'Income',
-            categoryType: 'Income',
-            subCategories: [
-              {
-                categoryId: 24,
-                categoryName: 'Bonus',
-                categoryType: 'Income',
-                parentId: 23,
-              },
-              {
-                categoryId: 25,
-                categoryName: 'Salary/Wages',
-                categoryType: 'Income',
-                parentId: 23,
-              },
-            ],
-          },
-          {
-            categoryId: 26,
-            categoryName: 'Other Income',
-            categoryType: 'Income',
-            subCategories: [
-              {
-                categoryId: 27,
-                categoryName: 'Interest Income',
-                categoryType: 'Income',
-                parentId: 26,
-              },
-              {
-                categoryId: 28,
-                categoryName: 'Rental Income',
-                categoryType: 'Income',
-                parentId: 26,
-              },
-            ],
-          },
-          {
-            categoryId: 29,
-            categoryName: 'Transfers',
-            categoryType: 'Transfer',
-          },
-          {
-            categoryId: 30,
-            categoryName: 'Uncategorised',
-            categoryType: 'General',
-          },
-        ],
-      },
-    ],
-  },
-]);
-
-const userContextMocks = createMocks([
-  {
-    urlPattern: '/client-api/v2/accessgroups/usercontext',
-    method: 'POST',
-    responses: [
-      {
-        status: 200,
-      },
-    ],
-  },
-]);
-
 export const mockProviders: Array<Provider> = [
   createMocksInterceptor(),
   pocketPostMockProvider,
@@ -503,16 +234,16 @@ export const mockProviders: Array<Provider> = [
   pocket2bMockProvider,
   pocket3cMockProvider,
   pocketsListMockProvider,
-  userMockProvider,
+  accessControlMocks,
   ProductSummaryHttpServiceMocksProvider,
   TransactionClientHttpServiceMocksProvider,
   ArrangementsHttpServiceMocksProvider,
   ServiceAgreementHttpServiceMocksProvider,
   NotificationsHttpServiceMocksProvider,
-  userProfileMockProvider,
-  accessControlMocks,
-  categoriesMocks,
+  UserManagementServiceMocksProvider,
+  UserProfileManagementServiceMocksProvider,
+  CategoriesHttpServiceMocksProvider,
   ServiceAgreementsHttpServiceMocksProvider,
   AccountsHttpServiceMocksProvider,
-  userContextMocks,
+  IdentityManagementServiceMocksProvider,
 ];
