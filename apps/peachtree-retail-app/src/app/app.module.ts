@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,11 +21,13 @@ import { bundlesDefinition } from './bundles-definition';
 // Open API module
 import { PtOpenapiModule } from '@peachtree/pt-openapi';
 import { AccountsTransactionsJourneyModule } from '@backbase/accounts-transactions-journey-ang';
+import { basePathProviders } from './base-path';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     HttpClientModule,
@@ -39,7 +42,7 @@ import { AccountsTransactionsJourneyModule } from '@backbase/accounts-transactio
     PtOpenapiModule,
     AccountsTransactionsJourneyModule,
   ],
-  providers: [...(environment.mockProviders || [])],
+  providers: [...(environment.mockProviders || []), basePathProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

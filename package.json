@@ -23,7 +23,9 @@
     "package:prebuilt": "bb-package project ./prebuilt --prebuilt=prebuilt --output=collections/collection-pt-prebuilt.zip",
     "create-translations": "ng xi18n && xliffmerge",
     "precreate-generate-openapi": "mkdir -p ./dist/openapi",
-    "generate-openapi": "openapi-generator-cli generate -g typescript-angular -i openapi/api.yaml -o ./dist/openapi"
+    "generate-openapi": "openapi-generator-cli generate -g typescript-angular -i openapi/api.yaml -o ./dist/openapi",
+    "b": "npm run create-experience:retail && npm run bundle-home-page:retail",
+    "fb": "npm run package:apps -- --configuration=production && npm run b"
   },
   "private": true,
   "dependencies": {
@@ -39,12 +41,12 @@
     "@angular/router": "~10.1.0",
     "@backbase/accounts-transactions-journey-ang": "0.7.2",
     "@backbase/backbase-theme": "latest",
-    "@backbase/data-ang": "3.9.1",
-    "@backbase/foundation-ang": "6.8.1",
+    "@backbase/data-ang": "3.9.3",
+    "@backbase/foundation-ang": "6.10.0",
     "@backbase/notifications-mocks-provider-ang": "^3.0.3",
-    "@backbase/retail-ang": "3.9.1-sp.1",
-    "@backbase/ui-ang": "^5.28.5",
-    "@backbase/universal-ang": "6.9.6",
+    "@backbase/retail-ang": "3.9.3",
+    "@backbase/ui-ang": "^5.42.1",
+    "@backbase/universal-ang": "6.9.18",
     "@ng-bootstrap/ng-bootstrap": "~7.0.0",
     "@ng-select/ng-select": "~5.0.0",
     "@ngrx/effects": "~10.0.0",

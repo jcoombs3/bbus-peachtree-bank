@@ -1,27 +1,43 @@
 import { ExternalServices } from '@backbase/foundation-ang/start';
-import { ContentType } from '@backbase/foundation-ang/web-sdk';
+import { ContentType } from '@backbase/lib-bb-page-bootstrap-cdn';
 
-export const services: ExternalServices = {
-  auth: () => ({
+export function auth() {
+  return {
     login: (username: any, password: any) => Promise.resolve(),
     logout: () => Promise.resolve(),
     goToLoginPage: () => {},
     register: (countdown: any) => () => {},
     refresh: () => Promise.resolve(),
     timeToLive: () => 100,
-  }),
-  eventBus: () => ({
-    publish: (eventName: any, data: any) => {
-      console.log(`eventBus published '${eventName}' with payload:`, data);
+  };
+}
+
+export function eventBus() {
+  const subscriptions = {} as any;
+  const events = {
+    publish(eventName: string, data: any) {
+      if (subscriptions[eventName]) {
+        subscriptions[eventName].forEach(function (listener: any) {
+          listener(data);
+        });
+      }
     },
-    subscribe: (eventName: any, listener: any) => {
-      console.log(`eventBus subscribed '${eventName}' to listener:`, listener);
+    subscribe(eventName: string, listener: any) {
+      subscriptions[eventName] = subscriptions[eventName] || [];
+      subscriptions[eventName].push(listener);
     },
-    unsubscribe: (eventName: any, listener: any) => {
-      console.log(`eventBus unsubscribed '${eventName}' from listener:`, listener);
+    unsubscribe(eventName: string, listener: any) {
+      const eventListeners = subscriptions[eventName];
+      if (eventListeners) {
+        eventListeners.splice(eventListeners.indexOf(listener), 1);
+      }
     },
-  }),
-  navigation: () => ({
+  };
+  return events;
+}
+
+export function navigation() {
+  return {
     getBreadcrumbs: (uuid: any, depth: any) => {
       return Promise.resolve({
         type: 'externalLink',
@@ -31,19 +47,12 @@ export const services: ExternalServices = {
         properties: {},
       });
     },
-    getTree: (uuid: any, depth: any) => {
-      return Promise.resolve({
-        type: 'externalLink',
-        title: 'Backbase',
-        url: 'http://www.backbase.com',
-        isCurrent: true,
-        isInPath: false,
-        properties: {},
-        children: [],
-      });
-    },
-  }),
-  pageConfig: () => ({
+    getTree: (uuid: string, depth: number) => {},
+  };
+}
+
+export function pageConfig() {
+  return {
     apiRoot: '/gateway/api',
     staticResourcesRoot: '/gateway/api/portal',
     portalName: 'backbase-wc3',
@@ -51,13 +60,24 @@ export const services: ExternalServices = {
     currentLink: '',
     version: '6',
     locale: 'en-US',
-  }),
-  portalContent: () => ({
+  };
+}
+
+export function portalContent() {
+  return {
     get: () => {
       return Promise.resolve({
         type: ContentType.IMAGE,
         contentRef: '/../../assets/logo-sml.svg',
       });
     },
-  }),
+  };
+}
+
+export const services: ExternalServices = {
+  auth: auth,
+  eventBus: eventBus,
+  navigation: navigation,
+  pageConfig: pageConfig,
+  portalContent: portalContent,
 };
