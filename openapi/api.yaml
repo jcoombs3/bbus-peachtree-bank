@@ -1,16 +1,18 @@
-openapi: 3.0.1
+openapi: 3.0.3
 info:
-  title: Sample Pockets API
-  description: >-
-    Optional multiline or single-line description in
-    [CommonMark](http://commonmark.org/help/) or HTML.
-  version: 0.1.9
+  title: Example Service API Spec
+  description: No description available
+  version: v1
 servers:
-  - url: 'http://localhost:4201/api'
-    description: 'Optional server description, e.g. Main (production) server'
+  - url: /serviceName/
+    description: The server
+tags:
+  - name: example service api spec
 paths:
   /pocket:
     post:
+      tags:
+        - pockets
       summary: Request to submit a new pocket
       requestBody:
         required: true
@@ -25,6 +27,8 @@ paths:
           description: Request pocket submission accepted
   /pockets:
     get:
+      tags:
+        - pockets
       summary: Returns a list of pockets.
       responses:
         '200':
@@ -37,6 +41,8 @@ paths:
                 $ref: '#/components/schemas/PocketList'
   /pockets/{id}:
     get:
+      tags:
+        - pockets
       summary: Returns a pocket by ID.
       parameters:
         - name: id
