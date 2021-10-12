@@ -2,6 +2,10 @@
 
 Retail Banking Web App - USA Edition is an out-of-the-box, configurable and themeable web app providing functionality tailored to the US market.
 
+## Prerequisites
+
+Follow the documentation to Deploy and run the app [on Community](https://community.backbase.com/documentation/Retail-Apps/latest/install_web_app)
+
 ## Main characteristics of a Retail Banking Web App:
 
 - **Fast Time to Market**. It allows “Adopt” customers to go to market in a couple of months, way faster than before, requiring zero or almost zero code touching.
