@@ -1,0 +1,130 @@
+openapi: 3.0.3
+info:
+  title: Example Service API Spec
+  description: No description available
+  version: v1
+servers:
+  - url: /serviceName/
+    description: The server
+tags:
+  - name: example service api spec
+paths:
+  /pocket:
+    post:
+      tags:
+        - pockets
+      summary: Request to submit a new pocket
+      requestBody:
+        required: true
+        content:
+          application/json:
+            example:
+              $ref: 'examples/body/pockets-post.json'
+            schema:
+              $ref: '#/components/schemas/PocketPostRequestBody'
+      responses:
+        200:
+          description: Request pocket submission accepted
+  /pockets:
+    get:
+      tags:
+        - pockets
+      summary: Returns a list of pockets.
+      responses:
+        '200':
+          description: A JSON array of pockets
+          content:
+            application/json:
+              example:
+                $ref: 'examples/body/pockets-list.json'
+              schema:
+                $ref: '#/components/schemas/PocketList'
+  /pockets/{id}:
+    get:
+      tags:
+        - pockets
+      summary: Returns a pocket by ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Parameter description in CommonMark or HTML.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A pocker object
+          content:
+            application/json:
+              example:
+                $ref: 'examples/body/pockets-detail.json'
+              schema:
+                $ref: '#/components/schemas/Pocket'
+components:
+  schemas:
+    PocketList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Pocket'
+    Pocket:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        funds:
+          $ref: '#/components/schemas/PocketCurrency'
+        goal:
+          $ref: '#/components/schemas/PocketCurrency'
+        goalDate:
+          type: string
+        transactions:
+          type: array
+          items:
+            $ref: '#/components/schemas/PocketTransaction'
+      required:
+        - id
+        - name
+    PocketTransaction:
+      type: object
+      properties:
+        id:
+          type: string
+        amount:
+          $ref: '#/components/schemas/PocketCurrency'
+        account:
+          type: string
+        incoming:
+          type: boolean
+        date:
+          type: string
+      required:
+        - id
+        - amount
+        - account
+        - incoming
+        - date
+    PocketPostRequestBody:
+      type: object
+      properties:
+        name:
+          type: string
+        goal:
+          $ref: '#/components/schemas/PocketCurrency'
+        arrangementId:
+          type: string
+        fundAmount:
+          $ref: '#/components/schemas/PocketCurrency'
+      required:
+        - name
+    PocketCurrency:
+      type: object
+      properties:
+        currency:
+          type: string
+        amount:
+          type: number
+      required:
+        - currency
+        - amount

@@ -1,0 +1,25 @@
+<bb-heading-widget [heading]="heading" [headingType]="'h1'"></bb-heading-widget>
+
+<ng-template bbProductSummaryHeaderCustomizable let-hostRef let-items="context">
+  <div *ngIf="items.total" class="bb-product-summary-balance">
+    <div class="bb-product-summary-balance__tooltip"> <span class="bb-product-summary-balance__title" data-role="label-total-validation" i18n="Total balance label|product summary header label@@product.summary.header.label.total.balance"> Total balance </span>
+      <bb-icon-ui class="bb-text-support" data-role="toggle-tooltip-icon" tabindex="0" size="sm" name="info" aria-label="Toggle tooltip for Total balance" i18n-aria-label="Toggle tooltip for Total balance|@@product.summary.header.account.consumedAmount.aria.label.openclose" bbTooltip="Total balance" i18n-bbTooltip="Total balance|Total balance label@@product.summary.header.account.tooltip.consumedAmount" triggers="focus hover"></bb-icon-ui>
+    </div>
+    <bb-amount-ui data-role="total-validation-amount" class="bb-product-summary-balance__amount" [currency]="items.total.currency" [amount]="items.total.aggregatedBalance"> </bb-amount-ui>
+  </div>
+
+  <ng-container *ngIf="config.enableManageAccounts" [ngTemplateOutlet]="enableManageAccounts"></ng-container>
+</ng-template>
+
+<bb-product-summary-list-widget [showIcons]="config.showAccountTypes" [maskIndicator]="config.maskIndicator" (selectedAccount)="onAccountSelect($event)"></bb-product-summary-list-widget>
+
+<ng-template #enableManageAccounts>
+  <ul class="bb-navigation--link d-flex justify-content-end mt-3">
+    <li class="bb-navigation-item">
+      <a class="bb-inline-stack bb-navigation-item__link pr-0" href="#/my-accounts/manage" aria-label="Manage Accounts">
+        <bb-icon-ui class="bb-inline-stack__item bb-navigation-item__icon" name="settings" aria-hidden="true"></bb-icon-ui>
+        <span class="bb-inline-stack__item bb-navigation-item__title">Manage Accounts</span>
+      </a>
+    </li>
+  </ul>
+</ng-template>

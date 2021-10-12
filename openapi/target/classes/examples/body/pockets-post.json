@@ -1,0 +1,12 @@
+{
+  "name": "A New Pocket",
+  "goal": {
+    "currency": "USD",
+    "amount": 1600
+  },
+  "arrangementId": "a232313f32312311ndndj222",
+  "fundAmount": {
+    "currency": "USD",
+    "amount": 500
+  }
+}

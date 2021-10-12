@@ -1,0 +1,44 @@
+{
+  "id": "1a",
+  "name": "Travel",
+  "funds": {
+    "currency": "USD",
+    "amount": 47.5
+  },
+  "goal": {
+    "currency": "USD",
+    "amount": 1500
+  },
+  "goalDate": "2021-04-20T04:00:00.000Z",
+  "transactions": [
+    {
+      "id": "1aa",
+      "amount": {
+        "currency": "USD",
+        "amount": 7.5
+      },
+      "account": "Saving",
+      "incoming": true,
+      "date": "2019-05-11T04:00:00.000Z"
+    },
+    {
+      "id": "1bb",
+      "amount": {
+        "currency": "USD",
+        "amount": 25
+      },
+      "account": "Current",
+      "date": "2019-05-11T04:00:00.000Z"
+    },
+    {
+      "id": "1cc",
+      "amount": {
+        "currency": "USD",
+        "amount": 25
+      },
+      "account": "Shared",
+      "incoming": true,
+      "date": "2020-12-01T04:00:00.000Z"
+    }
+  ]
+}
